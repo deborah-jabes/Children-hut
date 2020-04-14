@@ -1,13 +1,15 @@
 <?php
-/*function headerFunc ($title) {
+function headerFunc ($titre) {
 	echo '<!DOCTYPE html>
-	<html>
+	<html lang="fr">
 	<head>
-	<title>' . $title . '</title>' . PHP_EOL;
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="currentStyle.css">
+	<title>' . $titre . $color . '</title>
 	</head>
-	<body>' . PHP_EOL;
+	<body>';
 }
 
-headerFunc ('page Message'); */
+headerFunc ('Message');
 
-$apple_color = 'blue';
+echo '<h1>Salut</h1>';
