@@ -1,3 +1,28 @@
-h1 {
-	background-color : green;
+* {
+	background-color : black; 
+	color: white;
+}
+
+p {
+	font-weight: bold;
+}
+
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+
+li {
+	float : left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: right;
+	padding: 14px 16px;
+	text-decoration: none;
 }
