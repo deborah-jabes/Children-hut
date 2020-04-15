@@ -199,24 +199,30 @@ section{
 	text-align: center;
 }
 
-#footer > ul {
+#footer h3 {
+	padding-bottom: 0.5em;
+}
+
+#footer ul {
 	font-size: 1.25em;
 	color: rgba(255, 255, 255, 0.5);
-	font-size: 0.8em;
 	letter-spacing: 0.225em;
 	list-style: none;
-	padding: 0,0, 5;
+	padding-bottom: 1em;
+}
+
+#footer > .creators > li {
+	font-size: 0.6em;
 }
 			
 #footer > ul >li > a:hover {
 	color: #fff;
 }
 
-#footer .contact li {
+#footer .contact li  {
 	border-left: solid 1px rgba(255, 255, 255, 0.5);
 	display: inline-block;
 	line-height: 1em;
-	margin-left: 1em;
 	padding-left: 1em;
 }
 
