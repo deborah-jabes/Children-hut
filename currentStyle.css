@@ -1,5 +1,4 @@
-* {
-	background-color : black; 
+* { 
 	color: white;
 }
 
@@ -25,4 +24,8 @@ li a {
 	text-align: right;
 	padding: 14px 16px;
 	text-decoration: none;
+}
+
+#header {
+	background-image: url("images/roulotte.jpg");
 }
