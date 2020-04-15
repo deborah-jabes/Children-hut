@@ -13,14 +13,20 @@ function headerFunc ($titre) {
 headerFunc ('Message');
  	
 echo '
-<div>
-	<p>CHILDREN\'S HUT</p>
-	<ul id="menu">
-		<li><a href="index.html">HOME</a></li>
-		<li><a href="#buy">BUY</a></li>
-		<li><a href="#rent">RENT</a></li>
-		<li><a href="#sell">SELL</a></li>
-		<li><a href="#contact">CONTACT US</a></li>
-	</ul>
+<div class="flex_container">
+	<div class="titre_gauche">
+		CHILDREN\'S HUTS
+	</div>
+
+	<div class="menu_droite">
+		<ul id="menu">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="#buy">BUY</a></li>
+			<li><a href="#rent">RENT</a></li>
+			<li><a href="#sell">SELL</a></li>
+			<li><a href="#contact">CONTACT US</a></li>
+
+		</ul>
+	</div>
 </div>
 ';

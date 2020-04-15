@@ -1,31 +1,45 @@
 * { 
 	color: white;
+	background-color: black;
 }
 
-p {
+.titre_gauche {
 	font-weight: bold;
+	padding: 14px 16px;
 }
 
-#menu {
+.menu_droite #menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   float: right;
+  display: inherit;		
 }
 
-li {
+.flex_container {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex_container > div {
+	width: 100%;
+}
+
+#menu li {
 	float : left;
 }
 
-li a {
-	display: block;
+
+#menu li a {
+	display: inherit;
 	color: white;
 	text-align: right;
 	padding: 14px 16px;
 	text-decoration: none;
 }
 
-#header {
-	background-image: url("images/roulotte.jpg");
-}
+
+
+
+
