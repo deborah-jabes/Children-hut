@@ -10,8 +10,10 @@
 	</nav>
 
 	<section>
+		<p>azertyuiop</p>
+		<br>
 		<img src="images/profils/DefaultAccount.png">
-		<form method="post" action="signup.php">
+		<form method="post" action="signup.php" enctype="multipart/form-data">
 			<input type="text" name="login" id="login" placeholder="Email Adress">
 			<br>
 			<input type="text" name="FName" id="FName" placeholder="First Name">
@@ -22,7 +24,9 @@
 			<br>
 			<input type="password" name="confirm_password" id="confirm_password" placeholder="Re-type Password">
 			<br>
-			<input type="submit" name="send" value="Sign-up">
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<br>
+			<input type="submit" name="submit" value="Sign-up">
 		</form>
 	</section>
 
