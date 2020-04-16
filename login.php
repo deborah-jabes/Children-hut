@@ -6,17 +6,27 @@
 	<body>
 		<?php
 		include 'db_connection.php';
-			$exist = true;
-			if ($exist == true) { //check database
-				echo "Login Successful";
-				successfulLogin();
+			$result = db->prepare('SELECT * FROM user WHERE Email_address = ?');
+ 			$result->execute(array($_POST["Email_address"]));
+			if ($result->rowCount() > 0) { //check database
+				$data = $result->fetch();
+				if ($_POST["Password"]==$data["Password"]) {
+					successfulLogin();
+				}else{
+					echo "Wrong password";
+				}
 			}else{
-				echo "Wrong password";
+				echo "No account with this Email address";
 			}
+
+			$result->closeCursor();
 
 			function successfulLogin(){ //start session
 				session_start();
-
+				$_SESSION["Email_address"] = $data["Email_address"];
+ 				$_SESSION["Name"] = $data["FName"];
+ 				$_SESSION["Surname"] = $data["Surname"];
+ 				$_SESSION["Profil_picture"] = $data["Profil_picture"];
 			}
 		?>
 	</body>

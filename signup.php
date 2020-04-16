@@ -5,12 +5,13 @@
  	<body>
  		<?php
  		include 'db_connection.php';
- 			$exist = false;
- 			if ($exist == false){ //check data base
- 				if ($_POST["password"] == $_POST["confirm_password"]) {
+ 			$result = $db->prepare('SELECT Email_address FROM user WHERE Email_address = ?');
+ 			$result->execute(array($_POST["Email_address"]));
+ 			if ($result->rowCount() == 0){ //check data base
+ 				if ($_POST["Password"] == $_POST["confirm_password"]) {
 
  					$targetDir = "images/profils/";
- 					$targetFile = $targetDir.microtime(true).".jpg";
+ 					$targetFile = $targetDir.microtime(true).".png";
  					$fullFile = explode(".", $_FILES["fileToUpload"]["name"]);
  					$imageFileType = strtolower(end($fullFile));
  					$uploadOK = 1;
@@ -28,7 +29,7 @@
  						echo "File already exists <br>";
  						$uploadOK = 0;
  					}
- 					if ($_FILES["fileToUpload"]["size"]>2000000) {
+ 					if ($_FILES["fileToUpload"]["size"]>5000000) {
  						echo "File too large";
  						$uploadOK = 0;
  					}
@@ -39,15 +40,13 @@
  					if($uploadOK == 1){
  						if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)){
  							echo "All good <br>";
+ 							createAccount();
  						}else{
  							echo "File not uploaded <br>";
  						}
  					}else{
  						echo "Your file wasn't uploaded";
  					}
-
- 					createSession();
- 					echo "Account created <br>";
  				}else{
  					echo "Passwords must be the same <br>";
  				}
@@ -55,14 +54,25 @@
  				echo "An account already exists with this Email Address <br>";
  			}
 
- 			function createSession(){
+ 			$result->closeCursor();
+
+ 			function createAccount(){
  				global $targetFile;
- 				
+ 				$result = $db->prepare('INSERT INTO user(Name, Surname, Password, Email_address, Profil_picture) VALUES (:Name,:Surname,:Password,:Email_address,:Profil_picture)');
+ 				$result->execute(array(
+ 					'Name'=>$_POST["Name"],
+ 					'Surname'=>$_POST["Surname"],
+ 					'Password'=>$_POST["Password"],
+ 					'Email_address'=>$_POST["login"],
+ 					'Profil_picture'=>$targetFile
+ 				));
  				session_start();
- 				$_SESSION["EmailAddress"] = $_POST["login"];
- 				$_SESSION["FName"] = $_POST["FName"];
+ 				$_SESSION["EmailAddress"] = $_POST["Email_address"];
+ 				$_SESSION["Name"] = $_POST["Name"];
  				$_SESSION["Surname"] = $_POST["Surname"];
- 				$_SESSION["ProfilPhoto"] = $targetFile;
+ 				$_SESSION["Profil_picture"] = $targetFile;
+
+ 				echo "Account created <br>";
  			}
  		?>
  	</body>

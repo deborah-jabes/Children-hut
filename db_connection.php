@@ -11,7 +11,7 @@
 		die('Error : '.$e->getMessage());
 	}
 	//read from bdd
-	/*$result = $db->prepare('SELECT * FROM users WHERE id = ? OR first_name = ?');
+	/*$result = $db->prepare('SELECT * FROM user WHERE id = ? OR first_name = ?');
 	$result->execute(array(1,'Firmin'));
 	//$result = $db->query('SELECT * FROM users WHERE id = 1 OR first_name = \'Firmin\''); do not prevent sql injection
 	while ($data = $result->fetch()) {
@@ -21,21 +21,31 @@
 	$result->closeCursor();*/
 
 	//write to bdd
-	/*$first_name = 'Michel';
-	$last_name = 'Dupond';
-	$email = 'michel.dupond@gmail.com';
-	$password = '123456789';
-	$profil_photo = 'images/profils/DefaultAccount.png';
+	/*$Name = 'Michel';
+	$Surname = 'Dupond';
+	$Email_address = 'michel.dupond@gmail.com';
+	$Password = '123456789';
+	$Profil_picture = 'images/profils/DefaultAccount.png';
 
-	$result = $db->prepare('INSERT INTO users(first_name, last_name, email, password, profil_photo) VALUES (:first_name,:last_name,:email,:password,:profil_photo)');
+	$result = $db->prepare('INSERT INTO user(Name, Surname, Password, Email_address, Profil_picture) VALUES (:Name,:Surname,:Password,:Email_address,:Profil_picture)');
 	$result->execute(array(
-		'first_name'=>$first_name,
-		'last_name'=>$last_name,
-		'email'=>$email,
-		'password'=>$password,
-		'profil_photo'=>$profil_photo
+	 	'Name'=>$_POST["FName"],
+	 	'Surname'=>$_POST["Surname"],
+	 	'Password'=>$_POST["password"],
+	 	'Email_address'=>$_POST["login"],
+	 	'Profil_picture'=>$targetFile
 	));*/
 
 	//ne pas oublier $result->closeCursor(); à la fin d'une recherche.
+
+	/* creation bdd
+	create table User(
+	    User_id int primary key AUTO_INCREMENT,
+	    Name varchar(20),
+	    Surname Varchar(20),
+	    Password varchar(8),
+	    Email_address varchar(50),
+	    Profile_picture varchar(100))engine=INNODB;
+	    */
 
 ?>
