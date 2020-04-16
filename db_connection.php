@@ -10,10 +10,13 @@
 	} catch (Exception $e) {
 		die('Error : '.$e->getMessage());
 	}
-
-	$result = $db->query('SELECT * FROM users');
+	//read from bdd
+	/*$result = $db->query('SELECT * FROM users');
 	while ($data = $result->fetch()) {
 		echo "users name : ".$data["first_name"].' '.$data["last_name"].'<br>';
 		echo "Email : ".$data["email"];
 	}
+	$result->closeCursor();*/
+
+	//write to bdd
 ?>
