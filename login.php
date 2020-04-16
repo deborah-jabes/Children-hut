@@ -5,6 +5,7 @@
 	</head>
 	<body>
 		<?php
+		include 'db_connection.php';
 			$exist = true;
 			if ($exist == true) { //check database
 				echo "Login Successful";

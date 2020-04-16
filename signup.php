@@ -4,6 +4,7 @@
  	</head>
  	<body>
  		<?php
+ 		include 'db_connection.php';
  			$exist = false;
  			if ($exist == false){ //check data base
  				if ($_POST["password"] == $_POST["confirm_password"]) {
@@ -56,7 +57,7 @@
 
  			function createSession(){
  				global $targetFile;
- 				echo "Sans Database c'est compliqué mais t'inquiète <br>";
+ 				
  				session_start();
  				$_SESSION["EmailAddress"] = $_POST["login"];
  				$_SESSION["FName"] = $_POST["FName"];
