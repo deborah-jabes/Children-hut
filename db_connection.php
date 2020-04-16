@@ -1,14 +1,19 @@
 <?php
-//https://www.cloudways.com/blog/connect-mysql-with-php/
+//https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/914293-lisez-des-donnees
 	$servername = "localhost";
 	$username = "root";
 	$password = "123456789";
-	$db = "childrenshut";
+	$dbname = "childrenshut";
 
-	$conn = new mysqli_connect($servername, $username, $password, $db);
-
-	if(!$conn){
-		die("Connection failed".mysqli_connect_error());
+	try {
+		$db = new PDO('mysql:host='.$servername.';dbname='.$dbname.';charset=utf8',$username,$password);
+	} catch (Exception $e) {
+		die('Error : '.$e->getMessage());
 	}
-	echo "Connection Successfull"
+
+	$result = $db->query('SELECT * FROM users');
+	while ($data = $result->fetch()) {
+		echo "users name : ".$data["first_name"].' '.$data["last_name"].'<br>';
+		echo "Email : ".$data["email"];
+	}
 ?>
