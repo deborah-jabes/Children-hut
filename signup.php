@@ -8,6 +8,7 @@
  			$result = $db->prepare('SELECT Email_address FROM user WHERE Email_address = ?');
  			$result->execute(array($_POST["Email_address"]));
  			if ($result->rowCount() == 0){ //check data base
+ 				$result->closeCursor();
  				if ($_POST["Password"] == $_POST["confirm_password"]) {
 
  					$targetDir = "images/profils/";
@@ -58,19 +59,20 @@
 
  			function createAccount(){
  				global $targetFile;
- 				$result = $db->prepare('INSERT INTO user(Name, Surname, Password, Email_address, Profil_picture) VALUES (:Name,:Surname,:Password,:Email_address,:Profil_picture)');
+ 				global $db;
+ 				$result = $db->prepare('INSERT INTO user(Name, Surname, Password, Email_address, Profile_picture) VALUES (:Name,:Surname,:Password,:Email_address,:Profile_picture)');
  				$result->execute(array(
  					'Name'=>$_POST["Name"],
  					'Surname'=>$_POST["Surname"],
  					'Password'=>$_POST["Password"],
- 					'Email_address'=>$_POST["login"],
- 					'Profil_picture'=>$targetFile
+ 					'Email_address'=>$_POST["Email_address"],
+ 					'Profile_picture'=>$targetFile
  				));
  				session_start();
  				$_SESSION["EmailAddress"] = $_POST["Email_address"];
  				$_SESSION["Name"] = $_POST["Name"];
  				$_SESSION["Surname"] = $_POST["Surname"];
- 				$_SESSION["Profil_picture"] = $targetFile;
+ 				$_SESSION["Profile_picture"] = $targetFile;
 
  				echo "Account created <br>";
  			}

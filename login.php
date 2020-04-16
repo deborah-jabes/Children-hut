@@ -6,7 +6,7 @@
 	<body>
 		<?php
 		include 'db_connection.php';
-			$result = db->prepare('SELECT * FROM user WHERE Email_address = ?');
+			$result = $db->prepare('SELECT * FROM user WHERE Email_address = ?');
  			$result->execute(array($_POST["Email_address"]));
 			if ($result->rowCount() > 0) { //check database
 				$data = $result->fetch();
@@ -22,11 +22,13 @@
 			$result->closeCursor();
 
 			function successfulLogin(){ //start session
+				global $data;
 				session_start();
 				$_SESSION["Email_address"] = $data["Email_address"];
- 				$_SESSION["Name"] = $data["FName"];
+ 				$_SESSION["Name"] = $data["Name"];
  				$_SESSION["Surname"] = $data["Surname"];
- 				$_SESSION["Profil_picture"] = $data["Profil_picture"];
+ 				$_SESSION["Profile_picture"] = $data["Profile_picture"];
+ 				echo "Login successful";
 			}
 		?>
 	</body>
