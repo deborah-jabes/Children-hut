@@ -100,33 +100,6 @@ h3 {
 	text-transform: uppercase;
 }
 
-#header nav > ul > li > a.menuToggle {
-	outline: 0;
-	position: relative;
-}
-
-#header nav > ul > li > a.menuToggle:after {
-	background-image: url("images/bars.svg");
-	background-position: right center;
-	background-repeat: no-repeat;
-	content: '';
-	display: inline-block;
-	height: 3.75em;
-	vertical-align: top;
-	width: 2em;
-}
-
-@media screen and (max-width: 600px) {
-
-	#header nav > ul > li > a.menuToggle {
-		padding: 0 1.5em;
-	}
-
-	#header nav > ul > li > a.menuToggle span {
-		display: none;
-	}
-}
-
 @media screen and (max-width: 600px) {
 
 	#header nav > ul > li > a {
@@ -141,22 +114,6 @@ h3 {
 	}
 }						
 
-@media screen and (min-width: 600px) {
-
-	#header nav > ul > .menu {
-		visibility: hidden;
-		display: none;
-	}
-
-}
-
-@media screen and (max-width: 450px) {
-
-	#header h1 .transparent {
-		display: none;
-	}
-}
-
 #header nav > ul > li:first-child {
 	margin-left: 0;
 }
@@ -168,6 +125,57 @@ h3 {
 	top: 10px;
 }
 
+/* Menu -------------------------------------------------------------*/
+.menu{
+	height: 100%;
+	z-index: 10002;
+}
+
+#menu{
+	background-color: rgba(9,9,9,1.00);
+	position: relative;
+	right: 0px;
+	top: 0px;
+	padding: 0px, 0px;
+	margin: 0px, 0px;
+	height: 100%;
+	display: none;
+}
+
+#menu ul{
+	list-style: none;
+}
+
+#menu ul li a{
+	text-decoration: none;
+	border: 0;
+	color: #fff;
+	display: block;
+	font-size: 0.8em;
+	letter-spacing: 0.225em;
+	padding: 0 1.5em;
+	text-transform: uppercase;
+}
+
+.menuToggle{
+	position: relative;
+	top: 10px;
+	z-index: 10001;
+}
+
+/* Nav bar et menu responsive ------------------------------------------*/
+@media screen and (min-width: 751px) {
+	#header nav > ul > .menu {
+		visibility: hidden;
+		display: none;
+	}
+}
+@media screen and (max-width: 750px) {
+	#header #navbar{
+		visibility: hidden;
+		display: none;
+	}
+}
 /* Banner -------------------------------------------------------------*/
 body, section {
 	margin: 0;
@@ -238,15 +246,4 @@ section{
 
 #footer .contact li a:hover {
 	color: #fff;
-}
-
-@media screen and (max-width: 480px) {
-
-	#footer .contact li {
-		border: 0;
-		display: block;
-		line-height: 1.65em;
-		margin: 0;
-		padding: 0.5em 0;
-	}
 }
