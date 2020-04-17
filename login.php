@@ -28,7 +28,7 @@
  				$_SESSION["Name"] = $data["Name"];
  				$_SESSION["Surname"] = $data["Surname"];
  				$_SESSION["Profile_picture"] = $data["Profile_picture"];
- 				echo "Login successful";
+ 				header("Location: myaccount.php");
 			}
 		?>
 	</body>
