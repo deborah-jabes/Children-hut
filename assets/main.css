@@ -32,10 +32,7 @@ h3 {
 	position: fixed;
 	width: 100%;
 	z-index: 10000;	
-	background: rgba(10,10,10,0.2);
-}
-#header a:hover {
-	text-shadow: 4px 4px 1px rgb(150,150,150);
+	background: rgba(10,10,10,0.4);
 }
 
 #header h1 {
@@ -66,8 +63,12 @@ h3 {
 	color: inherit;
 }
 
+#header a {
+	 text-shadow: 1px 1px 5px black;
+}
+
 #header a:hover {
-	 text-shadow: 4px 4px 1px rgb(150,150,150);
+	 
 }
 
 #header nav {
