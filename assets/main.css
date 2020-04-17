@@ -1,6 +1,6 @@
 /* Basic -------------------------------------------------------------*/
 body, input, select, textarea {
-	color: #fff;
+	color: black;
 	font-family: "Open Sans", Helvetica, sans-serif;
 	font-size: 15pt;
 	font-weight: normal;  /* pas en gras */
@@ -53,6 +53,7 @@ h3 {
 	font-size: 100%;
 	font: inherit;
 	text-decoration: none;
+	color: #fff;
 }
 		
 #header h1 a{
@@ -199,31 +200,82 @@ body, section {
 }
 
 /* Sections -----------------------------------------------------------*/
-
 section{
 	width: 100%;
 	padding: 0 auto 0 auto;
+	display: flex;
+	flex: auto;
+	border: 2px solid blue;
+	
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid black;
 }
 
 .research{
-	display: flex;
-	flex: auto;
 	position: relative;
-	align-content: center;
-	align-items: center;
-	left: 43%;
 	bottom: 35px;
 }
+
 input[type=text] {
 	background-color: white;
-	background-image: url('searchicon.png');
-	background-position: 10px 10px;
-	background-repeat: no-repeat;
-	padding-left: 40px;
-	background-color: #fff;
-	border: 2px, 2px, black;
+	padding-left: 10px;
+	margin-right: 10px;
+	text-decoration-color: black;
 }
 
+.research button{
+	background-color: white;
+	border: 2px, 2px, black;
+	border-radius: 2px;
+	height: 40px;
+}
+
+.ad{
+	background-color: #B5CACE;
+}
+
+.team{
+	background-color: #E5E2D1;
+}
+
+.partners{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2em;
+}
+.partners h2{
+	background-color: #BFBFBF;
+	color: #fff;
+}
+
+.profils > div{
+	width: 60%;
+	padding: 1em 1em 1em 1em;
+	margin-top: 1em;
+}
+
+.profils h3{
+	text-transform: uppercase;
+}
+
+.firmin{
+	background-color: #D6EBD4;
+	margin-right: auto;
+}
+
+.deborah{
+	background-color: #D4E5EB;
+	margin-left: auto;
+}
+
+.nicolas{
+	background-color: #EBD4D4;
+	margin-right: auto;
+}
 
 
 /* Footer -------------------------------------------------------------*/
@@ -243,6 +295,7 @@ input[type=text] {
 
 #footer h3 {
 	padding-bottom: 0.5em;
+	color: #fff;
 }
 
 #footer ul {
