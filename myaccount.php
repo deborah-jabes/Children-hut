@@ -7,6 +7,7 @@
 
 	<section>
 		<?php
+		include 'db_connection.php';
 			session_start();
 			if (isset($_SESSION["Email_address"])) {
 				$Email_address = $_SESSION["Email_address"];
