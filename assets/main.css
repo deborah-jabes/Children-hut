@@ -1,7 +1,7 @@
 /* Basic -------------------------------------------------------------*/
 body, input, select, textarea {
 	color: black;
-	font-family: "Open Sans", Helvetica, sans-serif;
+	font-family: Product Sans, "Open Sans", Helvetica, sans-serif;
 	font-size: 15pt;
 	font-weight: normal;  /* pas en gras */
 	letter-spacing: 0.075em;
@@ -206,19 +206,33 @@ section{
 	padding: 0 auto 0 auto;
 	display: flex;
 	flex: auto;
-	border: 2px solid blue;
 	
 }
 
 .center{
 	margin-left: auto;
 	margin-right: auto;
-	border: 2px solid black;
 }
 
+.flexSection {
+	display: flex;
+}
+
+@media screen and (max-width: 600px) {
+	.flexSection {
+		flex-direction: column;
+	}
+}
+	
 .research{
 	position: relative;
 	bottom: 35px;
+	/*position: -webkit-sticky;
+	position: sticky;
+	top: 8px;
+	z-index: 100001;
+	padding-bottom: 20px;
+	transform: translateX(-100px);*/
 }
 
 input[type=text] {
@@ -235,12 +249,91 @@ input[type=text] {
 	height: 40px;
 }
 
+.ads div{
+	position: static;
+}
+
+.ads .flexSection img{
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 90%;
+}
+
+@media screen and (max-width: 600px) {
+	.ads .flexSection .hidden{
+		display: none;
+	}
+}
+
+.announcements {
+	position: static;
+	left: 200px;
+	overflow: visible;
+	width: 407px;
+	white-space: nowrap;
+	text-align: center;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,108,108,1);
+	letter-spacing: -0.3px;
+}
+
 .ad{
 	background-color: #B5CACE;
 }
 
+.ad h3{
+	position: absolute;
+
+	overflow: visible;
+	width: 535px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Product Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 4em;
+	color: rgba(0,0,0,0.6);
+	letter-spacing: 0.095px;
+}
+
+.ad img{
+	position: relative;
+	padding-left: auto;
+	padding-right: auto;
+	width: 40%;
+	margin-top: 2em;
+}
+
+.seller h2{
+	overflow: visible;
+	width: 353px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Product Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(163,217,255,1);
+	letter-spacing: -0.3px;
+}
+
 .team{
 	background-color: #E5E2D1;
+}
+
+.team h2{
+	overflow: visible;
+	width: 155px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Product Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(0,0,0,1);
+	text-transform: uppercase;
 }
 
 .partners{
