@@ -21,11 +21,28 @@
 				echo $Email_address."<br></p>";
 				echo "</div>";
 
-				echo "<div class=\"favorites\">";
+				//manque requete db
+
+				/*echo "<div class=\"favorites\">";
 				echo "Fav huts<br>";
+				$result = $db->query('');
+				while ($data = $result->fetch()){
+					echo "<div class=\"hut\">";
+					//huts info
+					echo "</div>";
+				}
 				echo "</div>";
+
+				echo "<div class=\"personnalHuts\">";
+				echo "My Huts<br>";
+				$result = $db->query('');
+				while ($data = $result->fetch()){
+					echo "<div class=\"hut\">";
+					//huts info
+					echo "</div>";
+				}
+				echo "</div>";*/
 			}else{
-				//header("Location: login.html");
 				echo "login first";
 				header("Location: login.html");
 			}
