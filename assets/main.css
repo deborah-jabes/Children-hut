@@ -266,8 +266,6 @@ input[type=text] {
 }
 
 .announcements {
-	position: static;
-	left: 200px;
 	overflow: visible;
 	width: 407px;
 	white-space: nowrap;
@@ -277,6 +275,13 @@ input[type=text] {
 	font-size: 20px;
 	color: rgba(238,108,108,1);
 	letter-spacing: -0.3px;
+}
+
+.announcements td div{
+	background-color: blue;
+	width: 300px;
+	height: 450px;
+	margin: 0 0.5em 1em 0.5em;
 }
 
 .ad{
