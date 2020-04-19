@@ -309,17 +309,41 @@ input[type=search] {
 	letter-spacing: -0.3px;
 }
 
+.announcements header{
+	display: flex;
+}
+
+.announcements td div h4{
+	color: #fff;
+	margin: 0 1em 1em 1em;
+	text-transform: uppercase;
+}
+
 .announcements td div{
-	background-color: #fff;
+	background-color: #EE6C6C;
 	box-shadow: 1px 1px 5px black;
 	width: 300px;
 	height: 400px;
 	margin: 0 0.5em 1em 0.5em;
+	border: 3px solid #EE6C6C;
 }
 
 .announcements td div img{
 	width: 100%;
-	margin-right: 2px;
+	margin-left: 0px;
+}
+
+.announcements .description{
+	background-color: #fff;
+	height: 50px;;
+	position: relative;
+	bottom: 40px;
+}
+
+.heart{
+	background: none;
+	border: none;
+	
 }
 
 .ad{
@@ -333,7 +357,6 @@ input[type=search] {
 	width: 535px;
 	white-space: nowrap;
 	text-align: left;
-	font-family: Product Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 4em;
@@ -354,7 +377,6 @@ input[type=search] {
 	width: 353px;
 	white-space: nowrap;
 	text-align: center;
-	font-family: Product Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 50px;
@@ -371,7 +393,6 @@ input[type=search] {
 	width: 155px;
 	white-space: nowrap;
 	text-align: center;
-	font-family: Product Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 35px;
