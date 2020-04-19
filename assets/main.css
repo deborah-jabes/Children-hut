@@ -291,10 +291,6 @@ input[type=search] {
 	padding-right: auto;
 }
 
-.ads div{
-	position: static;
-}
-
 .ads .flexSection img{
 	padding-left: 1em;
 	padding-right: 1em;
@@ -395,24 +391,45 @@ input[type=search] {
 	background-color: #B5CACE;
 }
 
-.ad h3{
-	position: absolute;
+.ad div{
+	width: 100%;
+}
 
-	overflow: visible;
-	width: 535px;
-	white-space: nowrap;
+.ad h3{
+	position: relative;
+	left: 70%;
+	bottom: 40px;
 	text-align: left;
-	font-style: normal;
 	font-weight: normal;
-	font-size: 4em;
+	font-size: 300%;
 	color: rgba(0,0,0,0.6);
 	letter-spacing: 0.095px;
 }
 
+@media screen and (max-width: 1600px) {
+	.ad h3{
+	   font-size: 200%;
+		margin-top: 9%;
+	}
+}
+
+@media screen and (max-width: 1084px) {
+	.ad h3{
+		font-size: 150%;
+		margin-top: 10%;
+	}
+}
+
+@media screen and (max-width: 754px) {
+	.ad h3{
+		font-size: 100%;
+		margin-top: 20%;
+	}
+}
 .ad img{
 	position: relative;
-	padding-left: auto;
-	padding-right: auto;
+	bottom: -10px;
+	left: -20px;
 	width: 40%;
 	margin-top: 2em;
 }
