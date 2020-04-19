@@ -205,7 +205,6 @@ section{
 	width: 100%;
 	padding: 0 auto 0 auto;
 	display: flex;
-	flex: auto;
 	
 }
 
@@ -298,16 +297,15 @@ input[type=search] {
 }
 
 .announcements {
-	overflow: visible;
-	width: 407px;
+	overflow: auto;
 	white-space: nowrap;
 	text-align: center;
-	font-style: normal;
-	font-weight: normal;
 	font-size: 20px;
 	color: rgba(238,108,108,1);
 	letter-spacing: -0.3px;
+	width: 100%;
 }
+
 
 .announcements header{
 	display: flex;
@@ -315,11 +313,13 @@ input[type=search] {
 
 .announcements td div h4{
 	color: #fff;
-	margin: 0 1em 1em 1em;
+	margin: 0 1em 1em 0.5em;
 	text-transform: uppercase;
+	position: relative;
+	bottom: 5px;
 }
 
-.announcements td div{
+.announcements td > div{
 	background-color: #EE6C6C;
 	box-shadow: 1px 1px 5px black;
 	width: 300px;
@@ -335,14 +335,48 @@ input[type=search] {
 
 .announcements .description{
 	background-color: #fff;
-	height: 50px;;
+	height: 100px;;
 	position: relative;
 	bottom: 40px;
+	margin-bottom: 0px;
+	text-align: justify;
+	padding: 5px 10px 5px 10px;
+	color: rgb(43,43,43);
+	font-size: 17px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	line-height: 1em;
+	white-space: pre-wrap;
+}
+
+.announcements footer{
+	background-color: #fff;
+	height: 43px;;
+	position: relative;
+	bottom: 36px;
+}
+
+.announcements .price{
+	padding-left: 10px;
+	font-size: 28px;
+	line-height: 0;
+}
+
+.announcements footer:last-child{
+	justify-content: flex-end;
+}
+
+.announcements footer button{
+	margin: 10px;
 }
 
 .heart{
 	background: none;
 	border: none;
+	position: relative;
+	bottom: 10px;
+	margin-right: 0px;
+	align-content: flex-end;
 	
 }
 
