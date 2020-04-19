@@ -235,8 +235,8 @@ section{
 	display: flex;
 }
 
-@media screen and (max-width: 600px) {
-	.flexSection {
+@media screen and (max-width: 900px){
+	.column{
 		flex-direction: column;
 	}
 }
@@ -433,6 +433,9 @@ input[type=search] {
 		margin-top: 20%;
 	}
 }
+
+
+
 .ad img{
 	position: relative;
 	bottom: -10px;
@@ -442,10 +445,8 @@ input[type=search] {
 }
 
 .seller h2{
-	overflow: visible;
-	width: 353px;
-	white-space: nowrap;
-	text-align: center;
+	margin: auto;
+	text-align: center; 
 	font-style: normal;
 	font-weight: normal;
 	font-size: 50px;
@@ -453,18 +454,71 @@ input[type=search] {
 	letter-spacing: -0.3px;
 }
 
+@media screen and (max-width: 800px){
+	.seller h2{
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.seller h2{
+		font-size: 30px;
+	}
+}
+
 .seller .center{
 	border: 2px solid #ABDBFF;
 	margin-top: 20px;
 	width: 60%;
+	margin-bottom: 20px;
+	min-width: 300px;
 }
 
-.seller h2{
-	margin: auto;
+.seller .center:last-child{
+	margin-top: 30px;
 }
+
+.seller p{
+	line-height: 2em;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(0,0,0,1);
+}
+
+.seller p span{
+	font-size: 40px;
+	margin-bottom: 5px;
+}
+
+.seller .center .flexSection > div{
+	margin: 0 20px 20px 20px;
+}
+
+.seller img{
+	width: 100%;
+	margin: auto;
+	
+}
+
+.seller p{
+	font-size: 15px;
+	line-height: 1.2em;
+}
+
+.seller .vertical{
+	position: relative;
+     top: 50%;
+     transform: perspective(1px) translateY(20%);
+}
+
 
 .team{
 	background-color: #E5E2D1;
+}
+
+.team .center div{
+	width: 100%;
 }
 
 .team h2{
