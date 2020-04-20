@@ -2,7 +2,7 @@
 		<h1><a  href="index.html">CHILDREN'S HUT</a></h1>
 		<nav id="nav">	
 			<ul id="navbar">
-							<li><a href="index.html" class="fa-"> Home</a></li>
+							<li><a href="index.php" class="fa-"> Home</a></li>
 							<li><a href=".html" class="fa-"> Buy</a></li>
 							<li><a href=".html" class="fa-"> Rent</a></li>
 							<li><a href=".html"class="fa-"> Sale</a></li>

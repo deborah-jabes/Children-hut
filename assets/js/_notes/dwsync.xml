@@ -5,4 +5,9 @@
 <file name="browser.min.js" server="192.168.1.11:2100/childrenshut/" local="132318484838902948" remote="132318412800000000" Dst="2" />
 <file name="jquery.scrollex.min.js" server="192.168.1.11:2100/childrenshut/" local="132318484840927546" remote="132318412800000000" Dst="2" />
 <file name="util.js" server="192.168.1.11:2100/childrenshut/" local="132318484844567798" remote="132318412800000000" Dst="2" />
+<file name="browser.min.js" server="ftp-locagarden.alwaysdata.net" local="132318484838902948" remote="132318517200000000" Dst="2" />
+<file name="main.js" server="ftp-locagarden.alwaysdata.net" local="132318484837896353" remote="132318517200000000" Dst="2" />
+<file name="util.js" server="ftp-locagarden.alwaysdata.net" local="132318484844567798" remote="132318517200000000" Dst="2" />
+<file name="jquery.scrollex.min.js" server="ftp-locagarden.alwaysdata.net" local="132318484840927546" remote="132318517200000000" Dst="2" />
+<file name="jquery.scrolly.min.js" server="ftp-locagarden.alwaysdata.net" local="132318484842663646" remote="132318517200000000" Dst="2" />
 </dwsync>

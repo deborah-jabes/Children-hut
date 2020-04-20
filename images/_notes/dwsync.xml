@@ -11,4 +11,27 @@
 <file name="heart.svg" server="192.168.1.11:2100/childrenshut/" local="132317726098626407" remote="132317851800000000" Dst="2" />
 <file name="hut2.png" server="192.168.1.11:2100/childrenshut/" local="132317029933031504" remote="132317851800000000" Dst="2" />
 <file name="seller.png" server="192.168.1.11:2100/childrenshut/" local="132317790373176919" remote="132317851800000000" Dst="2" />
+<file name="account.png" server="ftp-locagarden.alwaysdata.net" local="132314524873474887" remote="132318517200000000" Dst="2" />
+<file name="ad2.png" server="ftp-locagarden.alwaysdata.net" local="132317006286346857" remote="132318517200000000" Dst="2" />
+<file name="ad1.png" server="ftp-locagarden.alwaysdata.net" local="132317006286366800" remote="132318517200000000" Dst="2" />
+<file name="ad3.png" server="ftp-locagarden.alwaysdata.net" local="132317006286107500" remote="132318517200000000" Dst="2" />
+<file name="favicon.png" server="ftp-locagarden.alwaysdata.net" local="132316343592987149" remote="132318517200000000" Dst="2" />
+<file name="heart.svg" server="ftp-locagarden.alwaysdata.net" local="132317726098626407" remote="132318517200000000" Dst="2" />
+<file name="hut.png" server="ftp-locagarden.alwaysdata.net" local="132317029742124554" remote="132318517200000000" Dst="2" />
+<file name="hut2.png" server="ftp-locagarden.alwaysdata.net" local="132317029933031504" remote="132318517200000000" Dst="2" />
+<file name="menu.svg" server="ftp-locagarden.alwaysdata.net" local="132315486306130423" remote="132318517200000000" Dst="2" />
+<file name="head.jpg" server="ftp-locagarden.alwaysdata.net" local="132317879062202911" remote="132318517200000000" Dst="2" />
+<file name="picAnnouncement.png" server="ftp-locagarden.alwaysdata.net" local="132317666384423589" remote="132318518400000000" Dst="2" />
+<file name="seller.png" server="ftp-locagarden.alwaysdata.net" local="132317790373176919" remote="132318518400000000" Dst="2" />
+<file name="favicon.png" server="ftp-locagarden.alwaysdata.net/www/" local="132316343592987149" remote="132318582000000000" Dst="2" />
+<file name="account.png" server="ftp-locagarden.alwaysdata.net/www/" local="132314524873474887" remote="132318582000000000" Dst="2" />
+<file name="menu.svg" server="ftp-locagarden.alwaysdata.net/www/" local="132315486306130423" remote="132318582000000000" Dst="2" />
+<file name="ad1.png" server="ftp-locagarden.alwaysdata.net/www/" local="132317006286366800" remote="132318582000000000" Dst="2" />
+<file name="head.jpg" server="ftp-locagarden.alwaysdata.net/www/" local="132317879062202911" remote="132318582000000000" Dst="2" />
+<file name="ad2.png" server="ftp-locagarden.alwaysdata.net/www/" local="132317006286346857" remote="132318582000000000" Dst="2" />
+<file name="picAnnouncement.png" server="ftp-locagarden.alwaysdata.net/www/" local="132317666384423589" remote="132318582000000000" Dst="2" />
+<file name="heart.svg" server="ftp-locagarden.alwaysdata.net/www/" local="132317726098626407" remote="132318582000000000" Dst="2" />
+<file name="ad3.png" server="ftp-locagarden.alwaysdata.net/www/" local="132317006286107500" remote="132318582000000000" Dst="2" />
+<file name="hut2.png" server="ftp-locagarden.alwaysdata.net/www/" local="132317029933031504" remote="132318582000000000" Dst="2" />
+<file name="seller.png" server="ftp-locagarden.alwaysdata.net/www/" local="132317790373176919" remote="132318582000000000" Dst="2" />
 </dwsync>

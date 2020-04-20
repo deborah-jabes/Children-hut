@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="header.php" server="192.168.1.11:2100/childrenshut/" local="132317904444096768" remote="132317835600000000" Dst="2" />
-<file name="index.html" server="192.168.1.11:2100/childrenshut/" local="132318514889779932" remote="132318442800000000" Dst="2" />
 <file name="footer.php" server="192.168.1.11:2100/childrenshut/" local="132318483108947486" remote="132318411000000000" Dst="2" />
+<file name="footer.php" server="ftp-locagarden.alwaysdata.net" local="132318483108947486" remote="132318517200000000" Dst="2" />
+<file name="header.php" server="ftp-locagarden.alwaysdata.net" local="132317904444096768" remote="132318517200000000" Dst="2" />
+<file name="test.html" server="ftp-locagarden.alwaysdata.net" local="132317971982082250" remote="132318517200000000" Dst="2" />
+<file name="index.php" server="ftp-locagarden.alwaysdata.net/www/" local="132318656322105543" remote="132318584400000000" Dst="2" />
+<file name="header.php" server="ftp-locagarden.alwaysdata.net/www/" local="132317904444096768" remote="132318582000000000" Dst="2" />
+<file name="footer.php" server="ftp-locagarden.alwaysdata.net/www/" local="132318483108947486" remote="132318582000000000" Dst="2" />
 </dwsync>
