@@ -36,10 +36,10 @@ echo '
 </div>
 
 <div class="withBackgroundImg">
-	<div class="valuesMessage">
+	<div class="valuesMessage" id="valuesMessage">
 
 		<div class="valuesToEnter">
-			<form action="">';//that is to choose later on 
+			<form id="formulaireMessage" action="">';//that is to choose later on 
 			
 			echo 
 			'
@@ -55,7 +55,7 @@ echo '
 		</div>
 
 		<textarea id="message" placeholder="Your message here" rows="10" cols="70" maxlength="1000"></textarea></br></br>
-		<input type="submit" value="submit" id="submit">
+		<input type="submit" value="submit" id="submit" onclick="replace()">
 		</form>
 	</div>
 </div>		

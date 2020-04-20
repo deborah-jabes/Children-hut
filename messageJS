@@ -1,0 +1,10 @@
+window.onload = function replace () {
+
+var parentTest = document.getElementById("valuesMessage");
+var childTest = document.getElementById("submit");
+var image = document.createElement ("img");
+image.src = "/images/check_Circle.png";
+image.alt = "check_Circle";
+parentTest.replaceChild(image, childTest);
+	
+}
