@@ -46,6 +46,5 @@
 	    Password varchar(8),
 	    Email_address varchar(50),
 	    Profile_picture varchar(100))engine=INNODB;
-	    */
-
+	*/
 ?>
