@@ -12,10 +12,13 @@ function replaceAndCreate () {
 
 	var newButton = document.createElement("button");
 	var spanButton = document.createElement("span");
+	var linkButton = document.createElement("a");
 	
 	newButton.id = "returnHome";
-	spanButton.innerHTML = "HOME";
+	linkButton.innerHTML = "HOME";
 	newButton.append(spanButton);
+	newButton.append(linkButton);	
+	linkButton.href ="http://locagarden.alwaysdata.net/index.php";
 	formulaireMessage.appendChild(newButton);
 }
 
