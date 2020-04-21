@@ -1,6 +1,7 @@
 
 .titre_gauche {
 	font-weight: bold;
+	color: #003300;
 	padding: 14px 16px;
 }
 
@@ -25,6 +26,8 @@
 .titrePage {
 	text-align: center;
 	padding: 14px 16px;
+	font-weight: bold;
+	color: white;
 }
 
 #menu li {
@@ -35,21 +38,19 @@
 #menu li a {
 	display: inherit;
 	text-align: right;
-	color: black;
 	padding: 10px 10px;
 	text-decoration: none;
+	color: white;
+	font-weight: bold;
 }
 
 .valuesMessage {
 	padding: 14px 16px;
+	margin: 0 auto;
+	
 }
 
-.withBackgroundImg {
-	background-image: url("/images/cabane.jpg");
-	background-size: 100%;
-}
-
-.valuesToEnter input, #Objects, #message, #submit {
+.valuesToEnter input, #Objects, #message, #submit, #returnHome {
 	border: 1px solid #ccc;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -63,5 +64,61 @@
 	-webkit-appearance: none;
 }
 
+#image_check {
+	width : 50px;
+	height : 50px;
+}
+
+#submit, #Objects, #returnHome {
+	cursor: pointer;
+
+}
+
+#submit:hover {
+	background-color: #696969;
+}
+
+#returnHome {
+	vertical-align: middle;
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #696969;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 10px;
+	width: 100px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+#returnHome span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#returnHome:hover span {
+	padding-left: 25px;
+}
+
+#returnHome span:before {
+	content: '\003c';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	left: -20px;
+	transition: 0.5s;
+
+}
+
+
+
+#returnHome:hover span:before {
+	opacity: 1;
+	left: 0;
+}
 
 
