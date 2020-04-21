@@ -109,7 +109,7 @@
 	position: absolute;
 	opacity: 0;
 	top: 0;
-	left: -20px;
+	left: -100px;
 	transition: 0.5s;
 
 }
@@ -120,5 +120,4 @@
 	opacity: 1;
 	left: 0;
 }
-
 

@@ -11,8 +11,11 @@ function replaceAndCreate () {
 	formulaireMessage.replaceChild (image, submit);
 
 	var newButton = document.createElement("button");
+	var spanButton = document.createElement("span");
+	
 	newButton.id = "returnHome";
-	newButton.innerHTML = "HOME";
+	spanButton.innerHTML = "HOME";
+	newButton.append(spanButton);
 	formulaireMessage.appendChild(newButton);
 }
 
