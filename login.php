@@ -1,35 +1,31 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Login</title>
-	</head>
-	<body>
-		<?php
-		include 'db_connection.php';
-			$result = $db->prepare('SELECT * FROM user WHERE Email_address = ?');
- 			$result->execute(array($_POST["Email_address"]));
-			if ($result->rowCount() > 0) { //check database
-				$data = $result->fetch();
-				if ($_POST["Password"]==$data["Password"]) {
-					successfulLogin();
-				}else{
-					echo "Wrong password";
-				}
-			}else{
-				echo "No account with this Email address";
-			}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="assets/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
 
-			$result->closeCursor();
+	<?php include("header.php"); ?>
 
-			function successfulLogin(){ //start session
-				global $data;
-				session_start();
-				$_SESSION["Email_address"] = $data["Email_address"];
- 				$_SESSION["Name"] = $data["Name"];
- 				$_SESSION["Surname"] = $data["Surname"];
- 				$_SESSION["Profile_picture"] = $data["Profile_picture"];
- 				header("Location: myaccount.php");
-			}
-		?>
-	</body>
+	<img class="headimage" src="images/head.jpg" alt="Head image">
+
+	<section class="account">
+		<div class="accountpicture">
+			<img src="images/profils/DefaultAccount.png" class="center">
+		</div>
+		<br>
+		<form method="post" action="loginC.php" class="center">
+			<input type="text" name="Email_address" id="Email_address" placeholder="Email Adress">
+			<br>
+			<input type="password" name="Password" id="Password" placeholder="Password">
+			<br>
+			<input type="submit" name="send" value="Login">
+		</form>
+	</section>
+
+	<?php include("footer.php"); ?>
+    
+</body>
 </html>

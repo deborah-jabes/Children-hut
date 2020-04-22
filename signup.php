@@ -1,81 +1,40 @@
-<html>
-	<head>
-  		<title>Test PHP</title>
- 	</head>
- 	<body>
- 		<?php
- 		include 'db_connection.php';
- 			$result = $db->prepare('SELECT Email_address FROM user WHERE Email_address = ?');
- 			$result->execute(array($_POST["Email_address"]));
- 			if ($result->rowCount() == 0){ //check data base
- 				$result->closeCursor();
- 				if ($_POST["Password"] == $_POST["confirm_password"]) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="assets/main.css" rel="stylesheet" type="text/css">
+    <title>Sign-Up</title>
+</head>
+<body>
 
- 					$targetDir = "images/profils/";
- 					$targetFile = $targetDir.microtime(true).".png";
- 					$fullFile = explode(".", $_FILES["fileToUpload"]["name"]);
- 					$imageFileType = strtolower(end($fullFile));
- 					$uploadOK = 1;
- 					if (isset($_POST["submit"])) {
- 						$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
- 						if ($check !== false) {
- 							echo "All good";
- 							$uploadOK = 1;
- 						}else{
- 							echo "File is not an image.";
- 							$uploadOK = 0;
- 						}
- 					}
- 					if (file_exists($targetFile)){
- 						echo "File already exists <br>";
- 						$uploadOK = 0;
- 					}
- 					if ($_FILES["fileToUpload"]["size"]>5000000) {
- 						echo "File too large";
- 						$uploadOK = 0;
- 					}
- 					if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
- 						echo "Only jpg, png and jpeg supported";
- 						$uploadOK = 0;
- 					}
- 					if($uploadOK == 1){
- 						if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)){
- 							echo "All good <br>";
- 							createAccount();
- 						}else{
- 							echo "File not uploaded <br>";
- 						}
- 					}else{
- 						echo "Your file wasn't uploaded";
- 					}
- 				}else{
- 					echo "Passwords must be the same <br>";
- 				}
- 			}else{
- 				echo "An account already exists with this Email Address <br>";
- 			}
+	<?php include("header.php"); ?>
 
- 			$result->closeCursor();
+	<img class="headimage" src="images/head.jpg" alt="Head image">
 
- 			function createAccount(){
- 				global $targetFile;
- 				global $db;
- 				$result = $db->prepare('INSERT INTO user(Name, Surname, Password, Email_address, Profile_picture) VALUES (:Name,:Surname,:Password,:Email_address,:Profile_picture)');
- 				$result->execute(array(
- 					'Name'=>$_POST["Name"],
- 					'Surname'=>$_POST["Surname"],
- 					'Password'=>$_POST["Password"],
- 					'Email_address'=>$_POST["Email_address"],
- 					'Profile_picture'=>$targetFile
- 				));
- 				session_start();
- 				$_SESSION["EmailAddress"] = $_POST["Email_address"];
- 				$_SESSION["Name"] = $_POST["Name"];
- 				$_SESSION["Surname"] = $_POST["Surname"];
- 				$_SESSION["Profile_picture"] = $targetFile;
+	<section class="account">
+		<div class="accountpicture">
+			<img src="images/profils/DefaultAccount.png" class="center">
+		</div>
+		<br>
+		<form method="post" action="signupC.php" enctype="multipart/form-data" class="center">
+			<input type="text" name="Email_address" id="Email_address" placeholder="Email Adress">
+			<br>
+			<input type="text" name="Name" id="Name" placeholder="First Name">
+			<br>
+			<input type="text" name="Surname" id="Surname" placeholder="Surname">
+			<br>
+			<input type="password" name="Password" id="Password" placeholder="Password">
+			<br>
+			<input type="password" name="confirm_password" id="confirm_password" placeholder="Re-type Password">
+			<br>
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<br>
+			<input type="submit" name="submit" value="Sign-up">
+			<br>
+		</form>
+	</section>
 
- 				echo "Account created <br>";
- 			}
- 		?>
- 	</body>
+	<?php include("footer.php"); ?>
+
+</body>
 </html>
