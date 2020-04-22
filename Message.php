@@ -19,7 +19,7 @@ echo '
 	<div class="valuesMessage" id="valuesMessage">
 
 			<div class="valuesToEnter">
-				<form id="formulaireMessage" action="" onsubmit="replaceAndCreate()">'//that is to choose later on 
+				<form id="formulaireMessage" onsubmit="return replaceAndCreate()">'//that is to choose later on 
 				.'<input type="text" id="name" name="name" required placeholder="Name"></br></br>
 				<input type="text" id="mailAdr" name="mail" required placeholder="e-mail address"></br></br>
 				<select id="Objects" onclick="disable()" required> 
