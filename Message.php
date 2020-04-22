@@ -19,10 +19,10 @@ echo '
 	<div class="valuesMessage" id="valuesMessage">
 
 			<div class="valuesToEnter">
-				<form id="formulaireMessage" action="">'//that is to choose later on 
-				.'<input type="text" id="name" name="name" placeholder="Name"></br></br>
-				<input type="text" id="mailAdr" name="mail" placeholder="e-mail address"></br></br>
-				<select id="Objects" onclick="disable()">
+				<form id="formulaireMessage" action="" onsubmit="replaceAndCreate()">'//that is to choose later on 
+				.'<input type="text" id="name" name="name" required placeholder="Name"></br></br>
+				<input type="text" id="mailAdr" name="mail" required placeholder="e-mail address"></br></br>
+				<select id="Objects" onclick="disable()" required> 
 					<option id="clickToSelect" >Click to select</option>
 					<option value="buy">Buy a hut </option>
 					<option value="rent">Rent a hut </option>
@@ -31,8 +31,8 @@ echo '
 				</select></br></br>
 			
 
-		<textarea id="message" placeholder="Your message here" rows="10" cols="70" maxlength="1000"></textarea></br></br>
-		<input type="submit" value="submit" id="submit" onclick="replaceAndCreate()"><br><br>
+		<textarea id="message" placeholder="Your message here" rows="10" cols="70" maxlength="1000" required></textarea></br></br>
+		<input type="submit" value="submit" id="submit"><br><br>
 		 </form></div>
 
 		 <script src="messageJS.js"></script>
