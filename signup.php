@@ -32,6 +32,7 @@
 			<input type="submit" name="submit" value="Sign-up">
 			<br>
 		</form>
+		<p>You already have an account ? <a href="login.php">Login now</a></p>
 	</section>
 
 	<?php include("footer.php"); ?>

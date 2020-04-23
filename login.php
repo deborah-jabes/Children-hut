@@ -23,6 +23,7 @@
 			<br>
 			<input type="submit" name="send" value="Login">
 		</form>
+		<p>You don't have an account ? <a href="signup.php">Sign-up now</a></p>
 	</section>
 
 	<?php include("footer.php"); ?>

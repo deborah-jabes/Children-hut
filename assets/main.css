@@ -605,6 +605,12 @@ input[type=search] {
 	padding-left: 15px;
 }
 
+.account p{
+	text-align: center;
+	font-size: 10pt;
+	margin: 0 0 0 0;
+}
+
 	/* My account*/
 
 .superposition {
