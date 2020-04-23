@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="UTF-8">
+    <link href="assets/main.css" rel="stylesheet" type="text/css">
+	<title>My Account</title>
 </head>
 <body>
 
-	<section>
+	<?php include("header.php");
+		include("db_connection.php");
+	?>
+
+	<div class="superposition">
+
+		<img class="headimage" src="images/head.jpg" alt="Head image">
 		<?php
-		include 'db_connection.php';
 			session_start();
 			if (isset($_SESSION["Email_address"])) {
 				$Email_address = $_SESSION["Email_address"];
 				$Name = $_SESSION["Name"];
 				$Surname = $_SESSION["Surname"];
 				$Profile_picture = $_SESSION["Profile_picture"];
-				echo "<div class=\"accountInfo\">";
+				echo "<div class=\"titleAccountInfoPic\">";
 				echo "<h2>My Account</h2>";
-				echo "<img src=".$Profile_picture.">";
-				echo "<p>".$Name." ".$Surname."<br>";
-				echo $Email_address."<br></p>";
+				echo "<table><tr><td>";
+					echo "<img src=".$Profile_picture.">";
+				echo "</td><td>";
+					echo "<p>".$Name." ".$Surname."</p>";
+					echo "<p>".$Email_address."</p>";
+					echo "<p> ****** </p>";
+				echo "</td></tr></table>";
 				echo "</div>";
+			}else{
+				echo "login first";
+				header("Location: login.html");
+			}
+		?>
+	</div>
 
+	<section>
+		<?php
+			if (isset($_SESSION["Email_address"])) {
 				//manque requete db
 
 				/*echo "<div class=\"favorites\">";
@@ -49,6 +69,8 @@
 		?>
 
 	</section>
+
+	<?php include("footer.php"); ?>
 
 </body>
 </html>
