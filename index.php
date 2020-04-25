@@ -17,11 +17,11 @@
 	
 	<section class="research">
 		<div class="center">
-			<form action="">
-				<input type="search" placeholder="Research"></input>
+			<form action=""> 
 				<button type="submit" class="btn btn-success">
-				<i class="fa fa-search fa-1x"></i>
+					<i class="fa fa-search fa-1x"></i>
 				</button>
+				<input type="search" placeholder="Research"></input>
 			</form>
 		</div>
 	</section>
