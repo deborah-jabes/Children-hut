@@ -1,7 +1,6 @@
 <head>
 	<link rel="icon" href="images/favicon.png" />
 	<script src="https://kit.fontawesome.com/10a40eb87c.js" crossorigin="anonymous"></script> <!--les logos-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--JQuery-->
 	<script src="assets/js/menu.js"></script> <!--anim' du menu-->
 </head>
 
@@ -14,5 +13,4 @@
 			
 		</ul> 
 	</nav>
-	<figure class="circle"></figure>
 </header>

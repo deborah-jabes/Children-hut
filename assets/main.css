@@ -167,12 +167,23 @@ button {
 	}
 }
 @media screen and (max-width: 800px) {
-	/*.header .navbar{
-		visibility: hidden;
-		display: none;
-	}*/
 	.header{
-		position: static;
+		
+	}
+	
+	.site-content{
+
+	}
+	
+	.site-content{
+		height: 100%;
+		overflow-y: scroll;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		-webkit-overflow-scrolling: touch;
 	}
 	
 	.menu{
@@ -203,6 +214,7 @@ button {
 	
 	.with--sidebar .menu{
 		transform: translateX(-300px); 
+		transition-duration: 0.3s;
 	}
 }
 /* Banner -------------------------------------------------------------*/
@@ -571,6 +583,8 @@ input[type=search] {
 	background-color: #EBD4D4;
 	margin-right: auto;
 }
+
+/* Sections Responsive ------------------------------------------------*/
 
 
 /* Footer -------------------------------------------------------------*/
