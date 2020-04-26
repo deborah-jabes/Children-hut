@@ -64,7 +64,6 @@ button {
 	display: inline-block;
 	height: inherit;
 	line-height: inherit;
-	margin-right: 14px;
 	text-decoration: inherit;
 	color: inherit;
 }
@@ -74,10 +73,10 @@ button {
 }
 
 .header a:hover {
-	 
+	 background-color: rgba(203,203,203,0.51);
 }
 .header .account {
-	height: 40px;
+	height: 30px;
 	vertical-align: baseline;
 	position: relative;
 	top: 10px;
@@ -97,19 +96,21 @@ button {
 
 }
 
-.menu > ul {
+.menu .navbar {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding-top: 0;
 	white-space: nowrap;
+	height: 3em;
+	line-height: 3em;
 }
 
-.menu > ul > li {
+.menu .navbar li {
 	display: inline-block;
 	padding: 0;
 }
 
-.menu > ul > li > a {
+.menu .navbar li a {
 	border: 0;
 	color: #fff;
 	display: block;
@@ -119,7 +120,7 @@ button {
 	text-transform: uppercase;
 }					
 
-.menu > ul > li:first-child {
+.menu .navbar li:first-child {
 	margin-left: 0;
 }
 
@@ -133,6 +134,16 @@ button {
 	margin: 0;
 }
 
+.menuToggle{
+	float: right;
+	height: 3em;
+	margin: 0;
+}
+
+.menuToggle img{
+	padding: 10px;
+}
+
 /* Nav bar et menu responsive ------------------------------------------*/
 @media screen and (max-width: 1000px) {
 
@@ -142,7 +153,7 @@ button {
 }	
 
 @media screen and (min-width: 751px) {
-	#header nav > ul > .menu {
+	.menuToggle {
 		visibility: hidden;
 		display: none;
 	}

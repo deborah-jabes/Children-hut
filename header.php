@@ -7,7 +7,7 @@
 	<h1><a  href="index.php">CHILDREN'S HUT</a></h1>
 	<a href="#menu" class="menuToggle"><img src="images/menu.svg" alt="menu"></a>
 	<nav id="nav" class="menu">
-		<ul id="navbar">
+		<ul id="navbar" class="navbar">
 			<li><a href="index.php" class="fa-"> Home</a></li>
 			<li><a href=".php" class="fa-"> Buy</a></li>
 			<li><a href=".php" class="fa-"> Rent</a></li>
