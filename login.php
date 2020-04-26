@@ -17,9 +17,9 @@
 		</div>
 		<br>
 		<form method="post" action="loginC.php" class="center">
-			<input type="text" name="Email_address" id="Email_address" placeholder="Email Adress">
+			<input type="text" name="Email_address" id="Email_address" placeholder="Email Adress" required>
 			<br>
-			<input type="password" name="Password" id="Password" placeholder="Password">
+			<input type="password" name="Password" id="Password" placeholder="Password" required>
 			<br>
 			<input type="submit" name="send" value="Login">
 		</form>

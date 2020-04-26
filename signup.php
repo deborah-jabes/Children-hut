@@ -17,17 +17,17 @@
 		</div>
 		<br>
 		<form method="post" action="signupC.php" enctype="multipart/form-data" class="center">
-			<input type="text" name="Email_address" id="Email_address" placeholder="Email Adress">
+			<input type="text" name="Email_address" id="Email_address" placeholder="Email Adress" required>
 			<br>
-			<input type="text" name="Name" id="Name" placeholder="First Name">
+			<input type="text" name="Name" id="Name" placeholder="First Name" required>
 			<br>
-			<input type="text" name="Surname" id="Surname" placeholder="Surname">
+			<input type="text" name="Surname" id="Surname" placeholder="Surname" required>
 			<br>
-			<input type="password" name="Password" id="Password" placeholder="Password">
+			<input type="password" name="Password" id="Password" placeholder="Password" required>
 			<br>
-			<input type="password" name="confirm_password" id="confirm_password" placeholder="Re-type Password">
+			<input type="password" name="confirm_password" id="confirm_password" placeholder="Re-type Password" required>
 			<br>
-			<input type="file" name="fileToUpload" id="fileToUpload">
+			<input type="file" name="fileToUpload" id="fileToUpload" required>
 			<br>
 			<input type="submit" name="submit" value="Sign-up">
 			<br>
