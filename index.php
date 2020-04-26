@@ -10,7 +10,7 @@
 </head>
 <body id="body">
 	
-	<?php include("header.php"); ?>
+	<?php include("header.php"); ?> 
 	
 	<img class="headimage" src="images/head.jpg" alt="Head image">
 	

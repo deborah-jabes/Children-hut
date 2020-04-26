@@ -177,13 +177,32 @@ button {
 	
 	.menu{
 		position: absolute;
-		background-color: red;
+		background-color: rgba(70,102,111,1.00);
 		right: 0;
 		top: 0;
 		bottom: 0;
-		width: 70%;;
+		width: 250px;;
 		height: 100%;
-		
+		z-index: 100000;
+		transform: translateX(300px); 
+	}
+	
+	.menu li:first-child{ 
+		margin-top: 40px;
+	}
+	
+	.menu li{
+		display: block;
+		height: 60px;
+		line-height: 60px;
+	}
+	
+	.menu a{
+		text-align: center;
+	}
+	
+	.with--sidebar .menu{
+		transform: translateX(-300px); 
 	}
 }
 /* Banner -------------------------------------------------------------*/
