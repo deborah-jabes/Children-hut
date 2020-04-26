@@ -41,22 +41,20 @@ button {
 }
 /* Header -------------------------------------------------------------*/
 .header {
-	height: 3em;
-	line-height: 3em;
 	position: fixed;
+	height: 60px;
+	line-height: 60px;
 	width: 100%;
+	color: #fff;
 	z-index: 10000;	
 	background: rgba(10,10,10,0.4);
-	color: #fff;
 }
 
 .header h1 {
 	float: left;
-	font-size: 100%;
 	font: inherit;
 	text-decoration: none;
-	margin: 0 10px;
-	
+	margin: 0;
 }
 		
 .header h1 a{
@@ -66,34 +64,29 @@ button {
 	line-height: inherit;
 	text-decoration: inherit;
 	color: inherit;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .header a {
-	 text-shadow: 1px 1px 5px black;
 }
 
 .header a:hover {
-	 background-color: rgba(203,203,203,0.51);
+	background-color: rgba(203,203,203,0.51);
+	color: black;
 }
-.header .account {
-	height: 30px;
-	vertical-align: baseline;
-	position: relative;
-	top: 10px;
+
+.header a:hover ~ .circle {
+	color: black;
 }
 
 /* Menu -------------------------------------------------------------*/
 .menu{
 	float: right;
-}
-
-.menu {
 	height: inherit;
-	line-height: inherit;
 	position: absolute;
 	right: 0;  /*coller le menu à droite*/
 	top: 0;
-
 }
 
 .menu .navbar {
@@ -101,27 +94,40 @@ button {
 	margin: 0;
 	padding-top: 0;
 	white-space: nowrap;
-	height: 3em;
-	line-height: 3em;
+	height: inherit;
+	line-height: inherit;
 }
 
-.menu .navbar li {
+.navbar li {
+	position: relative;
+	bottom: 1px;
 	display: inline-block;
 	padding: 0;
+	margin: 0;
+	font-size: 16px;
 }
 
 .menu .navbar li a {
-	border: 0;
-	color: #fff;
 	display: block;
-	font-size: 0.8em;
+	height: 60px;
+	line-height:  60px;
 	letter-spacing: 0.225em;
 	padding: 0 1.5em;
+	margin: 0;
 	text-transform: uppercase;
-}					
+	top: 0;
+}*/
 
-.menu .navbar li:first-child {
-	margin-left: 0;
+.menu .account {
+	float: right;
+	height: 60px;
+	margin: 0;
+}
+
+.account > img {
+	height: 35px;
+	position: relative;
+    top: 10px;
 }
 
 .circle {
@@ -132,11 +138,13 @@ button {
 	height: 10px;
 	width: 10px;
 	margin: 0;
+	top: 44px;
+	left: 100px;
 }
 
 .menuToggle{
 	float: right;
-	height: 3em;
+	height: inherit;
 	margin: 0;
 }
 
@@ -152,26 +160,30 @@ button {
 	}
 }	
 
-@media screen and (min-width: 751px) {
+@media screen and (min-width: 800px) {
 	.menuToggle {
 		visibility: hidden;
 		display: none;
 	}
 }
-@media screen and (max-width: 750px) {
-	#header #navbar{
+@media screen and (max-width: 800px) {
+	/*.header .navbar{
 		visibility: hidden;
 		display: none;
+	}*/
+	.header{
+		position: static;
 	}
 	
-	#menu:after {
-		content:"";
-		width: 30px;
-		height: 30px;
-		display: inline-block;
+	.menu{
 		position: absolute;
-		right: 15px;
-		top: 10px;
+		background-color: red;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 70%;;
+		height: 100%;
+		
 	}
 }
 /* Banner -------------------------------------------------------------*/
@@ -543,7 +555,7 @@ input[type=search] {
 
 
 /* Footer -------------------------------------------------------------*/
-#footer h3, a, ul, li{
+#footer > h3, a, ul, li{
 	margin: 0;
 	padding: 0;
 	border: 0;
