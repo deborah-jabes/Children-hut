@@ -6,7 +6,6 @@
 	<link rel="icon" href="images/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="assets/main.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/10a40eb87c.js" crossorigin="anonymous"></script>
 </head>
 <body id="body">
@@ -15,7 +14,7 @@
 	
 	<img class="headimage" src="images/head.jpg" alt="Head image">
 	
-	<section class="research">
+	<section class="research">  
 		<div class="center">
 			<form action=""> 
 				<button type="submit" class="btn btn-success">

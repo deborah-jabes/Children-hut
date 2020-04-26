@@ -6,10 +6,13 @@ body, input, select, textarea {
 	font-weight: normal;  /* pas en gras */
 	letter-spacing: 0.075em;
 	line-height: 1.65em;
+	margin: 0;
+	padding: 0;
 }
 
 a{
 	text-decoration: none;
+	color: inherit;
 }
 
 h1 {
@@ -37,34 +40,26 @@ button {
   font-size: 16px;
 }
 /* Header -------------------------------------------------------------*/
-#header {
+.header {
 	height: 3em;
 	line-height: 3em;
 	position: fixed;
 	width: 100%;
 	z-index: 10000;	
 	background: rgba(10,10,10,0.4);
+	color: #fff;
 }
 
-#header h1 {
-	height: inherit;
-	left: 1.25em;
-	line-height: inherit;
-	position: relative;
-	vertical-align: baseline;
-	color: fff;
-	position: absolute;
-	top: 0;
-	margin: 0;
-	padding: 0;
-	border: 0;
+.header h1 {
+	float: left;
 	font-size: 100%;
 	font: inherit;
 	text-decoration: none;
-	color: #fff;
+	margin: 0 10px;
+	
 }
 		
-#header h1 a{
+.header h1 a{
 	border-bottom: 0;
 	display: inline-block;
 	height: inherit;
@@ -74,15 +69,15 @@ button {
 	color: inherit;
 }
 
-#header a {
+.header a {
 	 text-shadow: 1px 1px 5px black;
 }
 
-#header a:hover {
+.header a:hover {
 	 
 }
 
-#header nav {
+.header nav {
 	height: inherit;
 	line-height: inherit;
 	position: absolute;
@@ -91,19 +86,19 @@ button {
 
 }
 
-#header nav > ul {
+.header nav > ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	white-space: nowrap;
 }
 
-#header nav > ul > li {
+.header nav > ul > li {
 	display: inline-block;
 	padding: 0;
 }
 
-#header nav > ul > li > a {
+.header nav > ul > li > a {
 	border: 0;
 	color: #fff;
 	display: block;
@@ -113,11 +108,11 @@ button {
 	text-transform: uppercase;
 }					
 
-#header nav > ul > li:first-child {
+.header nav > ul > li:first-child {
 	margin-left: 0;
 }
 
-#header .account {
+.header .account {
 	height: 40px;
 	vertical-align: baseline;
 	position: relative;
@@ -126,50 +121,17 @@ button {
 
 /* Menu -------------------------------------------------------------*/
 .menu{
-	z-index: 10002;
+	float: right;
 }
 
-#menu{
-	background-color: rgba(9,9,9,1.00);
-	position: fixed;
-	right: 0px;
-	top: 0px;
-	padding: 0px, 0px;
-	margin: 0px, 0px;
-	height: 100%;
-	max-width: 80%;
+.circle {
 	display: block;
-	background-color: #283744;
-	overflow-y: auto;
-	width: 20em;
-	z-index: 10003;
-	
-	-moz-transform: translateX(20em);
-	-webkit-transform: translateX(20em);
-	-ms-transform: translateX(20em);
-	transform: translateX(20em);
-}
-
-#menu ul{
-	list-style: none;
-}
-
-#menu ul li a{
-	text-decoration: none;
-	border: 0;
-	color: #fff;
-	display: block;
-	font-size: 0.8em;
-	letter-spacing: 0.225em;
-	padding: 0 1.5em;
-	text-transform: uppercase;
-}
-
-.menuToggle{
-	position: relative;
-	top: 10px;
-	z-index: 10001;
-	outline: 0;
+	position: absolute;
+	background: white;
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+	margin: 0;
 }
 
 /* Nav bar et menu responsive ------------------------------------------*/
@@ -281,7 +243,7 @@ input[type=search] {
 .research button{ 
 	position: absolute;
 	top: 10px;
-	left: 25px;
+	left: 15px; 
 	height: 20px;
 	width: 20px;
 	padding: 0;
