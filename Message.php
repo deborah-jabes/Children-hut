@@ -38,8 +38,9 @@ echo '
 		<input type="submit" value="submit" name="submit" id="submit"><br><br>
 		 </form></div>
 
-		 <script src="js/messageJS.js"></script>
+		 <script src="js/messageJS.js"></script>';
 		 
-		<?php include ("footer.php");?>
+		include ("footer.php");
 
-		</body>;' ?>
+		echo '</body>;'; 
+?>
