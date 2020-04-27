@@ -261,7 +261,10 @@ body, section {
 	align-items: center;
 	align-content: center;
 	object-fit: cover;
+<<<<<<< HEAD
+=======
 	width: 100%;
+>>>>>>> origin/master
 	overflow: hidden;
 	z-index: -10;
 }
