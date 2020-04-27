@@ -42,5 +42,5 @@ echo '
 		 
 		include ("footer.php");
 
-		echo '</body>;'; 
+		echo '</body>'; 
 ?>
