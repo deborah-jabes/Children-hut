@@ -13,15 +13,15 @@ function headerFunc ($titre) {
 
 headerFunc ('Message');
 include("header.php");	
+$emailValue = $_POST['mail'];
 
 echo '
 
 	<img class="headimage" src="images/head.jpg" alt="Head image">
-	deborahjabes30@gmail.com'. //to erase after tests
-	'<div class="valuesMessage" id="valuesMessage">
+	<div class="valuesMessage" id="valuesMessage">
 
 			<div class="valuesToEnter">
-				<form id="formulaireMessage" action="sendingMsg.php" onsubmit="replaceAndCreate(); return false" method="post">
+				<form id="formulaireMessage" action="mailto:'.$emailValue.'" onsubmit="replaceAndCreate(); return false" method="post">
 				<input type="text" id="name" name="name" required placeholder="Name"></br></br>
 				<input type="text" id="mailAdr" name="mail" required placeholder="e-mail address"></br></br>
 				<select id="Objects" name="object" onclick="disable()" required> 
@@ -42,3 +42,5 @@ echo '
 
 
 include ("footer.php");	
+
+

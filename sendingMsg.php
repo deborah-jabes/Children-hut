@@ -7,18 +7,19 @@ if (isset($_POST['submit'])) {
 	$object = $_POST['object'];
 	$message = $_POST['msg'];
 
-	mail ($to, $object, $name. 'wrote the following : ' . PHP_EOL . $message);
+	mail ($to, $object, $name. ' wrote the following : ' . PHP_EOL . $message);
 }
+
 else {
-	showError("Something went wrong :(");
+	showError ('An error has occured :(');
 }
 
 /**
- * Affiche une erreur avec un message passé en paramètre
+ * Shows an error with the message in parameter
  * @param $message
  * @param string $title
  */
-function showError($message, $title="ERREUR :")
+function showError($message, $title="ERROR :")
 {
     echo '<div class="form" id="errorcomponent">'.PHP_EOL.
     '    <h3>'.$title.'</h3>'.PHP_EOL.
