@@ -33,7 +33,7 @@
 				echo "</div>";
 			}else{
 				echo "login first";
-				header("Location: login.html");
+				header("Location: login.php");
 			}
 		?>
 	</div>
