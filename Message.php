@@ -4,8 +4,8 @@ function headerFunc ($titre) {
 	<html lang="fr">
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="currentStyle.css">
-	<link rel="stylesheet" type="text/css" href="assets/main.css">
+	<link rel="stylesheet" type="text/css" href="css/currentStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<title>' . $titre . '</title>
 	</head>
 	<body>';
@@ -38,10 +38,8 @@ echo '
 		<input type="submit" value="submit" name="submit" id="submit"><br><br>
 		 </form></div>
 
-		 <script src="messageJS.js"></script>
-		 </body>';
-
-
+		 <script src="js/messageJS.js"></script>'
+		 
 include ("footer.php");	
 
-
+	echo '</body>;'
