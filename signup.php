@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="assets/main.css" rel="stylesheet" type="text/css">
+    <link href="assets/fifi.css" rel="stylesheet" type="text/css">
     <title>Sign-Up</title>
 </head>
 <body>
