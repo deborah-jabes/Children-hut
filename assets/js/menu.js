@@ -5,8 +5,7 @@
     $('#icon_menu').click(function(e){
 		
         e.preventDefault();
-        $('header').toggleClass('with--sidebar');
+        $('body').toggleClass('with--sidebar');
     });
-	
 
 })(jQuery);

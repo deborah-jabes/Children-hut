@@ -29,6 +29,10 @@ h3 {
 	line-height: 1.5em;
 }
 
+li{
+	list-style: none;
+}
+
 button {
   background-color: #EE6C6C;
   border: none;
@@ -152,6 +156,9 @@ button {
 	padding: 10px;
 }
 
+.menuMobile{
+	display: none;
+}
 /* Nav bar et menu responsive ------------------------------------------*/
 @media screen and (max-width: 1000px) {
 
@@ -167,6 +174,11 @@ button {
 	}
 }
 @media screen and (max-width: 800px) {
+
+	.menu{
+		display: none;
+	}
+	
 	.header{
 		
 	}
@@ -186,7 +198,8 @@ button {
 		-webkit-overflow-scrolling: touch;
 	}
 	
-	.menu{
+	.menuMobile{
+		display: inherit;
 		position: absolute;
 		background-color: rgba(70,102,111,1.00);
 		right: 0;
@@ -195,25 +208,39 @@ button {
 		width: 250px;;
 		height: 100%;
 		z-index: 100000;
-		transform: translateX(300px); 
 	}
 	
-	.menu li:first-child{ 
-		margin-top: 40px;
+	.navbarMobile li:first-child{ 
+		margin-top: 60px;
 	}
 	
-	.menu li{
+	.navbarMobile li a{
+		list-style: none;
 		display: block;
 		height: 60px;
 		line-height: 60px;
+		padding-left: 20px;
 	}
 	
-	.menu a{
-		text-align: center;
+	.iconCLose{
+		float: right;
+		margin: 0;
+		padding: 0;
+		height: 60px;	
 	}
 	
-	.with--sidebar .menu{
-		transform: translateX(-300px); 
+	.iconCLose i{
+		padding: 15px 15px;
+		font-size: 25px;	
+	}
+	
+	.without--sidebar{
+		transform: translateX(250px);
+		display: none;
+	}
+	.with--sidebar{
+		display: block;
+		transform: translateX(0px); 
 		transition-duration: 0.3s;
 	}
 }

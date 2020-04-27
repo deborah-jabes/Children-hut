@@ -13,7 +13,7 @@
 	
 	<?php include("header.php"); ?> 
 	
-	<div class="site-content">
+	<div id="site-content" class="site-content">
 		<img class="headimage" src="images/head.jpg" alt="Head image">
 
 		<section class="research">  
