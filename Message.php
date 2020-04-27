@@ -22,6 +22,7 @@ echo '
 
 			<div class="valuesToEnter">
 				<form id="formulaireMessage" action="mailto:'.$emailValue.'" onsubmit="replaceAndCreate(); return false" method="post">
+				<h2>MESSAGE</h2>
 				<input type="text" id="name" name="name" required placeholder="Name"></br></br>
 				<input type="text" id="mailAdr" name="mail" required placeholder="e-mail address"></br></br>
 				<select id="Objects" name="object" onclick="disable()" required> 

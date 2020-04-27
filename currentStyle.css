@@ -1,6 +1,5 @@
-.valuesMessage {
+	.valuesMessage {
 	padding: 14px 16px;
-	margin: 0 auto;
 	
 }
 
@@ -70,7 +69,15 @@
 
 }
 
+h2 {
+	color: white;
+	font-weight: bold;
+}
 
+#formulaireMessage {
+	margin-left: 10%;
+	margin-top: 9%;
+}
 
 #returnHome:hover span:before {
 	opacity: 1;
