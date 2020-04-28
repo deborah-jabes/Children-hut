@@ -36,6 +36,12 @@
 	padding-left: 15px;
 }
 
+.account form p {
+	margin: 0 0 0 0;
+	position: relative;
+	bottom: 45px;
+}
+
 .account input[type=submit]:hover{
 	background-color: rgb(105,105,105);
 }

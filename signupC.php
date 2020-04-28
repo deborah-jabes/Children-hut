@@ -7,47 +7,53 @@
  		include 'db_connection.php';
  			$result = $db->prepare('SELECT Email_address FROM user WHERE Email_address = ?');
  			$result->execute(array($_POST["Email_address"]));
+ 			$targetDir = "images/profils/";
  			if ($result->rowCount() == 0){ //check data base
  				$result->closeCursor();
  				if ($_POST["Password"] == $_POST["confirm_password"]) {
 
- 					$targetDir = "images/profils/";
- 					$targetFile = $targetDir.microtime(true).".png";
- 					$fullFile = explode(".", $_FILES["fileToUpload"]["name"]);
- 					$imageFileType = strtolower(end($fullFile));
- 					$uploadOK = 1;
- 					if (isset($_POST["submit"])) {
- 						$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
- 						if ($check !== false) {
- 							echo "All good";
- 							$uploadOK = 1;
- 						}else{
- 							echo "File is not an image.";
+ 					if (is_uploaded_file($_FILES["fileToUpload"]["tmp_name"])) {
+ 						$targetFile = $targetDir.microtime(true).".png";
+ 						$fullFile = explode(".", $_FILES["fileToUpload"]["name"]);
+ 						$imageFileType = strtolower(end($fullFile));
+ 						$uploadOK = 1;
+ 						if (isset($_POST["submit"])) {
+ 							$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+ 							if ($check !== false) {
+ 								echo "All good";
+ 								$uploadOK = 1;
+ 							}else{
+ 								echo "File is not an image.";
+ 								$uploadOK = 0;
+ 							}
+ 						}
+ 						if (file_exists($targetFile)){
+ 							echo "File already exists <br>";
  							$uploadOK = 0;
  						}
- 					}
- 					if (file_exists($targetFile)){
- 						echo "File already exists <br>";
- 						$uploadOK = 0;
- 					}
- 					if ($_FILES["fileToUpload"]["size"]>5000000) {
- 						echo "File too large";
- 						$uploadOK = 0;
- 					}
- 					if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
- 						echo "Only jpg, png and jpeg supported";
- 						$uploadOK = 0;
- 					}
- 					if($uploadOK == 1){
- 						if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)){
- 							echo "All good <br>";
- 							createAccount();
+ 						if ($_FILES["fileToUpload"]["size"]>5000000) {
+ 							echo "File too large";
+ 							$uploadOK = 0;
+ 						}
+ 						if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+ 							echo "Only jpg, png and jpeg supported";
+ 							$uploadOK = 0;
+ 						}
+ 						if($uploadOK == 1){
+ 							if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)){
+ 								echo "All good <br>";
+ 								createAccount();
+ 							}else{
+ 								echo "File not uploaded <br>";
+ 							}
  						}else{
- 							echo "File not uploaded <br>";
+ 							echo "Your file wasn't uploaded";
  						}
  					}else{
- 						echo "Your file wasn't uploaded";
+ 						$targetFile = $targetDir."DefaultAccount.png";
+ 						createAccount();
  					}
+
  				}else{
  					echo "Passwords must be the same <br>";
  				}
@@ -75,6 +81,7 @@
  				$_SESSION["Profile_picture"] = $targetFile;
 
  				echo "Account created <br>";
+ 				header("Location: myaccount.php");
  			}
  		?>
  	</body>
