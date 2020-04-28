@@ -1,7 +1,0 @@
-{
-	"host": "ftp-locagarden.alwaysdata.net",
-    "port": 21, 
-    "username": "locagarden_user1",
-    "password": "Loc@Garden1404",
-    "rootDirectory": "/www"
-}
