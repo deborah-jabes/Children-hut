@@ -22,10 +22,10 @@ function replaceAndCreate () {
 	formulaireMessage.appendChild(newButton);
 
 	//sending the email 
-	/*let email = document.getElementById ("mailAdr").value;
+	let email = document.getElementById ("mailAdr").value;
 	let subject = document.getElementById ("Objects").value;
 	let message = document.getElementById ("message").value;
-	window.location.href = "mailto:" + email + "?subject=" + escape (subject) + "&body=" + escape (message);*/
+	window.location.href = "mailto:" + email + "?subject=" + escape (subject) + "&body=" + escape (message);
 
 }
 
