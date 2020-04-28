@@ -37,7 +37,19 @@
 	
 	/*--------------------------------------------*/
 	
-	const header = document.getElementById('header'),
-		  img = document.querySelector('.')
+	const header = document.querySelector('.header'),
+		  sectionOne = document.querySelector('.headimage');
+	const sectionOneOptions = { };
+	const sectionOneObserver = new IntersectionObserver(function(
+														entries,
+														sectionOneObserver
+														) {
+		entries.forEach(entry => {
+			if(!entry.isIntersecting){
+				header.classList.add('nav-scrolled');
+			}
+		})
+	}, sectionOneOptions);
 
+	sectionOneObserver.observe(sectionOne);
 </script>
