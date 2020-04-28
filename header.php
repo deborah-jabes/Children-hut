@@ -1,11 +1,10 @@
 <head>
 	<link rel="icon" href="images/favicon.png" />
 	<script src="https://kit.fontawesome.com/10a40eb87c.js" crossorigin="anonymous"></script> <!--les logos-->
-	<script src="assets/js/menu.js"></script> <!--anim' du menu-->
 </head>
 
 <header id="header" class="header nav-scrolled">
-	<h1><a  href="index.php">CHILDREN'S HUT</a></h1>
+	<h1><a  href="index.php"><span class="titreMobile">CHILDREN'S HUT</span><img src="images/logoBlanc.png" class="logoMobile"></a></h1>
 	<a id="icon_menu" href="#menuMobile" class="menuToggle"><img src="images/menu.svg" alt="menu"></a>
 	<nav id="menu" class="menu">
 		<ul id="navbar" class="navbar">
@@ -38,7 +37,19 @@
 	
 	/*--------------------------------------------*/
 	
-	const header = document.getElementById('header'),
-		  img = document.querySelector('.')
+	const header = document.querySelector('.header'),
+		  sectionOne = document.querySelector('.headimage');
+	const sectionOneOptions = { };
+	const sectionOneObserver = new IntersectionObserver(function(
+														entries,
+														sectionOneObserver
+														) {
+		entries.forEach(entry => {
+			if(!entry.isIntersecting){
+				header.classList.add('nav-scrolled');
+			}
+		})
+	}, sectionOneOptions);
 
+	sectionOneObserver.observe(sectionOne);
 </script>
