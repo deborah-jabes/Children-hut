@@ -4,8 +4,8 @@ function headerFunc ($titre) {
 	<html lang="fr">
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/currentStyle.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/currentStyle.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<title>' . $titre . '</title>
 	</head>
 	<body>';
@@ -40,17 +40,10 @@ echo '<img class="headimage" src="images/head.jpg" alt="Head image">
 		<input type="submit" value="submit" name="submit" id="submit"><br><br>
 		 </form></div>
 
-<<<<<<< HEAD
 		 <script src="messageJS.js"></script>
 		 </body>';
 
 
 include ("footer.php");	
-=======
-		 <script src="js/messageJS.js"></script>';
-		 
-		include ("footer.php");
-
-		echo '</body>'; 
+echo '</body>'; 
 ?>
->>>>>>> origin
