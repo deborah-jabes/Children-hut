@@ -4,7 +4,7 @@
 </head>
 
 <header id="header" class="header nav-scrolled">
-	<h1><a  href="index.php">CHILDREN'S HUT</a></h1>
+	<h1><a  href="index.php"><span class="titreMobile">CHILDREN'S HUT</span><img src="images/logoBlanc.png" class="logoMobile"></a></h1>
 	<a id="icon_menu" href="#menuMobile" class="menuToggle"><img src="images/menu.svg" alt="menu"></a>
 	<nav id="menu" class="menu">
 		<ul id="navbar" class="navbar">
