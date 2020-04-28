@@ -10,34 +10,31 @@
 
 	<?php include("header.php");
 		include("db_connection.php");
+		session_start();
 	?>
 
-	<div class="superposition">
-
-		<img class="headimage" src="images/head.jpg" alt="Head image">
-		<?php
-			session_start();
-			if (isset($_SESSION["Email_address"])) {
-				$Email_address = $_SESSION["Email_address"];
-				$Name = $_SESSION["Name"];
-				$Surname = $_SESSION["Surname"];
-				$Profile_picture = $_SESSION["Profile_picture"];
-				echo "<div class=\"titleAccountInfoPic\">";
-				echo "<h2>My Account</h2>";
-				echo "<table><tr><td>";
-					echo "<img src=".$Profile_picture.">";
-				echo "</td><td>";
-					echo "<p>".$Name." ".$Surname."</p>";
-					echo "<p>".$Email_address."</p>";
-					echo "<p> ****** </p>";
-				echo "</td></tr></table>";
-				echo "</div>";
-			}else{
-				echo "login first";
-				header("Location: login.php");
-			}
-		?>
-	</div>
+	<img class="headimage" src="images/head.jpg" alt="Head image">
+	<?php
+		if (isset($_SESSION["Email_address"])) {
+			$Email_address = $_SESSION["Email_address"];
+			$Name = $_SESSION["Name"];
+			$Surname = $_SESSION["Surname"];
+			$Profile_picture = $_SESSION["Profile_picture"];
+			echo "<div class=\"titleAccountInfoPic\">";
+			echo "<h2>My Account</h2>";
+			echo "<table><tr><td>";
+				echo "<img src=".$Profile_picture.">";
+			echo "</td><td>";
+				echo "<p>".$Name." ".$Surname."</p>";
+				echo "<p>".$Email_address."</p>";
+				echo "<p> ****** </p>";
+			echo "</td></tr></table>";
+			echo "</div>";
+		}else{
+			echo "login first";
+			header("Location: login.php");
+		}
+	?>
 
 	<section>
 		<?php

@@ -1,9 +1,9 @@
 <?php
 //https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/914293-lisez-des-donnees
-	$servername = "localhost";
-	$username = "root";
-	$password = "123456789";
-	$dbname = "childrenshut";
+	$servername = "mysql-locagarden.alwaysdata.net";
+	$username = "204501_root";
+	$password = "Loc@Garden1404";
+	$dbname = "locagarden_bdd";
 
 	try {
 		$db = new PDO('mysql:host='.$servername.';dbname='.$dbname.';charset=utf8',$username,$password);
