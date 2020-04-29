@@ -40,12 +40,12 @@
 				echo "<div class=\"favorites\">";
 					echo "<h3>Fav huts</h3>";
 					$result = $db->query('SELECT * FROM huts INNER JOIN favorites ON huts.Hut_id = favorites.Hut_id WHERE favorites.User_id = '.$User_id.';');
-					echo "<div class=\"adTable\"><table><tr>";
 					if ($result->rowCount() > 0) {
+						echo "<div class=\"adTable\"><table><tr>";
 						while ($data = $result->fetch()){
 							echo "<td class=\"hut\"><div>";
 								echo "<img src=".$data["Pictures_path"]."1.jpg";
-								echo "<header><h4>azertyuiopazertyuiopazertyuiop</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
+								echo "<header><h4></h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
 								echo "<p class=\"description\">Main material : ".$data["Principal_material"].", main color : ".$data["Hut_color"]."</p>";
 								echo "<footer class=\"flexSection\">";
 								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
@@ -53,24 +53,38 @@
 								echo "</footer>";
 							echo "</div></td>";
 						}
+						echo "</tr></table></div>";
 					}else{
 						echo "<div class=\"dummyAd\">";
-						echo "<p class=\"centerV\">No favorites ads yet. Add some to see them here.</p>";
+						echo "<p class=\"centerV\">No favorites huts yet. Add some to see them here.</p>";
 						echo "</div>";
 					}
-					echo "</tr></table></div>";
 				echo "</div>";
 	echo "</section>";
 
 	echo "<section>";
 				echo "<div class=\"personnalHuts\">";
-				echo "My Huts<br>";
+				echo "<h3>My Huts</h3>";
 				$result = $db->query('SELECT * FROM huts WHERE huts.Author_id = '.$User_id.';');
-				while ($data = $result->fetch()){
-					echo "<div class=\"hut\">";
-					//huts info
-					echo "</div>";
-				}
+				if ($result->rowCount() > 0) {
+						echo "<div class=\"adTable\"><table><tr>";
+						while ($data = $result->fetch()){
+							echo "<td class=\"hut\"><div>";
+								echo "<img src=".$data["Pictures_path"]."1.jpg";
+								echo "<header><h4></h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
+								echo "<p class=\"description\">Main material : ".$data["Principal_material"].", main color : ".$data["Hut_color"]."</p>";
+								echo "<footer class=\"flexSection\">";
+								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
+								echo "<section><button type=\"button\">Details</button><button>Delete</button></section>";
+								echo "</footer>";
+							echo "</div></td>";
+						}
+						echo "</tr></table></div>";
+					}else{
+						echo "<div class=\"dummyAd\">";
+						echo "<p class=\"centerV\">No huts published, publish an add to see them here.</p>";
+						echo "</div>";
+					}
 				echo "</div>";
 			}else{
 				echo "login first";
