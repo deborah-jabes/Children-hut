@@ -8,7 +8,7 @@
 	<a id="icon_menu" href="#menuMobile" class="menuToggle"><img src="images/menu.svg" alt="menu"></a>
 	<nav id="menu" class="menu">
 		<ul id="navbar" class="navbar">
-			<li><a href=".php">Buy</a></li><li><a href=".php" >Rent</a></li><li><a href=".php">Sale</a></li><li><a href="#contact">Contact us</a></li><li><a href="login.php" class="account"><i class="fa fa-user-circle fa-2x"></i></a></li>
+			<li><a href=".php">Buy</a></li><li><a href=".php" >Rent</a></li><li><a href=".php">Sale</a></li><li><a href="#contact" class="mediumScreen">Contact</a></li><li><a href="login.php" class="account"><i class="fa fa-user-circle fa-2x"></i></a></li>
 		</ul>
 	</nav>
 </header>

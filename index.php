@@ -17,16 +17,15 @@
 		
 		<img id="headimage" class="headimage" src="images/head.jpg" alt="Head image">
 		<section class="space"></section>
-		<section class="research">  
-			<div class="center">
+		
+		<div class="research">  
 				<form action=""> 
 					<button type="submit" class="btn btn-success">
 						<i class="fa fa-search fa-1x"></i>
 					</button>
 					<input type="search" placeholder="Research"></input>
 				</form>
-			</div>
-		</section>
+		</div>
 
 		<section class="ads">
 			<div class="center flexSection">

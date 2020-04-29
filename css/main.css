@@ -50,7 +50,7 @@ button {
 	line-height: 60px;
 	width: 100%;
 	color: #fff;
-	z-index: 10000;
+	z-index: 100;
 }
 
 .nav-scrolled{
@@ -99,6 +99,8 @@ button {
 	position: absolute;
 	right: 0;  /*coller le menu à droite*/
 	top: 0;
+	position: relative;
+	z-index: 10000 !important;
 }
 
 .menu .navbar {
@@ -120,11 +122,11 @@ button {
 }
 
 .menu .navbar li a {
-	display: block;
+	
 	height: 60px;
 	line-height:  60px;
 	letter-spacing: 0.225em;
-	padding: 0 1.5em;
+	padding: 1em 1.5em;
 	margin: 0;
 	text-transform: uppercase;
 	top: 0;
@@ -175,13 +177,13 @@ button {
 	}
 }	
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 980px) {
 	.menuToggle {
 		visibility: hidden;
 		display: none;
 	}
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 980px) {
 
 	.menu{
 		display: none;
@@ -253,7 +255,7 @@ button {
 	}
 }
 
-@media screen and (max-width: 470px){
+@media screen and (max-width: 770px){
 	.header .logoMobile{
 		display: block;
 		width: 35px;
@@ -264,17 +266,30 @@ button {
 	.header .titreMobile{
 		display: none;
 	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 1100px){
 	.research form{
 		width: 250px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
 @media screen and (max-width: 399px){
 	.research form{
 		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	input[type=search] {
 		width: 75%;
+	}
+}
+
+@media screen and (max-width: 1400px){
+	.mediumScreen{
+		display: none;
 	}
 }
 /* Banner -------------------------------------------------------------*/
@@ -290,10 +305,7 @@ body, section {
 	align-items: center;
 	align-content: center;
 	object-fit: cover;
-<<<<<<< HEAD
-=======
 	width: 100%;
->>>>>>> origin/master
 	overflow: hidden;
 	z-index: -10;
 }
@@ -326,10 +338,13 @@ section{
 }
 
 .research{
+	top: 9px;
+	width: 350px;
+	z-index: 1000;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 8px;
-	z-index: 100001;
+	margin-left: auto;
+	margin-right: auto;
 }
 	
 .research form{
@@ -338,9 +353,10 @@ section{
 	border-radius: 40px;
 	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 	background: #fff;
+	
 }
 
-@media screen and (min-width: 471px){
+@media screen and (min-width: 1101px){
 	.research form{
 		width: 350px;
 	}
@@ -399,7 +415,7 @@ input[type=search] {
 }
 
 @media screen and (max-width: 600px) {
-	.ads .hidden{
+	.hidden{
 		display: none;
 	}
 }
