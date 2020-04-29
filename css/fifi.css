@@ -6,6 +6,7 @@
 
 .accountpicture{
 	width : 100%;
+	margin-top: 200px;
 }
 
 .account img {
@@ -47,7 +48,40 @@
 
 	/* My account*/
 
-.superposition {
+.titleAccountInfoPic {
+	display: inline-block;
+	width: 100%;
+}
+
+.titleAccountInfoPic h2 {
+	text-align: center;
+	display: block;
+	color: rgb(255,255,255);
+	text-shadow: 1px 1px 5px #000, -1px 1px 5px #000, 1px -1px 5px #000, -1px -1px 5px #000;
+	margin: 100px 0 0 0;
+}
+
+.titleAccountInfoPic table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.titleAccountInfoPic img {
+	width: 200px;
+	height: auto;
+	margin: 0 50px 0 50px;
+}
+
+.titleAccountInfoPic p {
+	border-radius: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #FFF;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/*.superposition {
 	position:relative;
 	text-align: center;
 	color: rgb(255,255,255);
@@ -81,4 +115,4 @@
 	margin-bottom: 5px;
 	color: #000;
 	text-shadow: none;
-}
+}*/
