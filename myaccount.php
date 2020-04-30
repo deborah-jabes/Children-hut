@@ -13,8 +13,6 @@
 		session_start();
 	?>
 
-	<img class="headimage" src="images/head.jpg" alt="Head image">
-
 	<section>
 		<?php
 			if (isset($_SESSION["Email_address"])) {

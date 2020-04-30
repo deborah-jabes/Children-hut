@@ -1,5 +1,6 @@
 <head>
 	<link rel="icon" href="images/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<script src="https://kit.fontawesome.com/10a40eb87c.js" crossorigin="anonymous"></script> <!--les logos-->
 </head>
 
