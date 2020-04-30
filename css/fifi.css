@@ -15,6 +15,13 @@
 	height: auto;
 }
 
+.account .hutImage{
+	width: 300px;
+	height: auto;
+	top: 0px;
+	margin-top: 80px;
+}
+
 .account form{
 	display: block;
 	width: 375px;

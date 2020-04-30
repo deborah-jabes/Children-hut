@@ -36,6 +36,8 @@
 			<br>
 		</form>
 		<p>You already have an account ? <a href="login.php">Login now</a></p>
+
+		<img src="images/hut2.png" class="hutImage center">
 	</section>
 
 	<?php include("footer.php"); ?>
