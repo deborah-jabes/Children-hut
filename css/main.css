@@ -51,10 +51,11 @@ button {
 	width: 100%;
 	color: #fff;
 	z-index: 100;
+	transition: background 150ms ease-in;
 }
 
 .nav-scrolled{
-	background: rgba(10,10,10,0.7);
+	background: #5C93A5;
 }
 
 .header h1 {
@@ -79,13 +80,13 @@ button {
 	padding-right: 20px;
 }
 
-.header a {
-	color: rgba(140,205,228,1.00);
+.header h1:hover {
+	background-color: rgba(203,203,203,0.51);
 }
 
-.header a:hover {
-	/*background-color: rgba(203,203,203,0.51);*/
-	color: white;
+.menu a:hover {
+	background-color: rgba(203,203,203,0.51);
+	border-radius: 50px;
 }
 
 .header a:hover ~ .circle {
@@ -119,6 +120,11 @@ button {
 	padding: 0;
 	margin: 0;
 	font-size: 16px;
+}
+
+.navbar i{
+	position: relative;
+	top: 6px;
 }
 
 .menu .navbar li a {
@@ -189,14 +195,6 @@ button {
 		display: none;
 	}
 	
-	.header{
-		
-	}
-	
-	.site-content{
-
-	}
-	
 	.site-content{
 		height: 100%;
 		overflow-y: scroll;
@@ -218,6 +216,7 @@ button {
 		width: 250px;;
 		height: 100%;
 		z-index: 100000;
+		transition: background 150ms ease-in;
 	}
 	
 	.navbarMobile li:first-child{ 
@@ -247,11 +246,14 @@ button {
 	.without--sidebar{
 		transform: translateX(250px);
 		display: none;
+		transition-duration: 0.3s;
+		transition: background 150ms ease-in;
 	}
 	.with--sidebar{
 		display: block;
 		transform: translateX(0px); 
 		transition-duration: 0.3s;
+		transition: background 150ms ease-in;
 	}
 }
 

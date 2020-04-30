@@ -11,11 +11,7 @@
 </head>
 <body id="body">
 	
-	<?php include("header.php"); ?> 
-	
-	<main id="site-content" class="site-content">
-		
-		<img id="headimage" class="headimage" src="images/head.jpg" alt="Head image">
+	<?php include("header.php")?>
 		<section class="space"></section>
 		
 		<div class="research">  
@@ -206,7 +202,6 @@
 		</section>	
 
 		<?php include("footer.php"); ?>
-	</main>
 
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e82eeddb-4dac-4972-9a28-304a54f8e032";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>

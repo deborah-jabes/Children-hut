@@ -10,8 +10,6 @@
 
 	<?php include("header.php"); ?>
 
-	<img class="headimage" src="images/head.jpg" alt="Head image">
-
 	<section class="account">
 		<div class="accountpicture">
 			<img src="images/profils/DefaultAccount.png" class="center">
