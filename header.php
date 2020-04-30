@@ -42,7 +42,7 @@
 	const header = document.querySelector('header');
 	const sectionOne = document.querySelector('#headimage');
 	const sectionOneOptions = {
-		rootMargin: "-20px 0px 0px 0px"
+		rootMargin: "-40px 0px 0px 0px"
 	};
 
 	const sectionOneObserver = new IntersectionObserver(function(
