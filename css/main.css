@@ -54,7 +54,7 @@ button {
 }
 
 .nav-scrolled{
-	background: rgba(10,10,10,0.7);
+	background: rgba(69,191,189,1.00);
 }
 
 .header h1 {
@@ -187,14 +187,6 @@ button {
 
 	.menu{
 		display: none;
-	}
-	
-	.header{
-		
-	}
-	
-	.site-content{
-
 	}
 	
 	.site-content{

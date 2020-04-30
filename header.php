@@ -3,7 +3,7 @@
 	<script src="https://kit.fontawesome.com/10a40eb87c.js" crossorigin="anonymous"></script> <!--les logos-->
 </head>
 
-<header id="header" class="header nav-scrolled">
+<header id="header" class="header">
 	<h1><a  href="index.php"><span class="titreMobile">CHILDREN'S HUT</span><img src="images/logoBlanc.png" class="logoMobile"></a></h1>
 	<a id="icon_menu" href="#menuMobile" class="menuToggle"><img src="images/menu.svg" alt="menu"></a>
 	<nav id="menu" class="menu">
@@ -18,7 +18,8 @@
 		<li><a href=".php">Buy</a></li><li><a href=".php" >Rent</a></li><li><a href=".php">Sale</a></li><li><a href="#contact">Contact us</a></li><li><a href="login.php" class="account"><img src="images/account.png"></a></li>
 	</ul> 
 </nav>
-
+	<main id="site-content" class="site-content">
+<img id="headimage" class="headimage" src="images/head.jpg" alt="Head image">
 <script>
 	const button = document.getElementById('icon_menu'),
 		menuMobile = document.getElementById('menuMobile'),
@@ -37,19 +38,25 @@
 	
 	/*--------------------------------------------*/
 	
-	const header = document.querySelector('.header'),
-		  sectionOne = document.querySelector('.headimage');
-	const sectionOneOptions = { };
+	const header = document.querySelector('header');
+	const sectionOne = document.querySelector('#headimage');
+	const sectionOneOptions = {
+		rootMargin: "-20px 0px 0px 0px"
+	};
+
 	const sectionOneObserver = new IntersectionObserver(function(
-														entries,
-														sectionOneObserver
-														) {
-		entries.forEach(entry => {
-			if(!entry.isIntersecting){
-				header.classList.add('nav-scrolled');
-			}
-		})
-	}, sectionOneOptions);
+	  entries,
+	  sectionOneObserver
+	) {
+	  entries.forEach(entry => {
+		if (!entry.isIntersecting) {
+		  header.classList.add("nav-scrolled");
+		} else {
+		  header.classList.remove("nav-scrolled");
+		}
+	  });
+	},
+	sectionOneOptions);
 
 	sectionOneObserver.observe(sectionOne);
 </script>
