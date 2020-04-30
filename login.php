@@ -10,7 +10,7 @@
 
 	<?php include("header.php"); ?>
 
-	<section class="account">
+	<section class="accountid">
 		<div class="accountpicture">
 			<img src="images/profils/DefaultAccount.png" class="center">
 		</div>
