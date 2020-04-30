@@ -6,6 +6,7 @@
 
 .accountpicture{
 	width : 100%;
+	margin-top: 200px;
 }
 
 .account img {
@@ -35,6 +36,12 @@
 	padding-left: 15px;
 }
 
+.account form p {
+	margin: 0 0 0 0;
+	position: relative;
+	bottom: 45px;
+}
+
 .account input[type=submit]:hover{
 	background-color: rgb(105,105,105);
 }
@@ -47,38 +54,68 @@
 
 	/* My account*/
 
-.superposition {
-	position:relative;
-	text-align: center;
-	color: rgb(255,255,255);
+.titleAccountInfoPic {
+	display: inline-block;
+	height: 400px;
+	width: 100%;
 }
 
-.titleAccountInfoPic {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: left;
+.titleAccountInfoPic h2 {
+	text-align: center;
 	display: block;
+	color: rgb(255,255,255);
 	text-shadow: 1px 1px 5px #000, -1px 1px 5px #000, 1px -1px 5px #000, -1px -1px 5px #000;
+	margin: 100px 0 0 0;
+}
+
+.titleAccountInfoPic table{
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .titleAccountInfoPic img {
 	width: 200px;
 	height: auto;
-	display: inline-block;
-	margin-right: 50px;
-	margin-left: 50px;
+	margin: 0 50px 0 50px;
 }
 
 .titleAccountInfoPic p {
-	position: relative;
 	border-radius: 5px;
 	padding-left: 15px;
 	padding-right: 15px;
 	background-color: #FFF;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	color: #000;
-	text-shadow: none;
+}
+
+.favorites {
+	display: inline-block;
+	width: 100%;
+}
+
+.favorites h3 {
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.dummyAd {
+	color: #cfcfcf;
+	height: 400px;
+}
+
+.centerV {
+	width: 100%;
+	text-align: center;
+}
+
+.personnalHuts{
+	display: inline-block;
+	width: 100%;
+}
+
+.personnalHuts h3 {
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
 }

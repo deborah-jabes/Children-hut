@@ -10,8 +10,6 @@
 
 	<?php include("header.php"); ?>
 
-	<img class="headimage" src="images/head.jpg" alt="Head image">
-
 	<section class="account">
 		<div class="accountpicture">
 			<img src="images/profils/DefaultAccount.png" class="center">
@@ -28,7 +26,9 @@
 			<br>
 			<input type="password" name="confirm_password" id="confirm_password" placeholder="Re-type Password" required>
 			<br>
-			<input type="file" name="fileToUpload" id="fileToUpload" required>
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<br>
+			<p>Field not required</p>
 			<br>
 			<input type="submit" name="submit" value="Sign-up">
 			<br>

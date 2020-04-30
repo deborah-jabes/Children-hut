@@ -25,6 +25,7 @@
 			function successfulLogin(){ //start session
 				global $data;
 				session_start();
+				$_SESSION["User_id"] = $data["User_id"];
 				$_SESSION["Email_address"] = $data["Email_address"];
  				$_SESSION["Name"] = $data["Name"];
  				$_SESSION["Surname"] = $data["Surname"];

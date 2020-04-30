@@ -23,20 +23,6 @@
 				</form>
 		</div>
 
-		<section class="ads">
-			<div class="center flexSection">
-				<div>
-					<label class="hidden"><img src="images/ad1.png" alt="ad"></label>
-				</div>
-				<div>
-					<label><img src="images/ad2.png" alt="ad"></label>
-				</div>
-				<div>
-					<label><img class="hidden" src="images/ad3.png" alt="ad"></label>
-				</div>
-			</div>
-		</section>
-
 		<section class="announcements">
 			<div class="center">
 				<h2>Recent Announcements</h2>
@@ -151,55 +137,6 @@
 				</div>
 			</div>
 		</section>
-
-		<section class="ad">
-			<div class="center flexSection">
-				<div><h3>Choose the <br />perfect <br />hut</h3></div>
-				<div><img src="images/hut2.png" alt="hut"></div>
-			</div>
-		</section>
-
-		<section class="seller">
-			<div class="center">
-				<h2>Become a seller</h2>
-				<div class="flexSection column">
-					<div>
-						<img src="images/seller.png" alt="" >
-					</div>
-					<div class="vertical">
-						<center><p><span>Evaluate your hut</span><br />
-						<strong>Ask for the price</strong></p>
-						<p>Fill in the form to contact one of our real estate agents</p>
-						<a class="typeform-share button" href="https://nicolasheudron.typeform.com/to/UmyEoa" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#ABDBFF;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="5" target="_blank">Form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script></center>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="team">
-			<div class="center">
-				<h2>The Team</h2>
-			</div>
-		</section>
-
-		<section class="partners">
-			<h2 class="center">| Partners |</h2>
-			<div class="profils">
-				<div class="firmin">
-					<img src="" alt="">
-					<h3>Chataigner 3D printer</h3>
-					<p>From father to son for over 20 years.</p>
-				</div>
-				<div class="deborah">
-					<h3>Déborah</h3>
-				</div>
-				<div class="nicolas">
-					<img src="" alt="">
-					<h3>Heudron videographer</h3>
-					<p>Fix on the roll your best moments with your children in your hut!</p>
-				</div>
-			</div>
-		</section>	
 
 		<?php include("footer.php"); ?>
 
