@@ -113,7 +113,7 @@
 }
 
 .imgAndSpecsContainer, .description {
-	display: flex;
+	
 	width: 50%;
 }
 
@@ -123,13 +123,21 @@
 	text-align: center;
 	margin-left: 10px;
 	margin-top: 5px;
-	width: 68%;
+	width: 70%;
 	font-weight: bold;
 }
 
-.description > p {
+.descriptionContent {
 	font-size: 12px;
-	top: 5px;
+}
+
+.descriptionContent a {
+	color: blue;
+}
+
+.descriptionContent li {
+	list-style-type: square;
+	margin-left: 20px;
 }
 
 

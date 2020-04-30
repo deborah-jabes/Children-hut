@@ -17,14 +17,21 @@ echo '
 
 			<div class="specs">
 				<button id="buy">BUY</button>
-				<p>allis lorem, nec varius neque ligula et dolor. </p>
+				<p>SPECIFICATIONS</p>
+				<ul class="descriptionContent">
+					<li>Element1</li>
+					<li>Element2</li>
+					<li>Element3</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 
 	<div class="description">
-		DESCRIPTION
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p><br>
+		<p>DESCRIPTION</p>
+		<p class="descriptionContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+		<p>THE SELLER</p>
+		<p class="descriptionContent"><a href="login.php">Log in</a> to see more information</p>
 	</div>
 
 </div>
