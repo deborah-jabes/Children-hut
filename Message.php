@@ -26,8 +26,7 @@ echo '<img class="headimage" src="images/head.jpg" alt="Head image">
 		<input type="submit" value="submit" name="submit" id="submit"><br><br>
 		 </form></div>
 
-		 <script src="messageJS.js"></script>
-		 </body>';
+		 <script src="messageJS.js"></script>';
 
 
 include ("footer.php");	

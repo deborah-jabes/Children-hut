@@ -2,9 +2,8 @@
 include ('usefulFunctions.php');
 
 headerFunc ('Classified Ad');
-session_start();
 $hutsName = "ImmaNumber1";
-//
+
 
 echo '
 <img class="headimage" src="images/head.jpg" alt="Head image">
@@ -14,15 +13,22 @@ echo '
 <div class="flexContainer">
 	<div class="imgAndSpecsContainer">
 		<div class="imgAndSpecs">
-			<img id="hutImg" src="images/huts/hut1.png" alt="image of a hut">
-			<p>allis lorem, nec varius neque ligula et dolor. </p>
+			<img id="hutImg" src="images/huts/hut1.jpg" alt="image of a hut">
+
+			<div class="specs">
+				<button id="buy">BUY</button>
+				<p>allis lorem, nec varius neque ligula et dolor. </p>
+			</div>
 		</div>
 	</div>
 
 	<div class="description">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+		DESCRIPTION
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p><br>
 	</div>
 
 </div>
 
 </div>';
+
+echo '</main></body>'; 

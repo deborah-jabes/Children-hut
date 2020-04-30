@@ -91,15 +91,17 @@
 }
 
 #hutImg {
-	width: 450px;
-	height: 400px;
+	width: 300px;
+	height: 300px;
 	margin-left: 10px;
 }
+
 
 .container {
 	width: 70%;
 	position: relative;
 	top: 80px;
+	bottom: 30px;
 	margin: auto;
 	border: solid 1px black;
 	border-radius: 15px;
@@ -113,6 +115,21 @@
 .imgAndSpecsContainer, .description {
 	display: flex;
 	width: 50%;
+}
+
+#buy {
+	background-color: green;
+	color: white;
+	text-align: center;
+	margin-left: 10px;
+	margin-top: 5px;
+	width: 68%;
+	font-weight: bold;
+}
+
+.description > p {
+	font-size: 12px;
+	top: 5px;
 }
 
 

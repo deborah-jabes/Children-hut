@@ -10,4 +10,5 @@ function headerFunc ($titre) {
 	<title>' . $titre . '</title>
 	</head>
 	<body>';
+	include ('header.php');
 }
