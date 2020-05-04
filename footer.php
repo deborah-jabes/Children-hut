@@ -9,7 +9,7 @@
 		<h3>The Creators</h3>
 		<ul class="creators">
 			<li><a href="https://firminchataigner.fr/" target="_blank">Firmin Chataigner</a></li>
-			<li><a href="" target="https://www.linkedin.com/in/deborah-jabes/">Déborah Jabès</a></li>
+			<li><a href="https://www.linkedin.com/in/deborah-jabes/" target="">Déborah Jabès</a></li>
 			<li><a href="https://www.nicolasheudron.xyz" target="_blank">Nicolas Heudron</a></li>
 		</ul>
 	</footer>
