@@ -34,7 +34,7 @@
 				echo "</div><br>";
 	echo "</section>";
 
-	echo "<section>";
+	echo "<section class=\"announcements\">";
 				echo "<div class=\"favorites\">";
 					echo "<h3>Fav huts</h3>";
 					$result = $db->query('SELECT * FROM huts INNER JOIN favorites ON huts.Hut_id = favorites.Hut_id WHERE favorites.User_id = '.$User_id.';');
@@ -42,8 +42,8 @@
 						echo "<div class=\"adTable\"><table><tr>";
 						while ($data = $result->fetch()){
 							echo "<td class=\"hut\"><div>";
-								echo "<img src=".$data["Pictures_path"]."1.jpg";
-								echo "<header><h4></h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
+								echo "<img src=".$data["Pictures_path"].">";
+								echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
 								echo "<p class=\"description\">Main material : ".$data["Principal_material"].", main color : ".$data["Hut_color"]."</p>";
 								echo "<footer class=\"flexSection\">";
 								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
@@ -60,7 +60,7 @@
 				echo "</div>";
 	echo "</section>";
 
-	echo "<section>";
+	echo "<section class=\"announcements\">";
 				echo "<div class=\"personnalHuts\">";
 				echo "<h3>My Huts</h3>";
 				$result = $db->query('SELECT * FROM huts WHERE huts.Author_id = '.$User_id.';');
@@ -68,8 +68,8 @@
 						echo "<div class=\"adTable\"><table><tr>";
 						while ($data = $result->fetch()){
 							echo "<td class=\"hut\"><div>";
-								echo "<img src=".$data["Pictures_path"]."1.jpg";
-								echo "<header><h4></h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
+								echo "<img src=".$data["Pictures_path"].">";
+								echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
 								echo "<p class=\"description\">Main material : ".$data["Principal_material"].", main color : ".$data["Hut_color"]."</p>";
 								echo "<footer class=\"flexSection\">";
 								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
@@ -86,7 +86,7 @@
 				echo "</div>";
 			}else{
 				echo "login first";
-				header("Location: login.html");
+				header("Location: login.php");
 			}
 		?>
 
