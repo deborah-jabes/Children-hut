@@ -26,13 +26,13 @@
 		<section class="ads">
 			<div class="center flexSection">
 				<div>
-					<label class="hidden"><img src="images/ad1.png" alt="ad"></label>
+					<img src="images/ad1.png" alt="hut" class="hidden">
 				</div>
 				<div>
-					<label><img src="images/ad2.png" alt="ad"></label>
+					<img class="girl" src="images/ad2.jpg" alt="girl in hut">
 				</div>
 				<div>
-					<label><img class="hidden" src="images/ad3.png" alt="ad"></label>
+					<img  src="images/ad3.png" alt="hut" class="hidden">
 				</div>
 			</div>
 		</section>
