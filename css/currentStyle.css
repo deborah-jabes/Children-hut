@@ -69,9 +69,15 @@
 
 }
 
-h2 {
+#messageTitle {
 	color: white;
 	font-weight: bold;
+}
+
+#hutsName {
+	color: black;
+	font-weight: bold;
+	text-align: center;
 }
 
 #formulaireMessage {
@@ -83,4 +89,62 @@ h2 {
 	opacity: 1;
 	left: 0;
 }
+
+#hutImg {
+	width: 300px;
+	height: 300px;
+	margin-left: 10px;
+}
+
+
+.container {
+	width: 70%;
+	position: relative;
+	top: 80px;
+	bottom: 30px;
+	margin: auto;
+	border: solid 1px black;
+	border-radius: 15px;
+	background-color: white;
+}
+
+.flexContainer {
+	display: inline-flex;
+}
+
+.imgAndSpecsContainer, .description {
+	
+	width: 50%;
+}
+
+#buyOrRent {
+	background-color: green;
+	color: white;
+	text-align: center;
+	margin-left: 10px;
+	margin-top: 5px;
+	width: 300px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#buyOrRent:hover {
+	opacity: 50%; 
+}
+
+.descriptionContent {
+	font-size: 12px;
+}
+
+.descriptionContent a {
+	color: blue;
+}
+
+.descriptionContent li {
+	list-style-type: square;
+	margin-left: 20px;
+}
+
+
+
 

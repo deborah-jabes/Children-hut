@@ -1,30 +1,15 @@
 <?php
-function headerFunc ($titre) {
-	echo '<!DOCTYPE html>
-	<html lang="fr">
-	<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="/css/currentStyle.css">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-	<title>' . $titre . '</title>
-	</head>
-	<body>';
-}
+include ('usefulFunctions.php');
 
 headerFunc ('Message');
 include("header.php");	
-$emailValue = $_POST['mail'];
-session_start();
 
 echo '<img class="headimage" src="images/head.jpg" alt="Head image">
 	<div class="valuesMessage" id="valuesMessage">
 
 			<div class="valuesToEnter">
 				<form id="formulaireMessage" onsubmit="replaceAndCreate(); return false" method="post">
-				
-				deborahjabes30@gmail.com
-				
-				<h2>MESSAGE</h2>
+				<h2 id="messageTitle">MESSAGE</h2>
 				<input type="text" id="name" name="name" required placeholder="Name"></br></br>
 				<input type="text" id="mailAdr" name="mail" required placeholder="e-mail address"></br></br>
 				<select id="Objects" name="object" onclick="disable()" required> 
@@ -40,8 +25,7 @@ echo '<img class="headimage" src="images/head.jpg" alt="Head image">
 		<input type="submit" value="submit" name="submit" id="submit"><br><br>
 		 </form></div>
 
-		 <script src="messageJS.js"></script>
-		 </body>';
+		 <script src="messageJS.js"></script>';
 
 
 include ("footer.php");	
