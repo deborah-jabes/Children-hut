@@ -11,6 +11,26 @@ $result = $db->prepare('SELECT * FROM huts WHERE Title = ?');
 	$result->execute(array('House for kids')); 
 while ($data = $result->fetch()) {
 
+	// setting the button value, depending on whether the hut is to rent or to buy
+	if ($data["toRent"] == 1) {
+		$rentOrBuy = 'RENT';
+	}
+	else {
+		$rentOrBuy = 'BUY';
+	}
+
+	//SPECIFICATIONS
+	/*$columnName = $db->prepare ('SHOW COLUMNS FROM huts');
+	$columnName->execute ();
+	$columnsResult = $columnName.get_result();
+
+	echo 'salut' . $columnsResult;
+
+	foreach ($columnName as $key => $value) {
+		$elements = '<li>' . $key . ' : '. $value . '</li>';
+	}*/
+
+
 	echo '
 	<img class="headimage" src="images/head.jpg" alt="Head image">
 	<div class="container">
@@ -22,13 +42,9 @@ while ($data = $result->fetch()) {
 				<img id="hutImg" src="'.$data["Pictures_path"].'" alt="image of a hut">
 
 				<div class="specs">
-					<a href="Message.php"><button id="buyOrRent">BUY</button></a>
+					<a href="Message.php"><button id="buyOrRent">'.$rentOrBuy.'</button></a>
 					<p>SPECIFICATIONS</p>
-					<ul class="descriptionContent">
-						<li>Element1</li>
-						<li>Element2</li>
-						<li>Element3</li>
-					</ul>
+					<ul class="descriptionContent"><li>Element1</li><li>Element2</li><li>Element3</li></ul>
 				</div>
 			</div>
 		</div>
