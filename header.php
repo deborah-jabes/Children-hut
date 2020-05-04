@@ -9,14 +9,14 @@
 	<a id="icon_menu" href="#menuMobile" class="menuToggle"><img src="images/menu.svg" alt="menu"></a>
 	<nav id="menu" class="menu">
 		<ul id="navbar" class="navbar">
-			<li><a href="buy.php">Buy</a></li><li><a href="rent.php" >Rent</a></li><li><a href="sale.php">Sale</a></li><li><a href="#contact" class="mediumScreen">Contact</a></li><li><a href="login.php" class="account"><i class="fa fa-user-circle fa-2x"></i></a></li>
+			<li><a href="buy.php">Buy</a></li><li><a href="rent.php" >Rent</a></li><li><a href="sale.php">Sale</a></li><li><a href="#contact" class="mediumScreen">Contact</a></li><li><a href="myaccount.php" class="account"><i class="fa fa-user-circle fa-2x"></i></a></li>
 		</ul>
 	</nav>
 </header>
 <nav id="menuMobile" class="menuMobile header without--sidebar">
 	<a id="iconClose" href="#menuMobile" class="iconCLose"><i class="fas fa-times"></i></a>
 	<ul id="navbarMobile" class="navbarMobile">
-		<li><a href=".php">Buy</a></li><li><a href=".php" >Rent</a></li><li><a href=".php">Sale</a></li><li><a href="#contact">Contact us</a></li><li><a href="myaccount.php" class="account"><img src="images/account.png"></a></li> 
+		<li><a href=".php">Buy</a></li><li><a href=".php" >Rent</a></li><li><a href=".php">Sale</a></li><li><a href="#contact">Contact us</a></li><li><a href="myaccount.php" class="account"><img src="images/account.png"></a></li>
 	</ul> 
 </nav>
 	<main id="site-content" class="site-content">
