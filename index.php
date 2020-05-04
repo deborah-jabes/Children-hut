@@ -11,11 +11,7 @@
 </head>
 <body id="body">
 	
-	<?php 
-		include("header.php");
-		include("db_connection.php");
-		session_start();
-	?>
+	<?php include("header.php")?>
 		<section class="space"></section>
 		
 		<div class="research">  
@@ -40,14 +36,97 @@
 				</div>
 			</div>
 		</section>
-		
-		<h2>Recent Announcements</h2>
-	
+
 		<section class="announcements">
 			<div class="center">
-				
+				<h2>Recent Announcements</h2>
 				<TABLE>
 					<TR>
+						<TD>
+							<div>
+								<img src="images/picAnnouncement.png">
+								<header>
+									<h4>Announcement</h4>
+									<button class="heart"><img src="images/heart.svg"></button>
+								</header>
+								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
+								<footer class="flexSection">
+									<section><p class="price">25€</p></section>
+									<section>
+										<button type="button">Buy</button>
+										<button>Details</button>
+									</section>
+								</footer>
+							</div>
+						</TD>
+						<TD>
+							<div>
+								<img src="images/picAnnouncement.png">
+								<header>
+									<h4>Announcement</h4>
+									<button class="heart"><img src="images/heart.svg"></button>
+								</header>
+								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
+								<footer class="flexSection">
+									<section><p class="price">25€</p></section>
+									<section>
+										<button type="button">Buy</button>
+										<button>Details</button>
+									</section>
+								</footer>
+							</div>
+						</TD>
+						<TD>
+							<div>
+								<img src="images/picAnnouncement.png">
+								<header>
+									<h4>Announcement</h4>
+									<button class="heart"><img src="images/heart.svg"></button>
+								</header>
+								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
+								<footer class="flexSection">
+									<section><p class="price">25€</p></section>
+									<section>
+										<button type="button">Buy</button>
+										<button>Details</button>
+									</section>
+								</footer>
+							</div>
+						</TD>
+						<TD>
+							<div>
+								<img src="images/picAnnouncement.png">
+								<header>
+									<h4>Announcement</h4>
+									<button class="heart"><img src="images/heart.svg"></button>
+								</header>
+								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
+								<footer class="flexSection">
+									<section><p class="price">25€</p></section>
+									<section>
+										<button type="button">Buy</button>
+										<button>Details</button>
+									</section>
+								</footer>
+							</div>
+						</TD>
+						<TD>
+							<div>
+								<img src="images/picAnnouncement.png">
+								<header>
+									<h4>Announcement</h4>
+									<button class="heart"><img src="images/heart.svg"></button>
+								</header>
+								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
+								<footer class="flexSection">
+									<section><p class="price">25€</p></section>
+									<section>
+										<button type="button">Buy</button>
+										<button>Details</button>
+									</section>
+								</footer>
+							</div>
+						</TD>
 						<TD>
 							<div>
 								<img src="images/picAnnouncement.png">
