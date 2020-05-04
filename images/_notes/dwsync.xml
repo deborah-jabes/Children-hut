@@ -5,14 +5,12 @@
 <file name="favicon.png" server="192.168.1.11:2100/childrenshut/" local="132316343592987149" remote="132319446600000000" Dst="2" />
 <file name="head.jpg" server="192.168.1.11:2100/childrenshut/" local="132317879062202911" remote="132319446600000000" Dst="2" />
 <file name="ad1.png" server="192.168.1.11:2100/childrenshut/" local="132317006286366800" remote="132319446600000000" Dst="2" />
-<file name="ad2.png" server="192.168.1.11:2100/childrenshut/" local="132317006286346857" remote="132319446600000000" Dst="2" />
 <file name="ad3.png" server="192.168.1.11:2100/childrenshut/" local="132317006286107500" remote="132319446600000000" Dst="2" />
 <file name="picAnnouncement.png" server="192.168.1.11:2100/childrenshut/" local="132317666384423589" remote="132319446600000000" Dst="2" />
 <file name="heart.svg" server="192.168.1.11:2100/childrenshut/" local="132317726098626407" remote="132319446600000000" Dst="2" />
 <file name="hut2.png" server="192.168.1.11:2100/childrenshut/" local="132317029933031504" remote="132319446600000000" Dst="2" />
 <file name="seller.png" server="192.168.1.11:2100/childrenshut/" local="132317790373176919" remote="132319446600000000" Dst="2" />
 <file name="account.png" server="ftp-locagarden.alwaysdata.net" local="132314524873474887" remote="132318517200000000" Dst="2" />
-<file name="ad2.png" server="ftp-locagarden.alwaysdata.net" local="132317006286346857" remote="132318517200000000" Dst="2" />
 <file name="ad1.png" server="ftp-locagarden.alwaysdata.net" local="132317006286366800" remote="132318517200000000" Dst="2" />
 <file name="ad3.png" server="ftp-locagarden.alwaysdata.net" local="132317006286107500" remote="132318517200000000" Dst="2" />
 <file name="favicon.png" server="ftp-locagarden.alwaysdata.net" local="132316343592987149" remote="132318517200000000" Dst="2" />
@@ -28,7 +26,6 @@
 <file name="menu.svg" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265312076" remote="132327188400000000" Dst="2" />
 <file name="ad1.png" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265152505" remote="132327188400000000" Dst="2" />
 <file name="head.jpg" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265282184" remote="132327188400000000" Dst="2" />
-<file name="ad2.png" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265162479" remote="132327188400000000" Dst="2" />
 <file name="picAnnouncement.png" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265322046" remote="132327188400000000" Dst="2" />
 <file name="heart.svg" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265292134" remote="132327188400000000" Dst="2" />
 <file name="ad3.png" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265172449" remote="132327188400000000" Dst="2" />
@@ -39,7 +36,6 @@
 <file name="favicon.png" server="192.168.1.11:2100//childrenshut/" local="132316343592987149" remote="132319419000000000" Dst="2" />
 <file name="head.jpg" server="192.168.1.11:2100//childrenshut/" local="132317879062202911" remote="132319419000000000" Dst="2" />
 <file name="ad1.png" server="192.168.1.11:2100//childrenshut/" local="132317006286366800" remote="132319419000000000" Dst="2" />
-<file name="ad2.png" server="192.168.1.11:2100//childrenshut/" local="132317006286346857" remote="132319419000000000" Dst="2" />
 <file name="ad3.png" server="192.168.1.11:2100//childrenshut/" local="132317006286107500" remote="132319419000000000" Dst="2" />
 <file name="picAnnouncement.png" server="192.168.1.11:2100//childrenshut/" local="132317666384423589" remote="132319419000000000" Dst="2" />
 <file name="heart.svg" server="192.168.1.11:2100//childrenshut/" local="132317726098626407" remote="132319419000000000" Dst="2" />
@@ -52,7 +48,6 @@
 <file name="favicon.png" server="192.168.1.11:2100/portal/childrenshut/" local="132324787265212340" remote="132324717000000000" Dst="2" />
 <file name="head.jpg" server="192.168.1.11:2100/portal/childrenshut/" local="132324787265282184" remote="132324717000000000" Dst="2" />
 <file name="ad1.png" server="192.168.1.11:2100/portal/childrenshut/" local="132324787265152505" remote="132324718200000000" Dst="2" />
-<file name="ad2.png" server="192.168.1.11:2100/portal/childrenshut/" local="132324787265162479" remote="132324718200000000" Dst="2" />
 <file name="ad3.png" server="192.168.1.11:2100/portal/childrenshut/" local="132324787265172449" remote="132324718200000000" Dst="2" />
 <file name="picAnnouncement.png" server="192.168.1.11:2100/portal/childrenshut/" local="132324787265322046" remote="132324718200000000" Dst="2" />
 <file name="heart.svg" server="192.168.1.11:2100/portal/childrenshut/" local="132324787265292134" remote="132324718200000000" Dst="2" />
@@ -71,4 +66,5 @@
 <file name="logoBlanc.png" server="ftp-locagarden.alwaysdata.net/www/" local="132324816711319253" remote="132327188400000000" Dst="2" />
 <file name="logoGris.png" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265212340" remote="132327188400000000" Dst="2" />
 <file name="roulotte.jpg" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265461681" remote="132327188400000000" Dst="2" />
+<file name="ad2.jpg" server="192.168.1.11:2100/portal/childrenshut/" local="132327373205542716" remote="132327301200000000" Dst="2" />
 </dwsync>

@@ -10,7 +10,7 @@
 		<ul class="creators">
 			<li><a href="https://firminchataigner.fr/" target="_blank">Firmin Chataigner</a></li>
 			<li><a href="" target="_blank">Déborah Jabès</a></li>
-			<li><a href="https://www.nicolasheudron.xyz" target="_blank">Nicolas Heudron</a></li>
+			<li><a href="https://nicolasheudron.xyz" target="_blank">Nicolas Heudron</a></li>
 		</ul>
 	</footer>
 </main>

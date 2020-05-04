@@ -117,14 +117,19 @@
 	width: 50%;
 }
 
-#buy {
+#buyOrRent {
 	background-color: green;
 	color: white;
 	text-align: center;
 	margin-left: 10px;
 	margin-top: 5px;
-	width: 70%;
+	width: 300px;
 	font-weight: bold;
+	cursor: pointer;
+}
+
+#buyOrRent:hover {
+	opacity: 50%; 
 }
 
 .descriptionContent {

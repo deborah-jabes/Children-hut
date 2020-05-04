@@ -414,6 +414,9 @@ input[type=search] {
 	padding-left: 1em;
 	padding-right: 1em;
 	width: 90%;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
 }
 
 @media screen and (max-width: 600px) {
