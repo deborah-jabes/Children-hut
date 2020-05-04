@@ -10,6 +10,7 @@
 	} catch (Exception $e) {
 		die('Error : '.$e->getMessage());
 	}
+	
 	//read from bdd
 	/*$result = $db->prepare('SELECT * FROM user WHERE id = ? OR first_name = ?');
 	$result->execute(array(1,'Firmin'));

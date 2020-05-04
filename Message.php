@@ -3,7 +3,6 @@ include ('usefulFunctions.php');
 
 headerFunc ('Message');
 include("header.php");	
-session_start();
 
 echo '<img class="headimage" src="images/head.jpg" alt="Head image">
 	<div class="valuesMessage" id="valuesMessage">
