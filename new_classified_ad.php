@@ -1,34 +1,21 @@
-<?php include ('header.php');
-include ('usefulFunctions.php');
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/fifi.css" rel="stylesheet" type="text/css">
+	<title>New Ad</title>
+</head>
+<body>
 
-headerFunc ('Classified Ad');
-$hutsName = "ImmaNumber1";
+	<?php include("header.php");
+		include("db_connection.php");
+		session_start();
+	?>
 
+	wahouuuuuu
 
-echo '
-<img class="headimage" src="images/head.jpg" alt="Head image">
-<div class="container">
-	<h2 id="hutsName">HUT '. $hutsName.'</h2>
+	<?php include("footer.php"); ?>
 
-<div class="flexContainer">
-	<div class="imgAndSpecsContainer">
-		<div class="imgAndSpecs">
-			<img id="hutImg" src="images/huts/hut1.jpg" alt="image of a hut">
-
-			<div class="specs">
-				<button id="buy">BUY</button>
-				<p>allis lorem, nec varius neque ligula et dolor. </p>
-			</div>
-		</div>
-	</div>
-
-	<div class="description">
-		DESCRIPTION
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p><br>
-	</div>
-
-</div>
-
-</div>';
-
-echo '</main></body>'; 
+</body>
+</html>

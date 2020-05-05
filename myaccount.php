@@ -24,13 +24,13 @@
 				$Profile_picture = $_SESSION["Profile_picture"];
 				echo "<div class=\"titleAccountInfoPic\">";
 				echo "<h2>My Account</h2>";
-				echo "<table><tr><td>";
-					echo "<img src=".$Profile_picture.">";
-				echo "</td><td>";
+				echo "<div class=\"centerH\"><div class=\"imgInfo\">";
+					echo "<div class=\"profilP\"><img src=".$Profile_picture."></div>";
+				echo "<div class=\"InfoP\">";
 					echo "<p>".$Name." ".$Surname."</p>";
 					echo "<p>".$Email_address."</p>";
 					echo "<p> ****** </p>";
-				echo "</td></tr></table>";
+				echo "</div></div></div>";
 				echo "</div><br>";
 	echo "</section>";
 
