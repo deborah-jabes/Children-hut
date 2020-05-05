@@ -11,8 +11,8 @@
 <file name="footer.php" server="192.168.1.11:2100//childrenshut/" local="132318483108947486" remote="132319419000000000" Dst="2" />
 <file name="index.php" server="192.168.1.11:2100//childrenshut/" local="132319497500865896" remote="132319425000000000" Dst="2" />
 <file name="index.php" server="192.168.1.11:2100/childrenshut/" local="132319525149647085" remote="132319452600000000" Dst="2" />
-<file name="header.php" server="192.168.1.11:2100/portal/childrenshut/" local="132330718392700573" remote="132330646200000000" Dst="2" />
-<file name="footer.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327307309557789" remote="132327235200000000" Dst="2" />
+<file name="header.php" server="192.168.1.11:2100/portal/childrenshut/" local="132331619553435750" remote="132331611600000000" Dst="2" />
+<file name="footer.php" server="192.168.1.11:2100/portal/childrenshut/" local="132330767529788124" remote="132331611600000000" Dst="2" />
 <file name="index.php" server="192.168.1.11:2100/portal/childrenshut/" local="132330712431239325" remote="132330640200000000" Dst="2" />
 <file name="db_connection.php" server="192.168.1.11:2100/portal/childrenshut/" local="132330704338337717" remote="132330632400000000" Dst="2" />
 <file name="signupC.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327258061082262" remote="132327187200000000" Dst="2" />
@@ -40,4 +40,5 @@
 <file name="buy.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327284547052284" remote="132327213000000000" Dst="2" />
 <file name="rent.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327285506086398" remote="132327219600000000" Dst="2" />
 <file name="rent.php" server="ftp-locagarden.alwaysdata.net/www/" local="132327285506086398" remote="132327221400000000" Dst="2" />
+<file name="sale.php" server="192.168.1.11:2100/portal/childrenshut/" local="132331686326644803" remote="132331614000000000" Dst="2" />
 </dwsync>
