@@ -458,7 +458,15 @@ input[type=search] {
 }
 
 .announcements td div img{
+	width: 300px;
+	height: 200px;
+	margin-left: 0px;
+	object-fit: contain;
+}
+
+.announcements td div button img{
 	width: 100%;
+	height: auto;
 	margin-left: 0px;
 }
 

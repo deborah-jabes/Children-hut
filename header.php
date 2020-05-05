@@ -16,7 +16,7 @@
 <nav id="menuMobile" class="menuMobile header without--sidebar">
 	<a id="iconClose" href="#menuMobile" class="iconCLose"><i class="fas fa-times"></i></a>
 	<ul id="navbarMobile" class="navbarMobile">
-		<li><a href=".php">Buy</a></li><li><a href=".php" >Rent</a></li><li><a href=".php">Sale</a></li><li><a href="#contact">Contact us</a></li><li><a href="myaccount.php" class="account"><img src="images/account.png"></a></li>
+		<li><a href=".php">Buy</a></li><li><a href=".php" >Rent</a></li><li><a href=".php">Sale</a></li><li><a href="#contact">Contact us</a></li><li><a href="myaccount.php" class="account"><img src="images/account.png"></a></li><li><a href="logout.php"></a></li>
 	</ul> 
 </nav>
 	<main id="site-content" class="site-content">
