@@ -195,7 +195,8 @@
 					<p>From father to son for over 20 years.</p>
 				</div>
 				<div class="deborah">
-					<h3>Déborah</h3>
+					<h3>Déborah Jabès</h3>
+					<p>A full-stack developer to create the best websites</p>
 				</div>
 				<div class="nicolas">
 					<img src="" alt="">
