@@ -41,121 +41,37 @@
 			</div>
 		</section>
 
-		<section class="announcements">
+		<section class="announcements flexSection flexColumn">
 			<div class="center">
 				<h2>Recent Announcements</h2>
-				<TABLE>
-					<TR>
-						<TD>
-							<div>
-								<img src="images/picAnnouncement.png">
-								<header>
-									<h4>Announcement</h4>
-									<button class="heart"><img src="images/heart.svg"></button>
-								</header>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
-								<footer class="flexSection">
-									<section><p class="price">25€</p></section>
-									<section>
-										<button type="button">Buy</button>
-										<button>Details</button>
-									</section>
-								</footer>
-							</div>
-						</TD>
-						<TD>
-							<div>
-								<img src="images/picAnnouncement.png">
-								<header>
-									<h4>Announcement</h4>
-									<button class="heart"><img src="images/heart.svg"></button>
-								</header>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
-								<footer class="flexSection">
-									<section><p class="price">25€</p></section>
-									<section>
-										<button type="button">Buy</button>
-										<button>Details</button>
-									</section>
-								</footer>
-							</div>
-						</TD>
-						<TD>
-							<div>
-								<img src="images/picAnnouncement.png">
-								<header>
-									<h4>Announcement</h4>
-									<button class="heart"><img src="images/heart.svg"></button>
-								</header>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
-								<footer class="flexSection">
-									<section><p class="price">25€</p></section>
-									<section>
-										<button type="button">Buy</button>
-										<button>Details</button>
-									</section>
-								</footer>
-							</div>
-						</TD>
-						<TD>
-							<div>
-								<img src="images/picAnnouncement.png">
-								<header>
-									<h4>Announcement</h4>
-									<button class="heart"><img src="images/heart.svg"></button>
-								</header>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
-								<footer class="flexSection">
-									<section><p class="price">25€</p></section>
-									<section>
-										<button type="button">Buy</button>
-										<button>Details</button>
-									</section>
-								</footer>
-							</div>
-						</TD>
-						<TD>
-							<div>
-								<img src="images/picAnnouncement.png">
-								<header>
-									<h4>Announcement</h4>
-									<button class="heart"><img src="images/heart.svg"></button>
-								</header>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
-								<footer class="flexSection">
-									<section><p class="price">25€</p></section>
-									<section>
-										<button type="button">Buy</button>
-										<button>Details</button>
-									</section>
-								</footer>
-							</div>
-						</TD>
-						<TD>
-							<div>
-								<img src="images/picAnnouncement.png">
-								<header>
-									<h4>Announcement</h4>
-									<button class="heart"><img src="images/heart.svg"></button>
-								</header>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu  </p>
-								<footer class="flexSection">
-									<section><p class="price">25€</p></section>
-									<section>
-										<button type="button">Buy</button>
-										<button>Details</button>
-									</section>
-								</footer>
-							</div>
-						</TD>
-					</TR>
-				</TABLE>
-				<div>
+			</div>
+			<div class="flexSection rowClassified">
 
-				</div>
+				<?php
+					$result = $db->query('SELECT * FROM huts;');
+					if ($result->rowCount() > 0) {
+							echo "<div class=\"adTable\"><table><tr>";
+							while ($data = $result->fetch()){
+								echo "<td class=\"hut\"><div>";
+									echo "<img src=".$data["Pictures_path"].">";
+									echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
+									echo "<p class=\"description\">".$data["Description"]."</p>";
+									echo "<footer class=\"flexSection\">";
+									echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
+									echo "<section><button type=\"button\">Details</button><button>Rent</button></section>";
+									echo "</footer>";
+								echo "</div></td>";
+							}
+							echo "</tr></table></div>";
+						}else{
+							echo "<div class=\"dummyAd\">";
+							echo "<p class=\"centerV\">No huts published, publish an add to see them here.</p>";
+							echo "</div>";
+						}
+				?>
 			</div>
 		</section>
-
+	
 		<section class="ad">
 			<div class="center flexSection">
 				<div><h3>Choose the <br />perfect <br />hut</h3></div>

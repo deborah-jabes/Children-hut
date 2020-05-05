@@ -17,29 +17,6 @@
 		session_start();
 	?>
 		<section class="space"></section>
-		
-		<div class="research">  
-				<form action=""> 
-					<button type="submit" class="btn btn-success">
-						<i class="fa fa-search fa-1x"></i>
-					</button>
-					<input type="search" placeholder="Research"></input>
-				</form>
-		</div>
-
-		<section class="ads">
-			<div class="center flexSection">
-				<div>
-					<img src="images/ad1.png" alt="hut" class="hidden">
-				</div>
-				<div>
-					<img class="girl" src="images/ad2.jpg" alt="girl in hut">
-				</div>
-				<div>
-					<img  src="images/ad3.png" alt="hut" class="hidden">
-				</div>
-			</div>
-	</section>
 
 		<section class="seller">
 			<div class="center">

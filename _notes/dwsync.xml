@@ -4,8 +4,8 @@
 <file name="footer.php" server="192.168.1.11:2100/childrenshut/" local="132318483108947486" remote="132319446600000000" Dst="2" />
 <file name="footer.php" server="ftp-locagarden.alwaysdata.net" local="132318483108947486" remote="132318517200000000" Dst="2" />
 <file name="header.php" server="ftp-locagarden.alwaysdata.net" local="132317904444096768" remote="132318517200000000" Dst="2" />
-<file name="index.php" server="ftp-locagarden.alwaysdata.net/www/" local="132330712172677666" remote="132330639600000000" Dst="2" />
-<file name="header.php" server="ftp-locagarden.alwaysdata.net/www/" local="132327284126971284" remote="132327211800000000" Dst="2" />
+<file name="index.php" server="ftp-locagarden.alwaysdata.net/www/" local="132331715073534047" remote="132331642800000000" Dst="2" />
+<file name="header.php" server="ftp-locagarden.alwaysdata.net/www/" local="132331619553435750" remote="132331638000000000" Dst="2" />
 <file name="footer.php" server="ftp-locagarden.alwaysdata.net/www/" local="132327307309557789" remote="132327235200000000" Dst="2" />
 <file name="header.php" server="192.168.1.11:2100//childrenshut/" local="132319493565691717" remote="132319421400000000" Dst="2" />
 <file name="footer.php" server="192.168.1.11:2100//childrenshut/" local="132318483108947486" remote="132319419000000000" Dst="2" />
@@ -20,14 +20,14 @@
 <file name="loginC.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327258061022416" remote="132327186600000000" Dst="2" />
 <file name="login.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327258618742015" remote="132327186600000000" Dst="2" />
 <file name="Message.php" server="192.168.1.11:2100/portal/childrenshut/" local="132326446338496515" remote="132327111600000000" Dst="2" />
-<file name="myaccount.php" server="192.168.1.11:2100/portal/childrenshut/" local="132330717074708897" remote="132330645000000000" Dst="2" />
+<file name="myaccount.php" server="192.168.1.11:2100/portal/childrenshut/" local="132331693753045288" remote="132331621200000000" Dst="2" />
 <file name="classified_ad.php" server="192.168.1.11:2100/portal/childrenshut/" local="132324787265112608" remote="132324720000000000" Dst="2" />
 <file name="messageJS.js" server="192.168.1.11:2100/portal/childrenshut/" local="132326446338745640" remote="132327111600000000" Dst="2" />
 <file name="README.md" server="192.168.1.11:2100/portal/childrenshut/" local="132326446338506281" remote="132327111600000000" Dst="2" />
 <file name="simple-ftp-deploy.json" server="192.168.1.11:2100/portal/childrenshut/" local="132326446338755692" remote="132327111600000000" Dst="2" />
 <file name="classified_ad.php" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265112608" remote="132327221400000000" Dst="2" />
 <file name="db_connection.php" server="ftp-locagarden.alwaysdata.net/www/" local="132326446338516252" remote="132327188400000000" Dst="2" />
-<file name="login.php" server="ftp-locagarden.alwaysdata.net/www/" local="132327258618742015" remote="132327188400000000" Dst="2" />
+<file name="login.php" server="ftp-locagarden.alwaysdata.net/www/" local="132331701947043698" remote="132330691200000000" Dst="2" />
 <file name="loginC.php" server="ftp-locagarden.alwaysdata.net/www/" local="132327258061022416" remote="132327188400000000" Dst="2" />
 <file name="Message.php" server="ftp-locagarden.alwaysdata.net/www/" local="132326446338496515" remote="132327221400000000" Dst="2" />
 <file name="messageJS.js" server="ftp-locagarden.alwaysdata.net/www/" local="132326446338745640" remote="132327188400000000" Dst="2" />
@@ -36,9 +36,10 @@
 <file name="signupC.php" server="ftp-locagarden.alwaysdata.net/www/" local="132327258061082262" remote="132327188400000000" Dst="2" />
 <file name="signup.php" server="ftp-locagarden.alwaysdata.net/www/" local="132327259545382948" remote="132327188400000000" Dst="2" />
 <file name="simple-ftp-deploy.json" server="ftp-locagarden.alwaysdata.net/www/" local="132326446338755692" remote="132327189000000000" Dst="2" />
-<file name="buy.php" server="ftp-locagarden.alwaysdata.net/www/" local="132327284547052284" remote="132327212400000000" Dst="2" />
-<file name="buy.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327284547052284" remote="132327213000000000" Dst="2" />
+<file name="buy.php" server="ftp-locagarden.alwaysdata.net/www/" local="132331712657786360" remote="132331640400000000" Dst="2" />
+<file name="buy.php" server="192.168.1.11:2100/portal/childrenshut/" local="132331703029562964" remote="132331630800000000" Dst="2" />
 <file name="rent.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327285506086398" remote="132327219600000000" Dst="2" />
-<file name="rent.php" server="ftp-locagarden.alwaysdata.net/www/" local="132327285506086398" remote="132327221400000000" Dst="2" />
+<file name="rent.php" server="ftp-locagarden.alwaysdata.net/www/" local="132331714448669005" remote="132331642200000000" Dst="2" />
 <file name="sale.php" server="192.168.1.11:2100/portal/childrenshut/" local="132331686326644803" remote="132331614000000000" Dst="2" />
+<file name="sale.php" server="ftp-locagarden.alwaysdata.net/www/" local="132331715963225640" remote="132331643400000000" Dst="2" />
 </dwsync>
