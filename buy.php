@@ -18,11 +18,11 @@
 		<section class="space"></section>
 		
 		<div class="research">  
-				<form action=""> 
+				<form action="search.php" method="post"> 
 					<button type="submit" class="btn btn-success">
 						<i class="fa fa-search fa-1x"></i>
 					</button>
-					<input type="search" placeholder="Research"></input>
+					<input type="search" placeholder="Research in 'Buy'"></input>
 				</form>
 		</div>
 
