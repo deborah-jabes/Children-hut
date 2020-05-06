@@ -173,7 +173,7 @@
 	display: block;
 	color: rgb(255,255,255);
 	text-shadow: 1px 1px 5px #000, -1px 1px 5px #000, 1px -1px 5px #000, -1px -1px 5px #000;
-	margin: 100px 0 0 0;
+	margin: 100px 0 50px 0;
 }
 
 .newClassifiedAd .divForm {
@@ -182,16 +182,111 @@
 	margin: 0 auto 0 auto;
 }
 
-.divForm table {
+.divForm form {
+	display: flex;
+	flex-direction: column;
+}
+
+.imagePreview {
+	display: flex;
+	flex-direction: row;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	border: solid 1px;
+	text-align: center;
+}
+
+.imagePreview img {
+	max-height: 300px;
+	object-fit: contain;
+}
+
+.addpading {
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.imagePreview div {
+	width: 50%;
+}
+
+.imagePreview div input[type=file] {
+	width: 100%;
+	text-align: left;
+}
+
+.previewimg{
+	object-fit: contain;
 	display: block;
+	margin: 0 auto 0 auto;
+	width: 100%;
 }
 
-#preview1{
-	height : 400px;
-	object-fit: contain;
+.newAdSpecs {
+	display: flex;
+	flex-direction: row;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	border: solid 1px;
+	padding: 15px;
 }
 
-#preview2{
-	height : 300px;
-	object-fit: contain;
+.newAdSpecs div:not(.sellrentdiv){
+	width: 50%;
+}
+
+.newAdSpecs .Rinfodiv {
+	margin-left: 15px;
+}
+
+.sellrentdiv {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.newClassifiedAd form input[type=text] {
+	box-sizing: border-box;
+	width: 100%;
+	padding-left: 10px;
+}
+
+.newClassifiedAd form textarea {
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	padding-left: 10px;
+}
+
+.newClassifiedAd form input[type=submit]{
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 980px) {
+
+	.imagePreview {
+		flex-direction: column;
+	}
+
+	.imagePreview div {
+		width: 100%;
+	}
+
+	.imagePreview img {
+		max-height: 250px;
+	}
+
+	.newAdSpecs {
+		flex-direction: column;
+	}
+
+	.newAdSpecs div:not(.sellrentdiv){
+		width: 100%;
+	}
+
+	.newAdSpecs .Rinfodiv {
+		margin-left: 0px;
+	}
 }
