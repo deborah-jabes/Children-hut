@@ -161,3 +161,37 @@
 	height: 100px;
 	}
 }
+
+	/* New classified ad */
+
+.newClassifiedAd{
+	display: inline-block;
+}
+
+.newClassifiedAd h1 {
+	text-align: center;
+	display: block;
+	color: rgb(255,255,255);
+	text-shadow: 1px 1px 5px #000, -1px 1px 5px #000, 1px -1px 5px #000, -1px -1px 5px #000;
+	margin: 100px 0 0 0;
+}
+
+.newClassifiedAd .divForm {
+	display: block;
+	width: 70%;
+	margin: 0 auto 0 auto;
+}
+
+.divForm table {
+	display: block;
+}
+
+#preview1{
+	height : 400px;
+	object-fit: contain;
+}
+
+#preview2{
+	height : 300px;
+	object-fit: contain;
+}
