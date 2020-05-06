@@ -12,3 +12,5 @@ function headerFunc ($titre) {
 	<body>';
 	include ('header.php');
 }
+
+

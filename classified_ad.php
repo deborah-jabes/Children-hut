@@ -4,12 +4,39 @@ include ('usefulFunctions.php');
 include ('db_connection.php');
 
 headerFunc ('Classified Ad');
-$hutsName = "ImmaNumber1";
 
-$result = $db->prepare('SELECT * FROM huts WHERE Title = ?');
-			// that is to modify later, so that the title is taken when the user clicks on a classified ad /!\
-	$result->execute(array('House for kids')); 
-while ($data = $result->fetch()) {
+$titles = $db->prepare('SELECT * FROM huts WHERE Title = ?');
+
+// that is to modify later, so that the title is taken when the user clicks on a classified ad /!\
+$titles->execute(array('House for kids')); 
+
+
+//SPECIFICATIONS
+function getSpecifications() {
+
+include ('db_connection.php');
+
+$columnName = $db->prepare('SELECT * from huts where Hut_id = ?');
+$columnName->execute(array('1'));
+
+	foreach ($columnName->fetch(PDO::FETCH_ASSOC) as $key => $value) {
+
+		if ($value == 0) {
+			PHP_EOL;
+		}
+		else {
+			echo '<li><b>' . str_replace('_', ' ', $key) . '</b> : '. $value . '</li>';	
+		}
+
+		
+		
+	}
+}
+
+
+
+
+while ($data = $titles->fetch()) {
 
 	// setting the button value, depending on whether the hut is to rent or to buy
 	if ($data["toRent"] == 1) {
@@ -18,17 +45,8 @@ while ($data = $result->fetch()) {
 	else {
 		$rentOrBuy = 'BUY';
 	}
+	//<li>Element1</li><li>Element2</li><li>Element3</li>
 
-	//SPECIFICATIONS
-	/*$columnName = $db->prepare ('SHOW COLUMNS FROM huts');
-	$columnName->execute ();
-	$columnsResult = $columnName.get_result();
-
-	echo 'salut' . $columnsResult;
-
-	foreach ($columnName as $key => $value) {
-		$elements = '<li>' . $key . ' : '. $value . '</li>';
-	}*/
 
 
 	echo '
@@ -44,7 +62,10 @@ while ($data = $result->fetch()) {
 				<div class="specs">
 					<a href="Message.php"><button id="buyOrRent">'.$rentOrBuy.'</button></a>
 					<p>SPECIFICATIONS</p>
-					<ul class="descriptionContent"><li>Element1</li><li>Element2</li><li>Element3</li></ul>
+					<ul class="descriptionContent">';
+
+					echo getSpecifications();
+					echo '</ul>
 				</div>
 			</div>
 		</div>
@@ -64,4 +85,4 @@ while ($data = $result->fetch()) {
 echo '</main></body>'; 
 
 
-$result->closeCursor();
+$titles->closeCursor();
