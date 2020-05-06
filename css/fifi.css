@@ -75,15 +75,31 @@
 	margin: 100px 0 0 0;
 }
 
-.titleAccountInfoPic table{
+.titleAccountInfoPic .imgInfo{
+	width: auto;
 	margin-left: auto;
 	margin-right: auto;
+	display: inline-flex;
+	flex-direction: row;
+}
+
+.imgInfo .InfoP {
+	display: inline-block;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.titleAccountInfoPic .centerH {
+	display: block;
+	text-align: center;
 }
 
 .titleAccountInfoPic img {
 	width: 200px;
-	height: auto;
+	height: 200px;
 	margin: 0 50px 0 50px;
+	border-radius: 50%;
+	object-fit: cover;
 }
 
 .titleAccountInfoPic p {
@@ -93,6 +109,7 @@
 	background-color: #FFF;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	text-align: left;
 }
 
 .favorites {
@@ -129,4 +146,18 @@
 	margin-left: auto;
 	text-align: left;
 	color: #000000;
+}
+
+@media screen and (max-width: 980px) {
+
+	.titleAccountInfoPic .imgInfo{
+		flex-direction: column;
+		max-width: 950px;
+		overflow: auto;
+	}
+
+	.titleAccountInfoPic img {
+	width: 100px;
+	height: 100px;
+	}
 }

@@ -13,7 +13,7 @@
 		session_start();
 	?>
 
-	<section>
+	<section class="flexSection flexRow">
 		<?php
 			if (isset($_SESSION["Email_address"])) {
 
@@ -24,13 +24,13 @@
 				$Profile_picture = $_SESSION["Profile_picture"];
 				echo "<div class=\"titleAccountInfoPic\">";
 				echo "<h2>My Account</h2>";
-				echo "<table><tr><td>";
-					echo "<img src=".$Profile_picture.">";
-				echo "</td><td>";
+				echo "<div class=\"centerH\"><div class=\"imgInfo\">";
+					echo "<div class=\"profilP\"><img src=".$Profile_picture."></div>";
+				echo "<div class=\"InfoP\">";
 					echo "<p>".$Name." ".$Surname."</p>";
 					echo "<p>".$Email_address."</p>";
 					echo "<p> ****** </p>";
-				echo "</td></tr></table>";
+				echo "</div></div></div>";
 				echo "</div><br>";
 	echo "</section>";
 
@@ -44,7 +44,7 @@
 							echo "<td class=\"hut\"><div>";
 								echo "<img src=".$data["Pictures_path"].">";
 								echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
-								echo "<p class=\"description\">Main material : ".$data["Principal_material"].", main color : ".$data["Hut_color"]."</p>";
+								echo "<p class=\"description\">".$data["Description"]."</p>";
 								echo "<footer class=\"flexSection\">";
 								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
 								echo "<section><button type=\"button\">Buy</button><button>Details</button></section>";
@@ -70,7 +70,7 @@
 							echo "<td class=\"hut\"><div>";
 								echo "<img src=".$data["Pictures_path"].">";
 								echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
-								echo "<p class=\"description\">Main material : ".$data["Principal_material"].", main color : ".$data["Hut_color"]."</p>";
+								echo "<p class=\"description\">".$data["Description"]."</p>";
 								echo "<footer class=\"flexSection\">";
 								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
 								echo "<section><button type=\"button\">Details</button><button>Delete</button></section>";
