@@ -13,7 +13,7 @@
 		session_start();
 	?>
 
-	<section>
+	<section class="flexSection flexRow">
 		<?php
 			if (isset($_SESSION["Email_address"])) {
 

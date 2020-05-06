@@ -9,31 +9,19 @@
 	<script src="https://kit.fontawesome.com/10a40eb87c.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--JQuery-->
 </head>
-<body id="body">
 	
-	<?php 	include("header.php");
-			include("db_connection.php");
-			session_start();
+	<?php
+	include("header.php");
+	include("db_connection.php");
 	?>
-		<section class="space"></section>
-		
-		<div class="research">  
-				<form action="search.php" method="post"> 
-					<button type="submit" class="btn btn-success">
-						<i class="fa fa-search fa-1x"></i>
-					</button>
-					<input type="search" placeholder="Research in 'Buy'"></input>
-				</form>
-		</div>
-
+	<section class="space"></section>
+	
 		<section class="announcements flexSection flexColumn">
 			<div class="center">
-				<h2>Recent Announcements</h2>
+				<h2>Results</h2>
 			</div>
 			<div class="flexSection rowClassified">
-
-				<?php
-					$result = $db->query('SELECT * FROM huts WHERE toPurchase= \'1\';');
+			<?php		$result = $db->query('SELECT * FROM huts;');
 					if ($result->rowCount() > 0) {
 							echo "<div class=\"adTable\"><table><tr>";
 							while ($data = $result->fetch()){
@@ -43,7 +31,7 @@
 									echo "<p class=\"description\">".$data["Description"]."</p>";
 									echo "<footer class=\"flexSection\">";
 									echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
-									echo "<section><button type=\"button\">Details</button><button>Buy</button></section>";
+									echo "<section><button type=\"button\">Details</button><button>Rent</button></section>";
 									echo "</footer>";
 								echo "</div></td>";
 							}
@@ -56,9 +44,4 @@
 				?>
 			</div>
 		</section>
-
-		<?php include("footer.php"); ?>
-
-	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e82eeddb-4dac-4972-9a28-304a54f8e032";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-</body>
-</html>
+	<?php include("footer.php"); ?>
