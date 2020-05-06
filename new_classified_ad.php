@@ -46,7 +46,7 @@
 						<br>
 						<input type="text" name="FloorsNB" id="FloorsNB" placeholder="Number of floors" maxlength="2">
 						<br>
-						<input type="text" name="SurfaceArea" id="SurfaceArea" placeholder="Surface area in m3" maxlength="3">
+						<input type="text" name="SurfaceArea" id="SurfaceArea" placeholder="Surface area in m²" maxlength="3">
 						<br>
 						<input type="text" name="CeilingHeight" id="CeilingHeight" placeholder="Ceiling Height" maxlength="4">
 						<br>
