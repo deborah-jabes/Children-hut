@@ -14,6 +14,12 @@
 		//https://developer.mozilla.org/fr/docs/Web/API/FileReader/readAsDataURL
 	?>
 
+	<script type="text/javascript">
+		function Loadpreview(){
+			var preview = document.quer
+		}
+	</script>
+
 	<section class="newClassifiedAd">
 		<h1>Create a new classified ad</h1>
 		<div class="divForm">
