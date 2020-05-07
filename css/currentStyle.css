@@ -142,10 +142,30 @@
 }
 
 .descriptionContent li {
-	list-style-type: square;
 	margin-left: 20px;
 }
 
+.descriptionContent li::before {
+	content:'\2714\0020';
+	color: green; 
+}
 
+li.contentWithCross::before {
+	content:'\2716\0020';
+	color: red; 
+}
 
+.specs p {
+	margin-left: 20px;
+}
 
+#country {
+	text-align: right;
+	margin-right: 30%;
+	opacity: 0.5;
+}
+
+#img_localisation {
+	height : 20px;
+	width: 20px;
+}
