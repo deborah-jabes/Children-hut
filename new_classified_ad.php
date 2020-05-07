@@ -52,7 +52,7 @@
 					<div class="addpading">
 						<img src="images/hut.png" id="preview1" class="previewimg">
 						<br>
-						<input type="file" name="fileToUpload1" id="fileToUpload1" onchange="loadpreview1()">
+						<input type="file" name="fileToUpload1" id="fileToUpload1" onchange="loadpreview1()" required>
 					</div>
 					<div class="addpading">
 						<img src="images/hut.png" id="preview2" class="previewimg">
@@ -69,27 +69,27 @@
 						<br>
 						<input type="text" name="Color" id="Color" placeholder="Main Color" maxlength="20" required>
 						<br>
-						<input type="text" name="WindowsNB" id="WindowsNB" placeholder="Number of windows" maxlength="2">
+						<input type="text" name="WindowsNB" id="WindowsNB" placeholder="Number of windows" maxlength="2" required>
 						<br>
-						<input type="checkbox" name="Slide" id="Slide">
+						<input type="checkbox" name="Slide" id="Slide" value="on">
 						<label for="Slide">Slide</label>
 						<br>
-						<input type="text" name="FloorsNB" id="FloorsNB" placeholder="Number of floors" maxlength="2">
+						<input type="text" name="FloorsNB" id="FloorsNB" placeholder="Number of floors" maxlength="2" required>
 						<br>
 						<input type="text" name="SurfaceArea" id="SurfaceArea" placeholder="Surface area in m²" maxlength="3">
 						<br>
-						<input type="text" name="CeilingHeight" id="CeilingHeight" placeholder="Ceiling Height" maxlength="4">
+						<input type="text" name="CeilingHeight" id="CeilingHeight" placeholder="Ceiling Height" maxlength="4" required>
 						<br>
-						<input type="checkbox" name="Terrace" id="Terrace">
+						<input type="checkbox" name="Terrace" id="Terrace" value="on">
 						<label for="Terrace">Terrace</label>
 						<br>
-						<input type="checkbox" name="Wheels" id="Wheels">
+						<input type="checkbox" name="Wheels" id="Wheels" value="on"Ar>
 						<label for="Wheels">Wheels</label>
 					</div>
 					<div class="Rinfodiv">
-						<input type="text" name="Price" id="Price" placeholder="Price" maxlength="6" required>
+						<input type="text" name="Price" id="Price" placeholder="Price in €" maxlength="6" required>
 						<br>
-						<input type="text" name="Country" id="Country" placeholder="Country" maxlength="30" required>
+						<input type="text" name="Town" id="Town" placeholder="Town" maxlength="30" required>
 						<br>
 						<textarea name="Description" id="Description" placeholder="Description" maxlength="10000" rows="7"></textarea>
 						<br>

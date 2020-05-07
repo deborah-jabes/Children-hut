@@ -148,6 +148,11 @@
 	color: #000000;
 }
 
+.personnalHuts h3 form{
+	display: inline-block;
+	margin-left: 50px;
+}
+
 @media screen and (max-width: 980px) {
 
 	.titleAccountInfoPic .imgInfo{
