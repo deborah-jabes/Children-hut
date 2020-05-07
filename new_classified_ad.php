@@ -15,8 +15,32 @@
 	?>
 
 	<script type="text/javascript">
-		function Loadpreview(){
-			var preview = document.quer
+		function loadpreview1(){
+			var preview1 = document.querySelector('#preview1');
+			var file1 = document.querySelector('#fileToUpload1').files[0];
+			var reader1 = new FileReader();
+
+			reader1.addEventListener("load",function(){
+				preview1.src = reader1.result
+			},false);
+
+			if (file1){
+				reader1.readAsDataURL(file1);
+			}
+		}
+
+		function loadpreview2(){
+			var preview2 = document.querySelector('#preview2');
+			var file2 = document.querySelector('#fileToUpload2').files[0];
+			var reader2 = new FileReader();
+
+			reader2.addEventListener("load",function(){
+				preview2.src = reader2.result
+			},false);
+
+			if (file2){
+				reader2.readAsDataURL(file2);
+			}
 		}
 	</script>
 
@@ -28,12 +52,12 @@
 					<div class="addpading">
 						<img src="images/hut.png" id="preview1" class="previewimg">
 						<br>
-						<input type="file" name="fileToUpload1" id="fileToUpload1">
+						<input type="file" name="fileToUpload1" id="fileToUpload1" onchange="loadpreview1()">
 					</div>
 					<div class="addpading">
 						<img src="images/hut.png" id="preview2" class="previewimg">
 						<br>
-						<input type="file" name="fileToUpload2" id="fileToUpload2">
+						<input type="file" name="fileToUpload2" id="fileToUpload2" onchange="loadpreview2()">
 					</div>
 				</div>
 
