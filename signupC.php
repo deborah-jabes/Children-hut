@@ -14,10 +14,10 @@
 				if (isset($_POST["submit"])) {
 					$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 					if ($check !== false) {
-						echo "All good";
+						echo "All good<br>";
 						$uploadOK = 1;
 					}else{
-						echo "File is not an image.";
+						echo "File is not an image.<br>";
 						$uploadOK = 0;
 					}
 				}
@@ -26,11 +26,11 @@
 					$uploadOK = 0;
 				}
 				if ($_FILES["fileToUpload"]["size"]>5000000) {
-					echo "File too large";
+					echo "File too large<br>";
 					$uploadOK = 0;
 				}
 				if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-					echo "Only jpg, png and jpeg supported";
+					echo "Only jpg, png and jpeg supported<br>";
 					$uploadOK = 0;
 				}
 				if($uploadOK == 1){
@@ -41,7 +41,8 @@
 						echo "File not uploaded <br>";
 					}
 				}else{
-					echo "Your file wasn't uploaded";
+					echo "Your file wasn't uploaded<br>";
+					header("Location: signup.php");
 				}
 			}else{
 				$targetFile = $targetDir."DefaultAccount.png";
@@ -49,9 +50,11 @@
 			}
 		}else{
 			echo "Passwords must be the same <br>";
+			header("Location: signup.php");
 		}
 	}else{
 		echo "An account already exists with this Email Address <br>";
+		header("Location: login.php");
 	}
 
 	$result->closeCursor();
@@ -68,6 +71,7 @@
 			'Profile_picture'=>$targetFile
 		));
 		session_start();
+
 		$_SESSION["EmailAddress"] = $_POST["Email_address"];
 		$_SESSION["Name"] = $_POST["Name"];
 		$_SESSION["Surname"] = $_POST["Surname"];

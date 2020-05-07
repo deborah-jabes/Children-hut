@@ -9,69 +9,74 @@
 		$fullFile = explode(".", $_FILES["fileToUpload1"]["name"]);
 		$imageFileType = strtolower(end($fullFile));
 		$uploadOK = 1;
+		echo "Image 1 :<br>";
 		if(isset($_POST["submit"])){
 			$check = getimagesize($_FILES["fileToUpload1"]["tmp_name"]);
 			if ($check !== false) {
-				echo "All good";
+				echo "All good<br>";
 				$uploadOK = 1;
 			}else{
-				echo "File is not an image.";
+				echo "File is not an image.<br>";
 				$uploadOK = 0;
 			}
 		}
 		if (file_exists($targetFile1)) {
-			echo "File already exists";
+			echo "File already exists<br>";
 			$uploadOK = 0;
 		}
 		if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-			echo "Only jpg, png and jpeg supported";
+			echo "Only jpg, png and jpeg supported<br>";
 			$uploadOK = 0;
 		}
 		if ($uploadOK == 1) {
 			if (move_uploaded_file($_FILES["fileToUpload1"]["tmp_name"], $targetFile1)) {
-				echo "All good";
+				echo "All good<br>";
 				if (is_uploaded_file($_FILES["fileToUpload2"]["tmp_name"])) {
 					$targetFile2 = $targetdir."/2.png";
 					$fullFile = explode(".", $_FILES["fileToUpload2"]["name"]);
 					$imageFileType = strtolower(end($fullFile));
 					$uploadOK = 1;
+					echo "Image 2 :<br>";
 					if(isset($_POST["submit"])){
 						$check = getimagesize($_FILES["fileToUpload2"]["tmp_name"]);
 						if ($check !== false) {
-							echo "All good";
+							echo "All good<br>";
 							$uploadOK = 1;
 						}else{
-							echo "File is not an image.";
+							echo "File is not an image.<br>";
 							$uploadOK = 0;
 						}
 					}
 					if (file_exists($targetFile2)) {
-						echo "File already exists";
+						echo "File already exists<br>";
 						$uploadOK = 0;
 					}
 					if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-						echo "Only jpg, png and jpeg supported";
+						echo "Only jpg, png and jpeg supported<br>";
 						$uploadOK = 0;
 					}
 					if ($uploadOK == 1) {
 						if (move_uploaded_file($_FILES["fileToUpload2"]["tmp_name"], $targetFile2)) {
-							echo "All good";
+							echo "All good<br>";
 							createHut();
 						} else {
-							echo "File not uploaded";
+							echo "File not uploaded<br>";
 						}
 					} else {
-						echo "File not uploaded";
+						echo "File not uploaded<br>";
 					}
 				}else{
 					createHut();
 				}
 			} else {
-				echo "File not uploaded";
+				echo "File not uploaded<br>";
 			}
 		} else {
-			echo "File not uploaded";
-		}	
+			echo "File not uploaded<br>";
+		}
+		if ($uploadOK == 0) {
+			header("Location: new_classified_ad.php")
+		}
 	}else{
 		header("Location: login.php");
 	}
@@ -84,17 +89,17 @@
 		$authorid = $_SESSION["User_id"];
 		$Requestok = 1;
 		if (!is_numeric($_POST["WindowsNB"])) {
-			echo "87";
+			echo "87<br>";
 			$Requestok = 0;
 		}
 		if (!is_numeric($_POST["FloorsNB"])) {
-			echo "90";
+			echo "90<br>";
 			$Requestok = 0;
 		}
 		if (!empty($_POST["SurfaceArea"])) {
 			if (!is_numeric($_POST["SurfaceArea"])) {
 				$Requestok = 0;
-				echo "96";
+				echo "96<br>";
 			}else{
 				$SurfaceArea = $_POST["SurfaceArea"];
 			}
@@ -118,7 +123,7 @@
 		}
 		if (!is_numeric($_POST["Price"])) {
 			$Requestok = 0;
-			echo "120";
+			echo "120<br>";
 		}else{
 			if (strpos($_POST["Price"], ",")) {
 				$Price = str_replace(",",".",$_POST["Price"])
@@ -162,7 +167,7 @@
 			));
 			header("Location: myaccount.php")
 		}else{
-			echo "Not good";
+			echo "Not good<br>";
 			header("Location: new_classified_ad.php")
 		}
 	}
