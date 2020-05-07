@@ -1,10 +1,11 @@
 <?php
 	include("db_connection.php");
+	session_start();
 
 	if (isset($_SESSION["Email_address"])){
-		$targetdir = "images/huts".microtime(true);
+		$targetdir = "images/huts/".microtime(true);
 		mkdir($targetdir);
-		$targetFile1 = $targetdir."1.png";
+		$targetFile1 = $targetdir."/1.png";
 		$fullFile = explode(".", $_FILES["fileToUpload1"]["name"]);
 		$imageFileType = strtolower(end($fullFile));
 		$uploadOK = 1;
@@ -30,7 +31,7 @@
 			if (move_uploaded_file($_FILES["fileToUpload1"]["tmp_name"], $targetFile1)) {
 				echo "All good";
 				if (is_uploaded_file($_FILES["fileToUpload2"]["tmp_name"])) {
-					$targetFile2 = $targetdir."2.png";
+					$targetFile2 = $targetdir."/2.png";
 					$fullFile = explode(".", $_FILES["fileToUpload2"]["name"]);
 					$imageFileType = strtolower(end($fullFile));
 					$uploadOK = 1;
@@ -72,7 +73,7 @@
 			echo "File not uploaded";
 		}	
 	}else{
-		header("Location: login.php")
+		header("Location: login.php");
 	}
 
 	
@@ -83,14 +84,17 @@
 		$authorid = $_SESSION["User_id"];
 		$Requestok = 1;
 		if (!is_numeric($_POST["WindowsNB"])) {
+			echo "87";
 			$Requestok = 0;
 		}
-		if (!is_numeric($_POST["Floors_nb"])) {
+		if (!is_numeric($_POST["FloorsNB"])) {
+			echo "90";
 			$Requestok = 0;
 		}
 		if (!empty($_POST["SurfaceArea"])) {
-			if (!is_numeric($_POST["SurfaceArea"]))) {
+			if (!is_numeric($_POST["SurfaceArea"])) {
 				$Requestok = 0;
+				echo "96";
 			}else{
 				$SurfaceArea = $_POST["SurfaceArea"];
 			}
@@ -114,9 +118,13 @@
 		}
 		if (!is_numeric($_POST["Price"])) {
 			$Requestok = 0;
-		}
-		if (!is_numeric($_POST["Town"])) {
-			$Requestok = 0;
+			echo "120";
+		}else{
+			if (strpos($_POST["Price"], ",")) {
+				$Price = str_replace(",",".",$_POST["Price"])
+			}else{
+				$Price = $_POST["Price"];
+			}
 		}
 		if(empty($_POST["Description"])){
 			$Description = null;
@@ -131,14 +139,14 @@
 			$toRent = 1;
 		}
 		if ($Requestok == 1) {
-			$result = $db->prepare('INSERT INTO huts(Title, Principal_material, Hut_color, Windows_nb, Slide, Floors_nb, Surface_area, Ceiling_height, Terrace, Wheels, Price, Town, Description, toPurchase, toRent, Publication_date, Purchased, Pictures_path, Author_id) VALUES (:Title, :Principal_material, :Hut_color, :Windows_nb, :Slide, :Floors_nb, :Surface_area, :Ceiling_height, :Terrace, :Wheels, :Price, :Town, :Description, :toPurchase, :toRent, :Publication_date, :Purchased, :Pictures_path, :Author_id)');
+			$result = $db->prepare('INSERT INTO huts(Title, Principal_material, Hut_color, Windows_nb, Slide, Floors_nb, Surface_area, Ceiling_height, Terrace, Wheels, Price, Town, Description, toPurchase, toRent, Purchased, Pictures_path, Author_id) VALUES (:Title, :Principal_material, :Hut_color, :Windows_nb, :Slide, :Floors_nb, :Surface_area, :Ceiling_height, :Terrace, :Wheels, :Price, :Town, :Description, :toPurchase, :toRent, :Purchased, :Pictures_path, :Author_id)');
 			$result->execute(array(
 				'Title'=>$_POST["Title"],
 				'Principal_material'=>$_POST["Material"],
 				'Hut_color'=>$_POST["Color"],
 				'Windows_nb'=>$_POST["WindowsNB"],
 				'Slide'=>$Slide,
-				'Floors_nb'=>$_POST["Floors_nb"],
+				'Floors_nb'=>$_POST["FloorsNB"],
 				'Surface_area'=>$SurfaceArea,
 				'Ceiling_height'=>$_POST["CeilingHeight"],
 				'Terrace'=>$Terrace,
@@ -148,11 +156,14 @@
 				'Description'=>$Description,
 				'toPurchase'=>$toPurchase,
 				'toRent'=>$toRent,
-				'Publication_date'=>"CURDATE()",
 				'Purchased'=>0,
 				'Pictures_path'=>$targetdir,
 				'Author_id'=>$authorid
 			));
+			header("Location: myaccount.php")
+		}else{
+			echo "Not good";
+			header("Location: new_classified_ad.php")
 		}
 	}
 ?>

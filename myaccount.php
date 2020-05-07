@@ -63,8 +63,8 @@
 	echo "<section class=\"announcements\">";
 				echo "<div class=\"personnalHuts\">";
 				echo "<h3>My Huts
-					<form action=\"new_classified_ad.php\" method=\"post\">
-						<input type=\"submit\" name=\"submit\" value=\"Add a new add\">
+					<form action=\"new_classified_ad.php\">
+						<input type=\"submit\" name=\"submit\" value=\"Add a new ad\">
 					</form></h3>";
 				$result = $db->query('SELECT * FROM huts WHERE huts.Author_id = '.$User_id.';');
 				if ($result->rowCount() > 0) {
