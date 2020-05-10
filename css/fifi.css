@@ -153,6 +153,41 @@
 	margin-left: 50px;
 }
 
+.mini{
+	display: inline-block;
+	position: relative;
+	border-radius: 20px;
+	background-color: rgb(85,121,128);
+	width: 35px; 
+	height: 35px;
+	color: white;
+	font-size: 30px;
+	margin-left: 20px;
+}
+
+.addHut{
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+}
+
+.addHut a{
+	display: block;
+	border-radius: 40px;
+	background-color: rgb(85,121,128);
+	width: 70px; 
+	height: 70px;
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.4);	
+	color: white;
+	text-align: center;
+	font-size: 60px;
+	line-height: 60px;
+}
+
+.addHut a:hover{
+	color: black;
+}
+
 @media screen and (max-width: 980px) {
 
 	.titleAccountInfoPic .imgInfo{

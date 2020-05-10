@@ -30,7 +30,7 @@
 				<h2>Results</h2>
 			</div>
 			<div class="flexSection rowClassified">
-			<?php	
+			<?php	 
 					$result = $db->query('SELECT * FROM huts WHERE  CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$recherche.'%";');
 					if ($result->rowCount() > 0) {
 						echo "<div class=\"adTable\"><table><tr>";

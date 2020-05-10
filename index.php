@@ -41,14 +41,14 @@
 			</div>
 		</section>
 
-		<section class="announcements flexSection flexColumn">
+		<section class=" flexSection flexColumn">
 			<div class="center">
 				<h2>Recent Announcements</h2>
 			</div>
-			<div class="flexSection rowClassified">
+			<div class="announcements flexSection rowClassified">
 
 				<?php
-					$result = $db->query('SELECT * FROM huts;');
+					$result = $db->query('SELECT * FROM huts ORDER BY Publication_date ASC LIMIT 5;');
 					if ($result->rowCount() > 0) {
 							echo "<div class=\"adTable\"><table><tr>";
 							while ($data = $result->fetch()){

@@ -62,10 +62,7 @@
 
 	echo "<section class=\"announcements\">";
 				echo "<div class=\"personnalHuts\">";
-				echo "<h3>My Huts
-					<form action=\"new_classified_ad.php\">
-						<input type=\"submit\" name=\"submit\" value=\"Add a new ad\">
-					</form></h3>";
+				echo '<p><h3>My Huts</h3> <i>Add a new hut to sell or rent :</i><div class="mini">+</div></p>';
 				$result = $db->query('SELECT * FROM huts WHERE huts.Author_id = '.$User_id.';');
 				if ($result->rowCount() > 0) {
 						echo "<div class=\"adTable\"><table><tr>";
@@ -94,7 +91,10 @@
 		?>
 
 	</section>
-
+	<div class="addHut">
+		<a href="new_classified_ad.php">+</a>
+	</div>
+	
 	<?php include("footer.php"); ?>
 
 </body>

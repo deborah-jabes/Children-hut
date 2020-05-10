@@ -434,8 +434,6 @@ input[type=search] {
 }
 
 .announcements {
-	overflow: auto;
-	white-space: nowrap;
 	text-align: center;
 	font-size: 20px;
 	color: rgba(238,108,108,1);
@@ -443,10 +441,16 @@ input[type=search] {
 	width: 100%;
 }
 
+.announcements tbody tr{
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
 
 .announcements header{
 	display: flex;
-}
+} 
 
 .announcements td div h4{
 	color: #fff;
