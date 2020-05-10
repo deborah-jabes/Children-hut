@@ -62,7 +62,7 @@
 
 	echo "<section class=\"announcements\">";
 				echo "<div class=\"personnalHuts\">";
-				echo '<p><h3>My Huts</h3> <i>Add a new hut to sell or rent :</i><div class="mini">+</div></p>';
+				echo '<p><h3>My Huts</h3> <center><i>Add a new hut to sell or rent :</i><div class="mini">+</div></p></center>';
 				$result = $db->query('SELECT * FROM huts WHERE huts.Author_id = '.$User_id.';');
 				if ($result->rowCount() > 0) {
 						echo "<div class=\"adTable\"><table><tr>";
