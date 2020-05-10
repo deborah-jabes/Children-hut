@@ -434,7 +434,6 @@ input[type=search] {
 }
 
 .announcements {
-	text-align: center;
 	font-size: 20px;
 	color: rgba(238,108,108,1);
 	letter-spacing: -0.3px;
