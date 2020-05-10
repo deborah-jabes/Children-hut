@@ -12,7 +12,7 @@
 <body>	
 	<?php 	include("header.php");
 			include("db_connection.php");
-			$recherche = $_GET['keyWords'];
+			$recherche = htmlspecialchars(['keyWords']);
 	?>
 	<section class="space"></section>
 		
