@@ -13,16 +13,16 @@
 <file name="index.php" server="192.168.1.11:2100/childrenshut/" local="132319525149647085" remote="132319452600000000" Dst="2" />
 <file name="header.php" server="192.168.1.11:2100/portal/childrenshut/" local="132335995090340209" remote="132335922600000000" Dst="2" />
 <file name="footer.php" server="192.168.1.11:2100/portal/childrenshut/" local="132330767529788124" remote="132333367800000000" Dst="2" />
-<file name="index.php" server="192.168.1.11:2100/portal/childrenshut/" local="132336044299211362" remote="132335971800000000" Dst="2" />
+<file name="index.php" server="192.168.1.11:2100/portal/childrenshut/" local="132336048616725071" remote="132335976600000000" Dst="2" />
 <file name="db_connection.php" server="192.168.1.11:2100/portal/childrenshut/" local="132333438904156285" remote="132333367800000000" Dst="2" />
 <file name="signupC.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327258061082262" remote="132327187200000000" Dst="2" />
 <file name="signup.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327259545382948" remote="132327187200000000" Dst="2" />
 <file name="loginC.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327258061022416" remote="132327186600000000" Dst="2" />
 <file name="login.php" server="192.168.1.11:2100/portal/childrenshut/" local="132327258618742015" remote="132327186600000000" Dst="2" />
-<file name="Message.php" server="192.168.1.11:2100/portal/childrenshut/" local="132326446338496515" remote="132327111600000000" Dst="2" />
+<file name="Message.php" server="192.168.1.11:2100/portal/childrenshut/" local="132330763400000000" remote="132335974800000000" Dst="2" />
 <file name="myaccount.php" server="192.168.1.11:2100/portal/childrenshut/" local="132336022730648551" remote="132335950200000000" Dst="2" />
-<file name="classified_ad.php" server="192.168.1.11:2100/portal/childrenshut/" local="132324787265112608" remote="132324720000000000" Dst="2" />
-<file name="messageJS.js" server="192.168.1.11:2100/portal/childrenshut/" local="132326446338745640" remote="132327111600000000" Dst="2" />
+<file name="classified_ad.php" server="192.168.1.11:2100/portal/childrenshut/" local="132333438904146324" remote="132335974800000000" Dst="2" />
+<file name="messageJS.js" server="192.168.1.11:2100/portal/childrenshut/" local="132330704338637055" remote="132335974800000000" Dst="2" />
 <file name="README.md" server="192.168.1.11:2100/portal/childrenshut/" local="132326446338506281" remote="132327111600000000" Dst="2" />
 <file name="simple-ftp-deploy.json" server="192.168.1.11:2100/portal/childrenshut/" local="132326446338755692" remote="132327111600000000" Dst="2" />
 <file name="classified_ad.php" server="ftp-locagarden.alwaysdata.net/www/" local="132324787265112608" remote="132327221400000000" Dst="2" />
@@ -44,4 +44,5 @@
 <file name="sale.php" server="ftp-locagarden.alwaysdata.net/www/" local="132331715963225640" remote="132331643400000000" Dst="2" />
 <file name="search.php" server="ftp-locagarden.alwaysdata.net/www/" local="132333439386040887" remote="132333367200000000" Dst="2" />
 <file name="search.php" server="192.168.1.11:2100/portal/childrenshut/" local="132336004063373299" remote="132335931600000000" Dst="2" />
+<file name="usefulFunctions.php" server="192.168.1.11:2100/portal/childrenshut/" local="132333438904196186" remote="132335974800000000" Dst="2" />
 </dwsync>
