@@ -19,11 +19,11 @@
 		<section class="space"></section>
 		
 		<div class="research">  
-				<form action="search.php" method="POST"> 
-					<button name="keyWords" type="submit" class="btn btn-success">
+				<form action="search.php" method="get"> 
+					<button  type="submit" class="btn btn-success">
 						<i class="fa fa-search fa-1x"></i>
 					</button>
-					<input type="search" placeholder="Research"></input>
+					<input type="search" name="keyWords" placeholder="Research"></input>
 				</form>
 		</div>
 
