@@ -12,6 +12,7 @@
 		include("db_connection.php");
 		session_start();
 		//https://developer.mozilla.org/fr/docs/Web/API/FileReader/readAsDataURL
+	if (isset($_SESSION["Email_address"])){
 	?>
 
 	<script type="text/javascript">
@@ -111,7 +112,12 @@
 		
 	</section>
 
-	<?php include("footer.php"); ?>
+	<?php 
+	}else{
+		header("Location: login.php");
+	}
+		
+	include("footer.php"); ?>
 
 </body>
 </html>

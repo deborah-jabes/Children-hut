@@ -50,4 +50,6 @@
 <file name="new_classified_adC.php" server="ftp-locagarden.alwaysdata.net/www/" local="132335974299160835" remote="132335978400000000" Dst="2" />
 <file name="searchEngineExample.php" server="ftp-locagarden.alwaysdata.net/www/" local="132330761658229584" remote="132335978400000000" Dst="2" />
 <file name="usefulFunctions.php" server="ftp-locagarden.alwaysdata.net/www/" local="132333438904196186" remote="132335978400000000" Dst="2" />
+<file name="new_classified_adC.php" server="192.168.1.11:2100/portal/childrenshut/" local="132335974299160835" remote="132336658200000000" Dst="2" />
+<file name="new_classified_ad.php" server="192.168.1.11:2100/portal/childrenshut/" local="132336733116124173" remote="132336660600000000" Dst="2" />
 </dwsync>
