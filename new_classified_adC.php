@@ -131,6 +131,16 @@
 				$Price = $_POST["Price"];
 			}
 		}
+		if (!is_numeric($_POST["CeilingHeight"])) {
+			$Requestok = 0;
+			echo "130<br>";
+		}else{
+			if (strpos($_POST["CeilingHeight"], ",")) {
+				$CeilingHeight = str_replace(",",".",$_POST["CeilingHeight"]);
+			}else{
+				$CeilingHeight = $_POST["CeilingHeight"];
+			}
+		}
 		if(empty($_POST["Description"])){
 			$Description = null;
 		}else{
@@ -153,7 +163,7 @@
 				'Slide'=>$Slide,
 				'Floors_nb'=>$_POST["FloorsNB"],
 				'Surface_area'=>$SurfaceArea,
-				'Ceiling_height'=>$_POST["CeilingHeight"],
+				'Ceiling_height'=>$CeilingHeight,
 				'Terrace'=>$Terrace,
 				'Wheels'=>$Wheels,
 				'Price'=>$_POST["Price"],
