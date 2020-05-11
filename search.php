@@ -13,6 +13,7 @@
 	<?php 	include("header.php");
 			include("db_connection.php");
 			$recherche = htmlspecialchars($_GET['keyWords']);
+			$words = explode(' ', $recherche);
 	?>
 	<section class="space"></section>
 		
@@ -31,7 +32,7 @@
 			</div>
 			<div class="flexSection rowClassified">
 			<?php	 
-					$result = $db->query('SELECT * FROM huts WHERE  CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$recherche.'%";');
+					$result = $db->query('SELECT * FROM huts WHERE  CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$words[0].'%";');
 					if ($result->rowCount() > 0) {
 						echo "<div class=\"adTable\"><table><tr>";
 						while ($data = $result->fetch()){
