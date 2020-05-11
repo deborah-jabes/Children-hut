@@ -42,7 +42,7 @@
 						echo "<div class=\"adTable\"><table><tr>";
 						while ($data = $result->fetch()){
 							echo "<td class=\"hut\"><div>";
-								echo "<img src=".$data["Pictures_path"].">";
+								echo "<img src=".$data["Pictures_path"]."/1.png>";
 								echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
 								echo "<p class=\"description\">".$data["Description"]."</p>";
 								echo "<footer class=\"flexSection\">";
@@ -68,7 +68,7 @@
 						echo "<div class=\"adTable\"><table><tr>";
 						while ($data = $result->fetch()){
 							echo "<td class=\"hut\"><div>";
-								echo "<img src=".$data["Pictures_path"].">";
+								echo "<img src=".$data["Pictures_path"]."/1.png>";
 								echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
 								echo "<p class=\"description\">".$data["Description"]."</p>";
 								echo "<footer class=\"flexSection\">";
