@@ -293,6 +293,12 @@
 	padding-left: 10px;
 }
 
+.newClassifiedAd form input[type=number] {
+	box-sizing: border-box;
+	width: 100%;
+	padding-left: 10px;
+}
+
 .newClassifiedAd form textarea {
 	box-sizing: border-box;
 	width: 100%;

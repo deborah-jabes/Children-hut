@@ -16,6 +16,20 @@
 		include("db_connection.php");
 		session_start();
 	?>
+
+	<script type="text/javascript">
+		function addToFav(hutid,userid){
+           	var xhr = new XMLHttpRequest();
+           	var str = "user="+userid+"&hut="+hutid;
+           	xhr.open("POST", "addToFav.php", true);
+           	xmlReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+           	xmlReq.setRequestHeader("Content-length", str.length);
+           	xmlReq.setRequestHeader("Connection", "close");
+
+           	xhr.send(str);
+		}
+	</script>
+
 		<section class="space"></section>
 		
 		<div class="research">  
@@ -54,7 +68,7 @@
 							while ($data = $result->fetch()){
 								echo "<td class=\"hut\"><div>";
 									echo "<img src=".$data["Pictures_path"]."/1.png>";
-									echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
+									echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\" onclick=\"<?php addToFav(".$data["Hut_id"].",".$_SESSION["User_id"].")?>\"><img src=\"images/heart.svg\"></button></header>";
 									echo "<p class=\"description\">".$data["Description"]."</p>";
 									echo "<footer class=\"flexSection\">";
 									echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
