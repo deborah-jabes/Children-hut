@@ -32,7 +32,7 @@
 			</div>
 			<div class="flexSection rowClassified">
 			<?php	 
-					$result = $db->query('SELECT * FROM huts WHERE  CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$words[0].'%";');
+					$result = $db->query('SELECT * FROM huts WHERE CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$words[0].'%" AND CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$words[1].'%" AND CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$words[2].'%" AND CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$words[3].'%" AND CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$words[4].'%" AND CONCAT(Title, Principal_material, Hut_color, Town, Description) LIKE "%'.$words[5].'%";');
 					if ($result->rowCount() > 0) {
 						echo "<div class=\"adTable\"><table><tr>";
 						while ($data = $result->fetch()){
