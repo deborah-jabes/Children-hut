@@ -71,20 +71,19 @@
 						}else{
 							echo "<div class=\"dummyAd\">";
 							echo "<p class=\"centerV\">No huts published, publish an add to see them here.</p>";
-							echo "</div>";
+							echo "</div>"; 
 						}
 				?>
 			</div>
 		</section>
 	
-		<section class="ad">
-			<div class="center flexSection">
-				<div><h3>Choose the <br />perfect <br />hut</h3></div>
-				<div><img src="images/hut2.png" alt="hut"></div>
-			</div>
+		<section id="ad" class="ad center flexSection">
+			<h3>Choose the <br />perfect <br />hut</h3>
+			<img src="images/hut.png" alt="hut" class="woodhut" >
+			<img src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
 		</section>
 
-		<section class="seller">
+		<section class="seller"> 
 			<div class="center">
 				<h2>Become a seller</h2>
 				<div class="flexSection column">
@@ -130,5 +129,8 @@
 		<?php include("footer.php"); ?>
 
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e82eeddb-4dac-4972-9a28-304a54f8e032";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+	<script src="js/scroll.js"></script>
+	
+	
 </body>
 </html>
