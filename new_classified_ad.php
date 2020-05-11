@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/fifi.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/favicon.png" />
 	<title>New Ad</title>
 </head>
 <body>
