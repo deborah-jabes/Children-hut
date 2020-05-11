@@ -74,8 +74,8 @@
 		} else {
 			echo "File not uploaded<br>";
 		}
-		if ($uploadOK == 0) {
-			header("Location: new_classified_ad.php")
+		if ($uploadOK == 0){
+			header("Location: new_classified_ad.php");
 		}
 	}else{
 		header("Location: login.php");
@@ -126,7 +126,7 @@
 			echo "120<br>";
 		}else{
 			if (strpos($_POST["Price"], ",")) {
-				$Price = str_replace(",",".",$_POST["Price"])
+				$Price = str_replace(",",".",$_POST["Price"]);
 			}else{
 				$Price = $_POST["Price"];
 			}
@@ -165,10 +165,10 @@
 				'Pictures_path'=>$targetdir,
 				'Author_id'=>$authorid
 			));
-			header("Location: myaccount.php")
+			header("Location: myaccount.php");
 		}else{
 			echo "Not good<br>";
-			header("Location: new_classified_ad.php")
+			header("Location: new_classified_ad.php");
 		}
 	}
 ?>
