@@ -52,7 +52,7 @@
 							echo "<div class=\"adTable\"><table><tr>";
 							while ($data = $result->fetch()){
 								echo "<td class=\"hut\"><div>";
-									echo "<img src=".$data["Pictures_path/1.png"].">";
+									echo "<img src=".$data["Pictures_path"]."/1.png>";
 									echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
 									echo "<p class=\"description\">".$data["Description"]."</p>";
 									echo "<footer class=\"flexSection\">";
@@ -62,7 +62,7 @@
 									}else{
 										$message = 'Rent';
 									}
-									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" name="Title" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
+									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'"</input><input type="hidden" name="Title" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
 									echo "</footer>";
 								echo "</div></td>";
 							}
