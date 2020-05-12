@@ -93,9 +93,26 @@ while ($data = $titles->fetch()) {
 	<div class="flexContainer">
 		<div class="imgAndSpecsContainer">
 			<div class="imgAndSpecs">
-				<img id="hutImg" src="'.$data["Pictures_path"].'/1.png" alt="image of a hut">
+				<div class="mySlides fade">
+					<img id="hutImg" src="'.$data["Pictures_path"].'/1.png" alt="image of a hut">
+				</div>';
+				if (file_exists($data["Pictures_path"] . '/2.png')) {
+				echo '
+				<div class="mySlides fade">
+					<img id="hutImg" src="'.$data["Pictures_path"].'/2.png" alt="image of a hut2">
+				</div>
 
-				<div class="specs">
+					';//<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					//<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+				echo '<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				</div>
+				<script src="classified_ad.js"></script>';
+				}
+				
+				echo '<div class="specs">
 					<a href="Message.php"><button id="buyOrRent">'.$rentOrBuy.'</button></a>
 					<p>SPECIFICATIONS</p>
 					<ul class="descriptionContent">';

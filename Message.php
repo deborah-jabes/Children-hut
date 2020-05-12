@@ -1,3 +1,8 @@
+<head>
+	<link rel="icon" href="images/favicon.png" />
+
+</head>
+
 <?php
 include ('usefulFunctions.php');
 
@@ -9,7 +14,7 @@ echo '<img class="headimage" src="images/head.jpg" alt="Head image">
 
 			<div class="valuesToEnter">
 				<form id="formulaireMessage" onsubmit="replaceAndCreate(); return false" method="post">
-				<h2 id="messageTitle">MESSAGE</h2>
+				<h2 id="messageTitle">Message</h2>
 				<input type="text" id="name" name="name" required placeholder="Name"></br></br>
 				<input type="text" id="mailAdr" name="mail" required placeholder="e-mail address"></br></br>
 				<select id="Objects" name="object" onclick="disable()" required> 
