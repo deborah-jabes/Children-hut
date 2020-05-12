@@ -14,7 +14,6 @@
 	<?php 
 		include("header.php");
 		include("db_connection.php");
-		session_start();
 	?>
 		<section class="space"></section>
 		
@@ -63,7 +62,7 @@
 									}else{
 										$message = 'Rent';
 									}
-									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
+									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" name="Title" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
 									echo "</footer>";
 								echo "</div></td>";
 							}

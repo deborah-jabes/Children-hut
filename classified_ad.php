@@ -1,3 +1,7 @@
+
+<head>
+	<link rel="icon" href="images/favicon.png" />
+</head>
 <?php 
 include ('header.php');
 include ('usefulFunctions.php');
@@ -7,8 +11,14 @@ headerFunc ('Classified Ad');
 
 $titles = $db->prepare('SELECT * FROM huts WHERE Title = ?');
 
-// that is to modify later, so that the title is taken when the user clicks on a classified ad /!\
-$titles->execute(array('House for kids')); 
+
+if ($_GET["Title"] != null) {
+	$titles->execute(array($_GET["Title"])); 
+}
+else {
+
+	echo '<h1 style="text-align: center">Error</h1>';
+}
 
 
 //SPECIFICATIONS
@@ -17,7 +27,7 @@ function getSpecifications() {
 include ('db_connection.php');
 
 $columnName = $db->prepare('SELECT * from huts where Hut_id = ?');
-$columnName->execute(array('1'));
+$columnName->execute(array($_GET["Hut_id"]));
 
 	foreach ($columnName->fetch(PDO::FETCH_ASSOC) as $key => $value) {
 		
@@ -83,7 +93,7 @@ while ($data = $titles->fetch()) {
 	<div class="flexContainer">
 		<div class="imgAndSpecsContainer">
 			<div class="imgAndSpecs">
-				<img id="hutImg" src="'.$data["Pictures_path"].'" alt="image of a hut">
+				<img id="hutImg" src="'.$data["Pictures_path"].'/1.png" alt="image of a hut">
 
 				<div class="specs">
 					<a href="Message.php"><button id="buyOrRent">'.$rentOrBuy.'</button></a>
