@@ -1,4 +1,10 @@
-<script src="https://kit.fontawesome.com/10a40eb87c.js" crossorigin="anonymous"></script> <!--les logos-->
+<head>
+	<script src="https://kit.fontawesome.com/10a40eb87c.js" crossorigin="anonymous"></script> <!--les logos-->
+</head>
+
+	<?php
+		session_start();
+	?>
 
 <header id="header" class="header">
 	<h1><a  href="index.php"><span class="titreMobile">CHILDREN'S HUT</span><img src="images/logoBlanc.png" class="logoMobile"></a></h1>
@@ -9,20 +15,25 @@
 		</ul>
 	</nav>
 </header>
+
 <nav id="menuMobile" class="menuMobile header without--sidebar">
 	<a id="iconClose" href="#menuMobile" class="iconCLose"><i class="fas fa-times"></i></a>
 	<ul id="navbarMobile" class="navbarMobile">
 		<li><a href="buy.php">Buy</a></li><li><a href="rent.php" >Rent</a></li><li><a href="sale.php">Sale</a></li><li><a href="#contact">Contact us</a></li><li><a href="myaccount.php" class="account"><img src="images/account.png"></a></li>
-		<?php
-			/*session_start();
-			if(isset($_SESSION["Email_address"])){
-				echo "<li><a href=\"logout.php\">Log-out</a></li>";
-			}*/
+		<?php if(isset($_SESSION["Email_address"])){
+				echo '<li><a href="logout.php">Log-out</a></li>';
+			}else{
+				echo '<li><a href="login.php">Log-in</a></li>';
+			}
 		?>
 	</ul>
 </nav>
+
 	<main id="site-content" class="site-content">
-<img id="headimage" class="headimage" src="images/head.jpg" alt="Head image">
+		
+		<img id="headimage" class="headimage" src="images/head.jpg" alt="Head image">
+		
+		
 <script>
 	const button = document.getElementById('icon_menu'),
 		menuMobile = document.getElementById('menuMobile'),

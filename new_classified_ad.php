@@ -10,7 +10,6 @@
 
 	<?php include("header.php");
 		include("db_connection.php");
-		session_start();
 		//https://developer.mozilla.org/fr/docs/Web/API/FileReader/readAsDataURL
 	if (isset($_SESSION["Email_address"])){
 	?>
