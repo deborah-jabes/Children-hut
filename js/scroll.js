@@ -1,24 +1,12 @@
-// JavaScript Document
-
-	const header = document.querySelector('woodhut');
-	const header2 = document.querySelector('header');
-	const sectionOne = document.querySelector('#header');
-	const sectionOneOptions = {
-		rootMargin: "0px 0px 0px 0px"
-	};
-
-	const sectionOneObserver = new IntersectionObserver(function(
-	  entries,
-	  sectionOneObserver
-	) {
-	  entries.forEach(entry => {
-		if (!entry.isIntersecting) {
-		  header.classList.add("hiddenHut");
-		} else {
-		  header.classList.remove("hiddenHut");
-		}
-	  });
-	},
-	sectionOneOptions);
-
-	sectionOneObserver.observe(sectionOne);
+const 	ad = document.getElementById('ad'),
+		woodhut = document.getElementById('woodhut'),
+		woodhutChild = document.getElementById('woodhutChild'),
+	  	x = 1;
+	
+		do{
+				ad.addEventListener('mouseover', function(){
+				woodhut.classList.toggle('hiddenHut');
+				woodhutChild.classList.toggle('hiddenHut');
+			});
+			x = x+1;
+		}while(x !== 2);
