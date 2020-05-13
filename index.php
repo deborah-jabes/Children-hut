@@ -21,10 +21,9 @@
            	var xhr = new XMLHttpRequest();
            	var str = "user="+userid+"&hut="+hutid;
            	xhr.open("POST", "addToFav.php", true);
-           	xmlReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-           	xmlReq.setRequestHeader("Content-length", str.length);
-           	xmlReq.setRequestHeader("Connection", "close");
-
+           	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+           	xhr.setRequestHeader("Content-length", str.length);
+           	xhr.setRequestHeader("Connection", "close");
            	xhr.send(str);
 		}
 	</script>
@@ -58,7 +57,7 @@
 			<div class="center">
 				<h2>Recent Announcements</h2>
 			</div>
-			<div class="announcements flexSection rowClassified center">
+			<div class="announcements flexSection rowClassified">
 
 				<?php
 					$result = $db->query('SELECT * FROM huts ORDER BY Publication_date DESC LIMIT 5;');
@@ -67,7 +66,7 @@
 							while ($data = $result->fetch()){
 								echo "<td class=\"hut\"><div>";
 									echo "<img src=".$data["Pictures_path"]."/1.png>";
-									echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\" onclick=\"<?php addToFav(".$data["Hut_id"].",".$_SESSION["User_id"].")?>\"><img src=\"images/heart.svg\"></button></header>";
+									echo "<header><h4>".$data["Title"]."</h4><form action=\"addToFav.php\" method=\"POST\" target=\"hidden-form\"><input type=\"hidden\" name=\"Hut_id\" value=\"".$data["Hut_id"]."\"><button type=\"submit\" class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
 									echo "<p class=\"description\">".$data["Description"]."</p>";
 									echo "<footer class=\"flexSection\">";
 									echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
@@ -76,7 +75,7 @@
 									}else{
 										$message = 'Rent';
 									}
-									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'"</input><input type="hidden" name="Title" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
+									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
 									echo "</footer>";
 								echo "</div></td>";
 							}
@@ -84,7 +83,7 @@
 						}else{
 							echo "<div class=\"dummyAd\">";
 							echo "<p class=\"centerV\">No huts published, publish an add to see them here.</p>";
-							echo "</div>"; 
+							echo "</div>";
 						}
 				?>
 			</div>
@@ -92,8 +91,8 @@
 	
 		<section id="ad" class="ad center flexSection">
 			<h3>Choose the <br />perfect <br />hut</h3>
-			<img id="woodhut" src="images/hut.png" alt="hut" class="woodhut" >
-			<img id="woodhutChild" src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
+			<img src="images/hut.png" alt="hut" class="woodhut" >
+			<img src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
 		</section>
 
 		<section class="seller"> 
@@ -107,9 +106,15 @@
 						<center><p><span>Evaluate your hut</span><br />
 						<strong>Ask for the price</strong></p>
 						<p>Fill in the form to contact one of our real estate agents</p>
-						<a class="typeform-share button" href="https://nicolasheudron.typeform.com/to/UmyEoa" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#B5CACE;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="5" target="_blank">Form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script></center>
+						<a class="typeform-share button" href="https://nicolasheudron.typeform.com/to/UmyEoa" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#ABDBFF;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="5" target="_blank">Form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script></center>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<section class="team">
+			<div class="center">
+				<h2>The Team</h2>
 			</div>
 		</section>
 
@@ -117,33 +122,28 @@
 			<h2 class="center">| Partners |</h2>
 			<div class="profils">
 				<div class="firmin">
-					<img src="images/3D_printer.png" alt="3D printer" class="logo">
-					<div><h3>Chataigner 3D printer</h3>
-					<p>From father to son for over 20 years.</p></div>
+					<img src="" alt="">
+					<h3>Chataigner 3D printer</h3>
+					<p>From father to son for over 20 years.</p>
 				</div>
 				<div class="deborah">
-					<img src="images/fullstack.png" width="150px" alt="Deborah full-stack developer" class="logo">
-					<div><h3>Déborah Jabès</h3>
-					<p>A full-stack developer to create the best websites</p></div>
-					
+					<h3>Déborah Jabès</h3>
+					<p>A full-stack developer to create the best websites</p>
 				</div>
 				<div class="nicolas">
-					<img src="images/logo entreprise.png" width="150px" alt="Nicolas Heudron ent" class="logo">
-					<div><h3>Heudron videographer</h3>
-					<p>Fix on the roll your best moments with your children in your hut!</p></div>
+					<img src="" alt="">
+					<h3>Heudron videographer</h3>
+					<p>Fix on the roll your best moments with your children in your hut!</p>
 				</div>
 			</div>
-		</section>	
+		</section>
+
+		<IFRAME name="hidden-form"></IFRAME>
 
 		<?php include("footer.php"); ?>
 
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e82eeddb-4dac-4972-9a28-304a54f8e032";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-	<style>
-	.crisp-x94m06{
-	background-color: #B5CACE;
-	-webkit-text-fill-color: #B5CACE;
-}</style>
-	<script src="js/scroll.js" type="text/javascript"></script>
+	<script src="js/scroll.js"></script>
 	
 </body>
 </html>
