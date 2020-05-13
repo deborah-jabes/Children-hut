@@ -69,4 +69,7 @@
 <file name="ad2.jpg" server="192.168.1.11:2100/portal/childrenshut/" local="132327373205542716" remote="132327301200000000" Dst="2" />
 <file name="ad2.jpg" server="ftp-locagarden.alwaysdata.net/www/" local="132327373205542716" remote="132335977200000000" Dst="2" />
 <file name="localisation.png" server="ftp-locagarden.alwaysdata.net/www/" local="132333438904176232" remote="132335977800000000" Dst="2" />
+<file name="3D_printer.png" server="192.168.1.11:2100/portal/childrenshut/" local="132302930934854312" remote="132338332200000000" Dst="2" />
+<file name="logo entreprise.png" server="192.168.1.11:2100/portal/childrenshut/" local="132076039460000000" remote="132338334000000000" Dst="2" />
+<file name="fullstack.png" server="192.168.1.11:2100/portal/childrenshut/" local="132338408678599740" remote="132338337000000000" Dst="2" />
 </dwsync>

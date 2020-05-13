@@ -14,7 +14,6 @@
 	<?php 
 		include("header.php");
 		include("db_connection.php");
-		session_start();
 	?>
 
 	<script type="text/javascript">
@@ -59,7 +58,7 @@
 			<div class="center">
 				<h2>Recent Announcements</h2>
 			</div>
-			<div class="announcements flexSection rowClassified">
+			<div class="announcements flexSection rowClassified center">
 
 				<?php
 					$result = $db->query('SELECT * FROM huts ORDER BY Publication_date DESC LIMIT 5;');
@@ -77,7 +76,7 @@
 									}else{
 										$message = 'Rent';
 									}
-									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
+									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'"</input><input type="hidden" name="Title" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
 									echo "</footer>";
 								echo "</div></td>";
 							}
@@ -93,8 +92,8 @@
 	
 		<section id="ad" class="ad center flexSection">
 			<h3>Choose the <br />perfect <br />hut</h3>
-			<img src="images/hut.png" alt="hut" class="woodhut" >
-			<img src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
+			<img id="woodhut" src="images/hut.png" alt="hut" class="woodhut" >
+			<img id="woodhutChild" src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
 		</section>
 
 		<section class="seller"> 
@@ -108,15 +107,9 @@
 						<center><p><span>Evaluate your hut</span><br />
 						<strong>Ask for the price</strong></p>
 						<p>Fill in the form to contact one of our real estate agents</p>
-						<a class="typeform-share button" href="https://nicolasheudron.typeform.com/to/UmyEoa" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#ABDBFF;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="5" target="_blank">Form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script></center>
+						<a class="typeform-share button" href="https://nicolasheudron.typeform.com/to/UmyEoa" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#B5CACE;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="5" target="_blank">Form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script></center>
 					</div>
 				</div>
-			</div>
-		</section>
-
-		<section class="team">
-			<div class="center">
-				<h2>The Team</h2>
 			</div>
 		</section>
 
@@ -124,18 +117,20 @@
 			<h2 class="center">| Partners |</h2>
 			<div class="profils">
 				<div class="firmin">
-					<img src="" alt="">
-					<h3>Chataigner 3D printer</h3>
-					<p>From father to son for over 20 years.</p>
+					<img src="images/3D_printer.png" alt="3D printer" class="logo">
+					<div><h3>Chataigner 3D printer</h3>
+					<p>From father to son for over 20 years.</p></div>
 				</div>
 				<div class="deborah">
-					<h3>Déborah Jabès</h3>
-					<p>A full-stack developer to create the best websites</p>
+					<img src="images/fullstack.png" width="150px" alt="Deborah full-stack developer" class="logo">
+					<div><h3>Déborah Jabès</h3>
+					<p>A full-stack developer to create the best websites</p></div>
+					
 				</div>
 				<div class="nicolas">
-					<img src="" alt="">
-					<h3>Heudron videographer</h3>
-					<p>Fix on the roll your best moments with your children in your hut!</p>
+					<img src="images/logo entreprise.png" width="150px" alt="Nicolas Heudron ent" class="logo">
+					<div><h3>Heudron videographer</h3>
+					<p>Fix on the roll your best moments with your children in your hut!</p></div>
 				</div>
 			</div>
 		</section>	
@@ -143,7 +138,12 @@
 		<?php include("footer.php"); ?>
 
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e82eeddb-4dac-4972-9a28-304a54f8e032";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-	<script src="js/scroll.js"></script>
+	<style>
+	.crisp-x94m06{
+	background-color: #B5CACE;
+	-webkit-text-fill-color: #B5CACE;
+}</style>
+	<script src="js/scroll.js" type="text/javascript"></script>
 	
 </body>
 </html>

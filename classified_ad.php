@@ -1,3 +1,7 @@
+
+<head>
+	<link rel="icon" href="images/favicon.png" />
+</head>
 <?php 
 include ('header.php');
 include ('usefulFunctions.php');
@@ -7,8 +11,14 @@ headerFunc ('Classified Ad');
 
 $titles = $db->prepare('SELECT * FROM huts WHERE Title = ?');
 
-// that is to modify later, so that the title is taken when the user clicks on a classified ad /!\
-$titles->execute(array('House for kids')); 
+
+if ($_GET["Title"] != null) {
+	$titles->execute(array($_GET["Title"])); 
+}
+else {
+
+	echo '<h1 style="text-align: center">Error</h1>';
+}
 
 
 //SPECIFICATIONS
@@ -17,7 +27,7 @@ function getSpecifications() {
 include ('db_connection.php');
 
 $columnName = $db->prepare('SELECT * from huts where Hut_id = ?');
-$columnName->execute(array('1'));
+$columnName->execute(array($_GET["Hut_id"]));
 
 	foreach ($columnName->fetch(PDO::FETCH_ASSOC) as $key => $value) {
 		
@@ -83,9 +93,26 @@ while ($data = $titles->fetch()) {
 	<div class="flexContainer">
 		<div class="imgAndSpecsContainer">
 			<div class="imgAndSpecs">
-				<img id="hutImg" src="'.$data["Pictures_path"].'" alt="image of a hut">
+				<div class="mySlides fade">
+					<img id="hutImg" src="'.$data["Pictures_path"].'/1.png" alt="image of a hut">
+				</div>';
+				if (file_exists($data["Pictures_path"] . '/2.png')) {
+				echo '
+				<div class="mySlides fade">
+					<img id="hutImg" src="'.$data["Pictures_path"].'/2.png" alt="image of a hut2">
+				</div>
 
-				<div class="specs">
+					';//<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					//<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+				echo '<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				</div>
+				<script src="classified_ad.js"></script>';
+				}
+				
+				echo '<div class="specs">
 					<a href="Message.php"><button id="buyOrRent">'.$rentOrBuy.'</button></a>
 					<p>SPECIFICATIONS</p>
 					<ul class="descriptionContent">';
