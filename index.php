@@ -47,7 +47,7 @@
 			<div class="announcements flexSection rowClassified center">
 
 				<?php
-					$result = $db->query('SELECT * FROM huts ORDER BY Publication_date ASC LIMIT 5;');
+					$result = $db->query('SELECT * FROM huts ORDER BY Publication_date DESC LIMIT 5;');
 					if ($result->rowCount() > 0) {
 							echo "<div class=\"adTable\"><table><tr>";
 							while ($data = $result->fetch()){
