@@ -16,18 +16,6 @@
 		include("db_connection.php");
 	?>
 
-	<script type="text/javascript">
-		function addToFav(hutid,userid){
-           	var xhr = new XMLHttpRequest();
-           	var str = "user="+userid+"&hut="+hutid;
-           	xhr.open("POST", "addToFav.php", true);
-           	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-           	xhr.setRequestHeader("Content-length", str.length);
-           	xhr.setRequestHeader("Connection", "close");
-           	xhr.send(str);
-		}
-	</script>
-
 		<section class="space"></section>
 		
 		<div class="research">  
@@ -138,7 +126,7 @@
 			</div>
 		</section>
 
-		<IFRAME name="hidden-form"></IFRAME>
+		<IFRAME style="display: none;" name="hidden-form"></IFRAME>
 
 		<?php include("footer.php"); ?>
 
