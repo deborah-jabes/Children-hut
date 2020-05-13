@@ -11,10 +11,20 @@
 	<a id="icon_menu" href="#menuMobile" class="menuToggle"><img src="images/menu.svg" alt="menu"></a>
 	<nav id="menu" class="menu">
 		<ul id="navbar" class="navbar">
-			<li><a href="buy.php">Buy</a></li><li><a href="rent.php" >Rent</a></li><li><a href="sale.php">Sale</a></li><li><a href="#contact" class="mediumScreen">Contact</a></li><li><a href="myaccount.php" class="account"><i class="fa fa-user-circle fa-2x"></i></a></li>
+			<li><a href="buy.php">Buy</a></li><li><a href="rent.php" >Rent</a></li><li><a href="sale.php">Sale</a></li><li><a href="#contact" class="mediumScreen">Contact</a></li><li><a id="accountButton" href="#deroulant" class="account"><i class="fa fa-user-circle fa-2x"></i></a></li>
 		</ul>
 	</nav>
 </header>
+
+<div id="deroulant" class="deroulant deroulantHidden">
+			<?php if(isset($_SESSION["Email_address"])){
+					echo '<a href="myaccount.php"><li>My account</li></a>';
+					echo '<a href="logout.php"><li>Log-out</li></a>';
+				}else{
+					echo '<a href="login.php"><li>Log-in</li></a>';
+				}
+			?>
+	</div>
 
 <nav id="menuMobile" class="menuMobile header without--sidebar">
 	<a id="iconClose" href="#menuMobile" class="iconCLose"><i class="fas fa-times"></i></a>
@@ -73,4 +83,19 @@
 	sectionOneOptions);
 
 	sectionOneObserver.observe(sectionOne);
+</script>
+		
+<script>
+	const deroulant = document.getElementById('deroulant'),
+		accountButton = document.getElementById('accountButton');
+	
+	accountButton.addEventListener('click', function(e){
+		e.preventDefault;
+		deroulant.classList.toggle('deroulantHidden');
+	});
+	
+	deroulant.addEventListener('mouseout', function(e){
+		e.preventDefault;
+		deroulant.classList.toggle('deroulantHidden');
+	});
 </script>

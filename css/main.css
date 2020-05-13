@@ -294,6 +294,34 @@ button {
 		display: none;
 	}
 }
+
+/* Menu déroulant -----------------------------------------------------*/
+.deroulant{
+	position: fixed;
+	right: 10px;
+	top: 60px;
+	border-radius: 4px;
+	background-color: white;
+	width: 200px;
+	height: auto;
+	box-shadow: 2px 2px 5px 1px rgba(85,121,128,0.80);
+	overflow: hidden;
+	z-index: 1000000000;
+}
+
+.deroulantHidden{
+	display :none;
+}
+
+.deroulant li{
+	padding-left :20px;
+	padding-top : 5px;
+}
+
+.deroulant li:hover{
+	background-color: rgba(85,121,128,1.00);
+	color: white;
+}
 /* Banner -------------------------------------------------------------*/
 body, section {
 	margin: 0;
