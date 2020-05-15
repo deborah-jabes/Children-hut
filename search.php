@@ -38,23 +38,11 @@
 						while ($data = $result->fetch()){
 							echo "<td class=\"hut\"><div>";
 								echo "<img src=".$data["Pictures_path"]."/1.png>";
-								echo "<header><h4>".$data["Title"]."</h4><form action=\"addToFav.php\" method=\"POST\" target=\"hidden-form\"><input type=\"hidden\" name=\"Hut_id\" value=\"".$data["Hut_id"]."\"><button type=\"submit\" class=\"heart\"><img src=\"images/heart.svg\"></button></form></header>";
+								echo "<header><h4>".$data["Title"]."</h4><form action=\"addToFav.php\" method=\"POST\" target=\"hidden-form\"><input type=\"hidden\" name=\"Hut_id\" value=\"".$data["Hut_id"]."\"><button type=\"submit\" class=\"heart\"onclick=\"changeheart('hut".$data["Hut_id"]."')\"><img src=\"images/heart.svg\" id=\"hut".$data["Hut_id"]."\"></button></form></header>";
 								echo "<p class=\"description\">".$data["Description"]."</p>";
 								echo "<footer class=\"flexSection\">";
 								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
-								if($data["toPurchase"] == 1){
-											$message = 'Buy';
-										}else{
-											$message = 'Rent';
-										}	
-								echo '<section>
-													<form action="classified_ad.php" method="get">
-														<input type="hidden" name="Title" value="'.$data["Title"].'"></input>
-														<input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'"</input>
-														<button type="submit">Details</button>
-													</form>
-													<button><a href="Message.php">'.$message.'</a></button>
-												</section>';
+								echo "<section><button type=\"button\">Details</button><button>Rent</button></section>";
 								echo "</footer>";
 							echo "</div></td>";
 						}
@@ -69,6 +57,8 @@
 		</section>
 
 		<IFRAME style="display: none;" name="hidden-form"></IFRAME>
+
+		<script src="js/heart.js"></script>
 		
 	<?php include("footer.php") ?>
 </body>
