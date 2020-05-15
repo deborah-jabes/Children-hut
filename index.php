@@ -134,7 +134,7 @@
 		<?php include("footer.php"); ?>
 
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e82eeddb-4dac-4972-9a28-304a54f8e032";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-	<script src="js/scroll.js"></script>
+	<script src="js/scroll.js" type="text/javascript"></script>
 	
 </body>
 </html>
