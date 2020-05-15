@@ -42,7 +42,15 @@
 									echo "<p class=\"description\">".$data["Description"]."</p>";
 									echo "<footer class=\"flexSection\">";
 									echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
-									echo "<section><button type=\"button\">Details</button><button>Buy</button></section>";
+									echo '<section>
+											<form action="classified_ad.php" method="get">
+													<input type="hidden" name="Title" value="'.$data["Title"].'">
+													</input>
+													<input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'">
+													</input>
+													<button type="submit">Details</button>
+											</form>
+											<button><a href="Message.php">Buy</a></button></section>';
 									echo "</footer>";
 								echo "</div></td>";
 							}
