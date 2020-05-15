@@ -486,6 +486,11 @@ input[type=search] {
 	text-transform: uppercase;
 	position: relative;
 	bottom: 5px;
+	height: 36px;
+	width: 200px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .announcements td > div{
