@@ -54,7 +54,7 @@
 							while ($data = $result->fetch()){
 								echo "<td class=\"hut\"><div>";
 									echo "<img src=".$data["Pictures_path"]."/1.png>";
-									echo "<header><h4>".$data["Title"]."</h4><form action=\"addToFav.php\" method=\"POST\" target=\"hidden-form\"><input type=\"hidden\" name=\"Hut_id\" value=\"".$data["Hut_id"]."\"><button type=\"submit\" class=\"heart\"><img src=\"images/heart.svg\"></button></form></header>";
+									echo "<header><h4>".$data["Title"]."</h4><form action=\"addToFav.php\" method=\"POST\" target=\"hidden-form\"><input type=\"hidden\" name=\"Hut_id\" value=\"".$data["Hut_id"]."\"><button type=\"submit\" class=\"heart\" onclick=\"changeheart(hut".$data["Hut_id"].")\"><img src=\"images/heart.svg\" id=\"hut".$data["Hut_id"]."\"></button></form></header>";
 									echo "<p class=\"description\">".$data["Description"]."</p>";
 									echo "<footer class=\"flexSection\">";
 									echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
@@ -66,8 +66,7 @@
 									echo '<section>
 												<form action="classified_ad.php" method="get">
 													<input type="hidden" name="Title" value="'.$data["Title"].'"></input>
-													<input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'">
-													</input>
+													<input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'"</input>
 													<button type="submit">Details</button>
 												</form>
 												<button><a href="Message.php">'.$message.'</a></button>
@@ -87,8 +86,8 @@
 	
 		<section id="ad" class="ad center flexSection">
 			<h3>Choose the <br />perfect <br />hut</h3>
-			<img id="woodhut" src="images/hut.png" alt="hut" class="woodhut" >
-			<img id="woodhutChild" src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
+			<img src="images/hut.png" alt="hut" class="woodhut" >
+			<img src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
 		</section>
 
 		<section class="seller"> 
@@ -108,34 +107,45 @@
 			</div>
 		</section>
 
+		<section class="team">
+			<div class="center">
+				<h2>The Team</h2>
+			</div>
+		</section>
+
 		<section class="partners">
 			<h2 class="center">| Partners |</h2>
 			<div class="profils">
 				<div class="firmin">
-					<img src="images/3D_printer.png" alt="3D printer" class="logo">
-					<div><h3>Chataigner 3D printer</h3>
-					<p>From father to son for over 20 years.</p></div>
+					<img src="" alt="">
+					<h3>Chataigner 3D printer</h3>
+					<p>From father to son for over 20 years.</p>
 				</div>
 				<div class="deborah">
-					<img src="images/fullstack.png" width="150px" alt="Deborah full-stack developer" class="logo">
-					<div><h3>Déborah Jabès</h3>
-					<p>A full-stack developer to create the best websites</p></div>
-					
+					<h3>Déborah Jabès</h3>
+					<p>A full-stack developer to create the best websites</p>
 				</div>
 				<div class="nicolas">
-					<img src="images/logo entreprise.png" width="150px" alt="Nicolas Heudron ent" class="logo">
-					<div><h3>Heudron videographer</h3>
-					<p>Fix on the roll your best moments with your children in your hut!</p></div>
+					<img src="" alt="">
+					<h3>Heudron videographer</h3>
+					<p>Fix on the roll your best moments with your children in your hut!</p>
 				</div>
 			</div>
-		</section>	
+		</section>
 
 		<IFRAME style="display: none;" name="hidden-form"></IFRAME>
 
 		<?php include("footer.php"); ?>
 
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e82eeddb-4dac-4972-9a28-304a54f8e032";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-	<script src="js/scroll.js" type="text/javascript"></script>
+	<script src="js/scroll.js"></script>
+
+	<script type="text/javascript">
+		function changeheart(hutid){
+			var logo = document.getElementById(hutid);
+			logo.src = "/images/heartfull.svg";
+		}
+	</script>
 	
 </body>
 </html>
