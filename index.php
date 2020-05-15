@@ -87,8 +87,8 @@
 	
 		<section id="ad" class="ad center flexSection">
 			<h3>Choose the <br />perfect <br />hut</h3>
-			<img src="images/hut.png" alt="hut" class="woodhut" >
-			<img src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
+			<img id="woodhut" src="images/hut.png" alt="hut" class="woodhut" >
+			<img id="woodhutChild" src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
 		</section>
 
 		<section class="seller"> 
@@ -108,38 +108,34 @@
 			</div>
 		</section>
 
-		<section class="team">
-			<div class="center">
-				<h2>The Team</h2>
-			</div>
-		</section>
-
 		<section class="partners">
 			<h2 class="center">| Partners |</h2>
 			<div class="profils">
 				<div class="firmin">
-					<img src="" alt="">
-					<h3>Chataigner 3D printer</h3>
-					<p>From father to son for over 20 years.</p>
+					<img src="images/3D_printer.png" alt="3D printer" class="logo">
+					<div><h3>Chataigner 3D printer</h3>
+					<p>From father to son for over 20 years.</p></div>
 				</div>
 				<div class="deborah">
-					<h3>Déborah Jabès</h3>
-					<p>A full-stack developer to create the best websites</p>
+					<img src="images/fullstack.png" width="150px" alt="Deborah full-stack developer" class="logo">
+					<div><h3>Déborah Jabès</h3>
+					<p>A full-stack developer to create the best websites</p></div>
+					
 				</div>
 				<div class="nicolas">
-					<img src="" alt="">
-					<h3>Heudron videographer</h3>
-					<p>Fix on the roll your best moments with your children in your hut!</p>
+					<img src="images/logo entreprise.png" width="150px" alt="Nicolas Heudron ent" class="logo">
+					<div><h3>Heudron videographer</h3>
+					<p>Fix on the roll your best moments with your children in your hut!</p></div>
 				</div>
 			</div>
-		</section>
+		</section>	
 
 		<IFRAME style="display: none;" name="hidden-form"></IFRAME>
 
 		<?php include("footer.php"); ?>
 
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e82eeddb-4dac-4972-9a28-304a54f8e032";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-	<script src="js/scroll.js"></script>
+	<script src="js/scroll.js" type="text/javascript"></script>
 	
 </body>
 </html>
