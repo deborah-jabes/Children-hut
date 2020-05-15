@@ -117,21 +117,23 @@
 			<h2 class="center">| Partners |</h2>
 			<div class="profils">
 				<div class="firmin">
-					<img src="" alt="">
-					<h3>Chataigner 3D printer</h3>
-					<p>From father to son for over 20 years.</p>
+					<img src="images/3D_printer.png" alt="3D printer" class="logo">
+					<div><h3>Chataigner 3D printer</h3>
+					<p>From father to son for over 20 years.</p></div>
 				</div>
 				<div class="deborah">
-					<h3>Déborah Jabès</h3>
-					<p>A full-stack developer to create the best websites</p>
+					<img src="images/fullstack.png" width="150px" alt="Deborah full-stack developer" class="logo">
+					<div><h3>Déborah Jabès</h3>
+					<p>A full-stack developer to create the best websites</p></div>
+					
 				</div>
 				<div class="nicolas">
-					<img src="" alt="">
-					<h3>Heudron videographer</h3>
-					<p>Fix on the roll your best moments with your children in your hut!</p>
+					<img src="images/logo entreprise.png" width="150px" alt="Nicolas Heudron ent" class="logo">
+					<div><h3>Heudron videographer</h3>
+					<p>Fix on the roll your best moments with your children in your hut!</p></div>
 				</div>
 			</div>
-		</section>
+		</section>	
 
 		<IFRAME style="display: none;" name="hidden-form"></IFRAME>
 
