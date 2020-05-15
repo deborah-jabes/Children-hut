@@ -107,12 +107,6 @@
 			</div>
 		</section>
 
-		<section class="team">
-			<div class="center">
-				<h2>The Team</h2>
-			</div>
-		</section>
-
 		<section class="partners">
 			<h2 class="center">| Partners |</h2>
 			<div class="profils">
