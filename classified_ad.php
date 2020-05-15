@@ -17,7 +17,7 @@ if ($_GET["Title"] != null) {
 }
 else {
 
-	echo '<h1 style="text-align: center">Error</h1>';
+	echo '<h1 style="text-align: center; color: red">Error</h1>';
 }
 
 
