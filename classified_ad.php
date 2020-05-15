@@ -84,7 +84,7 @@ while ($data = $titles->fetch()) {
 	echo '
 	<img class="headimage" src="images/head.jpg" alt="Head image">
 	<div class="container">
-		<h2 id="hutsName">HUT '. $data["Title"] .'</h2>
+		<h2 id="hutsName">'. $data["Title"] .'</h2>
 		<div id="country">
 		<img id="img_localisation" src="/images/localisation.png" alt="localisation_img"></img>
 		<a>'.$data["Town"].'<a>
