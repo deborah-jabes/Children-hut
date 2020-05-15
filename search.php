@@ -42,7 +42,19 @@
 								echo "<p class=\"description\">".$data["Description"]."</p>";
 								echo "<footer class=\"flexSection\">";
 								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
-								echo "<section><button type=\"button\">Details</button><button>Rent</button></section>";
+								if($data["toPurchase"] == 1){
+											$message = 'Buy';
+										}else{
+											$message = 'Rent';
+										}	
+								echo '<section>
+													<form action="classified_ad.php" method="get">
+														<input type="hidden" name="Title" value="'.$data["Title"].'"></input>
+														<input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'"</input>
+														<button type="submit">Details</button>
+													</form>
+													<button><a href="Message.php">'.$message.'</a></button>
+												</section>';
 								echo "</footer>";
 							echo "</div></td>";
 						}
