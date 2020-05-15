@@ -14,7 +14,6 @@
 	<?php 
 		include("header.php");
 		include("db_connection.php");
-		session_start();
 	?>
 		<section class="space"></section>
 

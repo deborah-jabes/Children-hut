@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/fifi.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/favicon.png" />
 	<title>My Account</title>
 </head>
 <body>
 
 	<?php include("header.php");
 		include("db_connection.php");
-		session_start();
 	?>
 
 	<section class="flexSection flexRow">
@@ -43,7 +43,7 @@
 						while ($data = $result->fetch()){
 							echo "<td class=\"hut\"><div>";
 								echo "<img src=".$data["Pictures_path"]."/1.png>";
-								echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
+								echo "<header><h4>".$data["Title"]."</h4><form action=\"removeFromFav.php\" method=\"POST\" target=\"hidden-form\"><input type=\"hidden\" name=\"Hut_id\" value=\"".$data["Hut_id"]."\"><button type=\"submit\" class=\"heart\"><img src=\"images/crossedheart.svg\"></button></form></header>";
 								echo "<p class=\"description\">".$data["Description"]."</p>";
 								echo "<footer class=\"flexSection\">";
 								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
@@ -69,7 +69,7 @@
 						while ($data = $result->fetch()){
 							echo "<td class=\"hut\"><div>";
 								echo "<img src=".$data["Pictures_path"]."/1.png>";
-								echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
+								echo "<header><h4>".$data["Title"]."</h4><form action=\"addToFav.php\" method=\"POST\" target=\"hidden-form\"><input type=\"hidden\" name=\"Hut_id\" value=\"".$data["Hut_id"]."\"><button type=\"submit\" class=\"heart\"><img src=\"images/heart.svg\"></button></form></header>";
 								echo "<p class=\"description\">".$data["Description"]."</p>";
 								echo "<footer class=\"flexSection\">";
 								echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
@@ -91,6 +91,9 @@
 		?>
 
 	</section>
+
+	<IFRAME style="display: none;" name="hidden-form"></IFRAME>
+
 	<div class="addHut">
 		<a href="new_classified_ad.php">+</a>
 	</div>

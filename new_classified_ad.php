@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/fifi.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/favicon.png" />
 	<title>New Ad</title>
 </head>
 <body>
 
 	<?php include("header.php");
 		include("db_connection.php");
-		session_start();
 		//https://developer.mozilla.org/fr/docs/Web/API/FileReader/readAsDataURL
 	if (isset($_SESSION["Email_address"])){
 	?>
@@ -70,12 +70,12 @@
 						<br>
 						<input type="text" name="Color" id="Color" placeholder="Main Color" maxlength="20" required>
 						<br>
-						<input type="text" name="WindowsNB" id="WindowsNB" placeholder="Number of windows" maxlength="2" required>
+						<input type="number" name="WindowsNB" id="WindowsNB" placeholder="Number of windows" maxlength="2" step="1" min="0" required>
 						<br>
 						<input type="checkbox" name="Slide" id="Slide" value="on">
 						<label for="Slide">Slide</label>
 						<br>
-						<input type="text" name="FloorsNB" id="FloorsNB" placeholder="Number of floors" maxlength="2" required>
+						<input type="number" name="FloorsNB" id="FloorsNB" placeholder="Number of floors" maxlength="2" step="1" min="1" required>
 						<br>
 						<input type="text" name="SurfaceArea" id="SurfaceArea" placeholder="Surface area in m²" maxlength="3" required>
 						<br>
@@ -109,7 +109,6 @@
 				<input type="submit" name="submit" value="Publish">
 			</form>
 		</div>
-		
 	</section>
 
 	<?php 

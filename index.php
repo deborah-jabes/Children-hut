@@ -15,6 +15,7 @@
 		include("header.php");
 		include("db_connection.php");
 	?>
+
 		<section class="space"></section>
 		
 		<div class="research">  
@@ -53,7 +54,7 @@
 							while ($data = $result->fetch()){
 								echo "<td class=\"hut\"><div>";
 									echo "<img src=".$data["Pictures_path"]."/1.png>";
-									echo "<header><h4>".$data["Title"]."</h4><button class=\"heart\"><img src=\"images/heart.svg\"></button></header>";
+									echo "<header><h4>".$data["Title"]."</h4><form action=\"addToFav.php\" method=\"POST\" target=\"hidden-form\"><input type=\"hidden\" name=\"Hut_id\" value=\"".$data["Hut_id"]."\"><button type=\"submit\" class=\"heart\"><img src=\"images/heart.svg\"></button></form></header>";
 									echo "<p class=\"description\">".$data["Description"]."</p>";
 									echo "<footer class=\"flexSection\">";
 									echo "<section><p class=\"price\">".$data["Price"]."€</p></section>";
@@ -62,7 +63,7 @@
 									}else{
 										$message = 'Rent';
 									}
-									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'"</input><input type="hidden" name="Title" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
+									echo '<section><form action="classified_ad.php" method="get"><input type="hidden" value="'.$data["Title"].'"></input><button type="submit">Details</button></form><button><a href="Message.php">'.$message.'</a></button></section>';
 									echo "</footer>";
 								echo "</div></td>";
 							}
@@ -70,7 +71,7 @@
 						}else{
 							echo "<div class=\"dummyAd\">";
 							echo "<p class=\"centerV\">No huts published, publish an add to see them here.</p>";
-							echo "</div>"; 
+							echo "</div>";
 						}
 				?>
 			</div>
@@ -123,7 +124,9 @@
 					<p>Fix on the roll your best moments with your children in your hut!</p>
 				</div>
 			</div>
-		</section>	
+		</section>
+
+		<IFRAME style="display: none;" name="hidden-form"></IFRAME>
 
 		<?php include("footer.php"); ?>
 

@@ -294,6 +294,34 @@ button {
 		display: none;
 	}
 }
+
+/* Menu déroulant -----------------------------------------------------*/
+.deroulant{
+	position: fixed;
+	right: 10px;
+	top: 60px;
+	border-radius: 4px;
+	background-color: white;
+	width: 200px;
+	height: auto;
+	box-shadow: 2px 2px 5px 1px rgba(85,121,128,0.80);
+	overflow: hidden;
+	z-index: 1000000000;
+}
+
+.deroulantHidden{
+	display :none;
+}
+
+.deroulant li{
+	padding-left :20px;
+	padding-top : 5px;
+}
+
+.deroulant li:hover{
+	background-color: rgba(85,121,128,1.00);
+	color: white;
+}
 /* Banner -------------------------------------------------------------*/
 body, section {
 	margin: 0;
@@ -578,6 +606,7 @@ input[type=search] {
 
 .hiddenHut{
 	display: none;
+	transition-duration: 1s;
 }
 
 .seller h2{
@@ -586,7 +615,7 @@ input[type=search] {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 50px;
-	color: rgba(163,217,255,1);
+	color: #B5CACE;
 	letter-spacing: -0.3px;
 }
 
@@ -607,7 +636,7 @@ input[type=search] {
 }
 
 .seller .center{
-	border: 2px solid #ABDBFF;
+	border: 2px solid #B5CACE;
 	margin-top: 20px;
 	width: 60%;
 	margin-bottom: 20px;
@@ -696,16 +725,38 @@ input[type=search] {
 .firmin{
 	background-color: #D6EBD4;
 	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.firmin .logo{
+	margin-right: 50px;
+	margin-left: 10%;
 }
 
 .deborah{
 	background-color: #D4E5EB;
 	margin-left: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.deborah .logo{
+	margin-right: 10%;
+	margin-left: 50px;
+	float: right;
 }
 
 .nicolas{
 	background-color: #EBD4D4;
 	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nicolas .logo{
+	margin-right: 50px;
+	margin-left: 10%;
 }
 
 /* Buy page -----------------------------------------------------------*/
