@@ -66,7 +66,8 @@
 									echo '<section>
 												<form action="classified_ad.php" method="get">
 													<input type="hidden" name="Title" value="'.$data["Title"].'"></input>
-													<input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'"</input>
+													<input type="hidden" name="Hut_id" value="'.$data["Hut_id"].'">
+													</input>
 													<button type="submit">Details</button>
 												</form>
 												<button><a href="Message.php">'.$message.'</a></button>
