@@ -86,8 +86,8 @@
 	
 		<section id="ad" class="ad center flexSection">
 			<h3>Choose the <br />perfect <br />hut</h3>
-			<img src="images/hut.png" alt="hut" class="woodhut" >
-			<img src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
+			<img id="woodhut" src="images/hut.png" alt="hut" class="woodhut" >
+			<img id="woodhutChild" src="images/hut2.png" alt="hut" class="woodhutChild hiddenHut">
 		</section>
 
 		<section class="seller"> 
